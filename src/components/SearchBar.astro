@@ -1,0 +1,80 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div class={`bg-gray-900 border border-gray-800 rounded-xl p-4 ${className}`}>
+  <label for="search-input" class="text-sm font-bold text-gray-300 mb-2 block">Pretrazite grad, opcinu ili zupaniju...</label>
+  <div class="relative">
+    <input
+      type="text"
+      id="search-input"
+      placeholder="npr. Split, Dubrovnik, Vukovar..."
+      autocomplete="off"
+      class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+    />
+    <div id="search-results" class="absolute top-full left-0 right-0 mt-1 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden hidden z-50 max-h-80 overflow-y-auto"></div>
+  </div>
+</div>
+
+<script>
+  let fuse: any = null;
+  let searchData: any[] = [];
+
+  const input = document.getElementById('search-input') as HTMLInputElement;
+  const results = document.getElementById('search-results') as HTMLDivElement;
+
+  async function loadIndex() {
+    if (searchData.length > 0) return;
+    try {
+      const res = await fetch('/search-index.json');
+      searchData = await res.json();
+      const Fuse = (await import('https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.mjs' as any)).default;
+      fuse = new Fuse(searchData, {
+        keys: ['name', 'county'],
+        threshold: 0.3,
+        limit: 10,
+      });
+    } catch {}
+  }
+
+  input?.addEventListener('focus', loadIndex);
+
+  input?.addEventListener('input', () => {
+    const q = input.value.trim();
+    if (!q || !fuse) {
+      results.classList.add('hidden');
+      return;
+    }
+    const matches = fuse.search(q).slice(0, 8);
+    if (matches.length === 0) {
+      results.classList.add('hidden');
+      return;
+    }
+    results.innerHTML = matches.map((m: any) => {
+      const item = m.item;
+      const href = item.type === 'zupanija' ? `/zupanija/${item.slug}/` : item.type === 'grad' ? `/grad/${item.slug}/` : `/opcina/${item.slug}/`;
+      const typeLabel = item.type === 'grad' ? 'Grad' : item.type === 'opcina' ? 'Opcina' : 'Zupanija';
+      return `<a href="${href}" class="block px-4 py-3 hover:bg-gray-800 transition-colors border-b border-gray-800 last:border-0 no-underline">
+        <div class="flex justify-between items-center">
+          <div>
+            <span class="text-sm font-bold text-gray-200">${item.name}</span>
+            <span class="text-xs text-gray-500 ml-2">${typeLabel}</span>
+          </div>
+          <span class="text-xs text-gray-400">${item.pop?.toLocaleString('hr-HR') || ''}</span>
+        </div>
+        ${item.county ? `<div class="text-xs text-gray-600">${item.county}</div>` : ''}
+      </a>`;
+    }).join('');
+    results.classList.remove('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!results.contains(e.target as Node) && e.target !== input) {
+      results.classList.add('hidden');
+    }
+  });
+</script>

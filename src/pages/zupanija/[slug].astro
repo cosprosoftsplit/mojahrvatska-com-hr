@@ -1,0 +1,167 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import NavTabs from '../../components/NavTabs.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import StatCard from '../../components/StatCard.astro';
+import BarChart from '../../components/BarChart.astro';
+import NameList from '../../components/NameList.astro';
+import LocationCard from '../../components/LocationCard.astro';
+import PopulationChange from '../../components/PopulationChange.astro';
+import AdUnit from '../../components/AdUnit.astro';
+import { ZUPANIJE } from '../../data/zupanije';
+import { GRADOVI } from '../../data/gradovi';
+import { OPCINE } from '../../data/opcine';
+
+export function getStaticPaths() {
+  return ZUPANIJE.map(z => ({
+    params: { slug: z.slug },
+    props: { zupanija: z }
+  }));
+}
+
+const { zupanija } = Astro.props;
+const cityList = GRADOVI.filter(g => g.county_id === zupanija.id).sort((a, b) => b.population_2021 - a.population_2021);
+const opcinaList = OPCINE.filter(o => o.county_id === zupanija.id).sort((a, b) => b.population_2021 - a.population_2021);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AdministrativeArea",
+  "name": zupanija.name,
+  "containedInPlace": {
+    "@type": "Country",
+    "name": "Hrvatska"
+  },
+  "population": {
+    "@type": "QuantitativeValue",
+    "value": zupanija.population_2021,
+    "unitText": "inhabitants",
+    "observationDate": "2021-09-13"
+  }
+};
+
+const title = `${zupanija.name} — stanovnistvo, gradovi, opcine`;
+const description = `${zupanija.name}: ${zupanija.population_2021.toLocaleString('hr-HR')} stanovnika (Popis 2021), ${cityList.length} gradova, ${opcinaList.length} opcina. Demografski podaci, dobna struktura, najcesca imena.`;
+---
+
+<Layout title={title} description={description} schema={schema}>
+  <Header />
+  <NavTabs active="zupanije" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <Breadcrumb items={[
+      { label: 'Zupanije', href: '/' },
+      { label: zupanija.name }
+    ]} />
+
+    <h1 class="text-2xl font-black text-gray-100 mb-1">{zupanija.name}</h1>
+    <p class="text-sm text-gray-500 mb-6">Sjediste: {zupanija.seat}</p>
+
+    <!-- Key Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+      <StatCard value={zupanija.population_2021} label="Stanovnika" />
+      <StatCard value={`${zupanija.change_pct >= 0 ? '+' : ''}${zupanija.change_pct.toFixed(1)}%`} label="Promjena 2011-2021" />
+      <StatCard value={cityList.length} label="Gradova" />
+      <StatCard value={opcinaList.length} label="Opcina" />
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+      <StatCard value={`${zupanija.area_km2.toLocaleString('hr-HR')} km2`} label="Povrsina" />
+      <StatCard value={zupanija.density.toFixed(1)} label="Gustoca (stan/km2)" />
+      <StatCard value={zupanija.avg_age.toFixed(1)} label="Prosjecna starost" />
+      <StatCard value={`${zupanija.male_pct.toFixed(1)}% / ${zupanija.female_pct.toFixed(1)}%`} label="Muski / Zenski" />
+    </div>
+
+    <!-- Age Structure -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Dobna struktura</h2>
+      <BarChart items={[
+        { label: '0-14 godina', value: zupanija.age_0_14_pct, color: '#22c55e' },
+        { label: '15-64 godina', value: zupanija.age_15_64_pct, color: '#3b82f6' },
+        { label: '65+ godina', value: zupanija.age_65_plus_pct, color: '#ef4444' },
+      ]} maxValue={100} />
+    </section>
+
+    <!-- Gender Split -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Spolna struktura</h2>
+      <div class="bg-gray-900 rounded-lg p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs text-blue-400 font-bold">M: {zupanija.male_pct.toFixed(1)}%</span>
+          <div class="flex-1 h-4 bg-gray-800 rounded-full overflow-hidden flex">
+            <div class="h-full bg-blue-500" style={`width: ${zupanija.male_pct}%`}></div>
+            <div class="h-full bg-pink-500" style={`width: ${zupanija.female_pct}%`}></div>
+          </div>
+          <span class="text-xs text-pink-400 font-bold">Z: {zupanija.female_pct.toFixed(1)}%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Population Change -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Promjena stanovnistva 2011 &rarr; 2021</h2>
+      <div class="bg-gray-900 rounded-lg p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <div class="text-xs text-gray-500">Popis 2011.</div>
+            <div class="text-lg font-bold text-gray-300">{zupanija.population_2011.toLocaleString('hr-HR')}</div>
+          </div>
+          <PopulationChange change={zupanija.change_pct} large />
+          <div class="text-right">
+            <div class="text-xs text-gray-500">Popis 2021.</div>
+            <div class="text-lg font-bold text-gray-300">{zupanija.population_2021.toLocaleString('hr-HR')}</div>
+          </div>
+        </div>
+        <div class="text-xs text-gray-600 text-center">
+          Razlika: {(zupanija.population_2021 - zupanija.population_2011).toLocaleString('hr-HR')} stanovnika
+        </div>
+      </div>
+    </section>
+
+    <AdUnit />
+
+    <!-- Names -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Najcesca imena</h2>
+      <NameList maleNames={zupanija.top_male_names} femaleNames={zupanija.top_female_names} />
+    </section>
+
+    <!-- Cities -->
+    {cityList.length > 0 && (
+      <section class="mb-6">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Gradovi u zupaniji ({cityList.length})</h2>
+        <div class="space-y-2">
+          {cityList.map(city => (
+            <LocationCard
+              name={city.name}
+              slug={city.slug}
+              type="grad"
+              population={city.population_2021}
+              change={city.change_pct}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <AdUnit />
+
+    <!-- Municipalities -->
+    {opcinaList.length > 0 && (
+      <section class="mb-6">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Opcine u zupaniji ({opcinaList.length})</h2>
+        <div class="space-y-2">
+          {opcinaList.map(opcina => (
+            <LocationCard
+              name={opcina.name}
+              slug={opcina.slug}
+              type="opcina"
+              population={opcina.population_2021}
+              change={opcina.change_pct}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+  </main>
+</Layout>

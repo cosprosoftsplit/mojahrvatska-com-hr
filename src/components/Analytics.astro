@@ -1,0 +1,9 @@
+---
+import siteConfig from '../../site.config.json';
+
+const cfBeacon = siteConfig.cfBeacon;
+---
+
+{cfBeacon && (
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${cfBeacon}"}`}></script>
+)}

@@ -1,0 +1,34 @@
+---
+interface Props {
+  maleNames: string[];
+  femaleNames: string[];
+  class?: string;
+}
+
+const { maleNames, femaleNames, class: className = '' } = Astro.props;
+---
+
+<div class={`grid grid-cols-2 gap-3 ${className}`}>
+  <div class="bg-blue-950/30 border border-blue-800/30 rounded-xl p-4">
+    <p class="text-xs text-blue-400 font-bold mb-2">Muska imena</p>
+    {maleNames.map((name, i) => (
+      <div class="flex items-center gap-2 py-1 border-b border-gray-800/50 last:border-0">
+        <span class={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-black ${
+          i < 3 ? 'bg-blue-500 text-white' : 'bg-gray-800 text-gray-400'
+        }`}>{i + 1}</span>
+        <span class="text-sm text-gray-200">{name}</span>
+      </div>
+    ))}
+  </div>
+  <div class="bg-pink-950/30 border border-pink-800/30 rounded-xl p-4">
+    <p class="text-xs text-pink-400 font-bold mb-2">Zenska imena</p>
+    {femaleNames.map((name, i) => (
+      <div class="flex items-center gap-2 py-1 border-b border-gray-800/50 last:border-0">
+        <span class={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-black ${
+          i < 3 ? 'bg-pink-500 text-white' : 'bg-gray-800 text-gray-400'
+        }`}>{i + 1}</span>
+        <span class="text-sm text-gray-200">{name}</span>
+      </div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,59 @@
+---
+import siteConfig from '../../site.config.json';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: object;
+  article?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage,
+  schema,
+  article = false,
+} = Astro.props;
+
+const fullTitle = `${title} — ${siteConfig.siteName}`;
+const siteUrl = `https://${siteConfig.domain}`;
+---
+
+<!-- Primary Meta Tags -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={siteConfig.primaryKeywords.join(', ')} />
+<link rel="canonical" href={canonical} />
+<meta name="theme-color" content={siteConfig.themeColor} />
+
+<!-- Favicon (emoji) -->
+<link rel="icon" href={`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>${siteConfig.emoji}</text></svg>`} />
+
+<!-- Language -->
+<meta name="language" content={siteConfig.locale} />
+<link rel="alternate" hreflang={siteConfig.locale} href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={article ? 'article' : 'website'} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:locale" content={siteConfig.locale} />
+<meta property="og:site_name" content={siteConfig.siteName} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+
+<!-- Schema.org JSON-LD -->
+{schema && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}

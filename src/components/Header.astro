@@ -1,0 +1,26 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<header class={`relative overflow-hidden ${className}`}>
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-blue-950"></div>
+  <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.3), transparent 60%)"></div>
+  <div class="relative px-4 py-5 max-w-4xl mx-auto">
+    <div class="flex items-center justify-between">
+      <a href="/" class="no-underline">
+        <h1 class="text-xl font-black tracking-tight">
+          <span class="text-blue-300">Moja</span><span class="text-red-300">Hrvatska</span>
+        </h1>
+        <p class="text-xs text-blue-300/60 mt-0.5">Hrvatska u brojkama — Popis 2021.</p>
+      </a>
+      <div class="text-right text-xs text-gray-500">
+        <div>Izvor: DZS Popis 2021.</div>
+        <div class="text-blue-400 font-semibold">3.871.833 stanovnika</div>
+      </div>
+    </div>
+  </div>
+</header>

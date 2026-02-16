@@ -1,0 +1,33 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  type: 'grad' | 'opcina' | 'zupanija';
+  population: number;
+  change?: number;
+  county?: string;
+  class?: string;
+}
+
+const { name, slug, type, population, change, county, class: className = '' } = Astro.props;
+
+const typeLabels: Record<string, string> = { grad: 'Grad', opcina: 'Opcina', zupanija: 'Zupanija' };
+const typeColors: Record<string, string> = { grad: 'bg-blue-900 text-blue-300', opcina: 'bg-gray-800 text-gray-400', zupanija: 'bg-blue-800 text-blue-200' };
+const href = type === 'zupanija' ? `/zupanija/${slug}/` : type === 'grad' ? `/grad/${slug}/` : `/opcina/${slug}/`;
+---
+
+<a href={href} class={`block bg-gray-900 border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition-all no-underline ${className}`}>
+  <div class="flex items-center justify-between">
+    <div>
+      <span class="font-bold text-gray-200">{name}</span>
+      <span class={`text-xs ml-2 px-2 py-0.5 rounded-full ${typeColors[type]}`}>{typeLabels[type]}</span>
+      {change !== undefined && (
+        <span class={`text-xs ml-2 ${change >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+          {change >= 0 ? '\u2191' : '\u2193'}{Math.abs(change).toFixed(1)}%
+        </span>
+      )}
+    </div>
+    <span class="text-lg font-black text-gray-300">{population.toLocaleString('hr-HR')}</span>
+  </div>
+  {county && <div class="text-xs text-gray-600 mt-1">{county}</div>}
+</a>

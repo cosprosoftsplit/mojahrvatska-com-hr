@@ -1,0 +1,32 @@
+---
+interface Props {
+  active?: string;
+  class?: string;
+}
+
+const { active = '', class: className = '' } = Astro.props;
+
+const tabs = [
+  { id: 'home', label: 'Pocetna', href: '/' },
+  { id: 'zupanije', label: 'Zupanije', href: '/zupanija/grad-zagreb-zupanija/' },
+  { id: 'gradovi', label: 'Gradovi', href: '/rang-lista/#gradovi' },
+  { id: 'opcine', label: 'Opcine', href: '/rang-lista/#opcine' },
+  { id: 'rang-lista', label: 'Rang-lista', href: '/rang-lista/' },
+  { id: 'usporedba', label: 'Usporedba', href: '/usporedba/' },
+];
+---
+
+<nav class={`sticky top-0 z-40 bg-gray-900/95 backdrop-blur border-b border-gray-800 ${className}`}>
+  <div class="max-w-4xl mx-auto px-4 flex gap-1 py-2 overflow-x-auto">
+    {tabs.map(t => (
+      <a
+        href={t.href}
+        class={`px-4 py-2 text-xs font-bold rounded-lg transition-all whitespace-nowrap no-underline ${
+          active === t.id ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-white hover:bg-gray-800'
+        }`}
+      >
+        {t.label}
+      </a>
+    ))}
+  </div>
+</nav>

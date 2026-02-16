@@ -1,0 +1,40 @@
+---
+import siteConfig from '../../site.config.json';
+
+const showBanner = siteConfig.monetization === 'ads' || siteConfig.monetization === 'both';
+---
+
+{showBanner && (
+  <div id="consent-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4 text-sm text-gray-300 hidden" style="font-family: system-ui, sans-serif;">
+    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-3">
+      <p class="flex-1 text-xs">
+        Koristimo kolačiće za prikazivanje oglasa i analitiku. Nastavkom korištenja stranice prihvaćate našu
+        <a href="/privatnost" class="underline text-gray-100">politiku privatnosti</a>.
+      </p>
+      <div class="flex gap-2">
+        <button id="consent-accept" class="bg-white text-black text-xs font-bold px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+          Prihvaćam
+        </button>
+        <button id="consent-reject" class="bg-gray-700 text-gray-300 text-xs font-bold px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+          Odbij
+        </button>
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    (function() {
+      var consent = localStorage.getItem('cookie-consent');
+      if (!consent) {
+        document.getElementById('consent-banner').classList.remove('hidden');
+      }
+      document.getElementById('consent-accept')?.addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'accepted');
+        document.getElementById('consent-banner').classList.add('hidden');
+      });
+      document.getElementById('consent-reject')?.addEventListener('click', function() {
+        localStorage.setItem('cookie-consent', 'rejected');
+        document.getElementById('consent-banner').classList.add('hidden');
+      });
+    })();
+  </script>
+)}

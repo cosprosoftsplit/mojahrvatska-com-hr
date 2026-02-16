@@ -1,0 +1,112 @@
+---
+interface Column {
+  key: string;
+  label: string;
+  type?: 'number' | 'string' | 'percent';
+}
+
+interface Props {
+  id: string;
+  columns: Column[];
+  rows: Record<string, any>[];
+  defaultSort?: string;
+  defaultDir?: 'asc' | 'desc';
+  class?: string;
+}
+
+const { id, columns, rows, defaultSort, defaultDir = 'desc', class: className = '' } = Astro.props;
+---
+
+<div class={`overflow-x-auto ${className}`}>
+  <table class="w-full text-sm" id={id} data-sort={defaultSort || columns[0].key} data-dir={defaultDir}>
+    <thead>
+      <tr class="border-b border-gray-800">
+        {columns.map(col => (
+          <th
+            class="px-3 py-2 text-left text-xs font-bold text-gray-500 uppercase cursor-pointer hover:text-blue-400 transition-colors select-none"
+            data-col={col.key}
+            data-type={col.type || 'string'}
+          >
+            {col.label}
+            <span class="sort-arrow text-blue-400 ml-1"></span>
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(row => (
+        <tr class="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors">
+          {columns.map((col, ci) => (
+            <td class="px-3 py-2 text-gray-300" data-value={row[col.key]}>
+              {ci === 0 && row.href ? (
+                <a href={row.href} class="text-blue-400 hover:text-blue-300 transition-colors">{row[col.key]}</a>
+              ) : col.type === 'number' ? (
+                typeof row[col.key] === 'number' ? row[col.key].toLocaleString('hr-HR') : row[col.key]
+              ) : col.type === 'percent' ? (
+                `${row[col.key]}%`
+              ) : (
+                row[col.key]
+              )}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<script define:vars={{ id }}>
+  const table = document.getElementById(id);
+  if (table) {
+    const headers = table.querySelectorAll('th[data-col]');
+    let currentSort = table.dataset.sort;
+    let currentDir = table.dataset.dir || 'desc';
+
+    function sortTable(col, type) {
+      const tbody = table.querySelector('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const colIndex = Array.from(headers).findIndex(h => h.dataset.col === col);
+
+      rows.sort((a, b) => {
+        const aVal = a.children[colIndex]?.dataset.value ?? a.children[colIndex]?.textContent ?? '';
+        const bVal = b.children[colIndex]?.dataset.value ?? b.children[colIndex]?.textContent ?? '';
+
+        if (type === 'number' || type === 'percent') {
+          const aNum = parseFloat(aVal) || 0;
+          const bNum = parseFloat(bVal) || 0;
+          return currentDir === 'asc' ? aNum - bNum : bNum - aNum;
+        }
+        return currentDir === 'asc'
+          ? aVal.localeCompare(bVal, 'hr')
+          : bVal.localeCompare(aVal, 'hr');
+      });
+
+      for (const row of rows) tbody.appendChild(row);
+
+      headers.forEach(h => {
+        const arrow = h.querySelector('.sort-arrow');
+        if (arrow) arrow.textContent = h.dataset.col === col ? (currentDir === 'asc' ? '\u25B2' : '\u25BC') : '';
+      });
+    }
+
+    headers.forEach(h => {
+      h.addEventListener('click', () => {
+        const col = h.dataset.col;
+        const type = h.dataset.type;
+        if (currentSort === col) {
+          currentDir = currentDir === 'asc' ? 'desc' : 'asc';
+        } else {
+          currentSort = col;
+          currentDir = type === 'number' || type === 'percent' ? 'desc' : 'asc';
+        }
+        sortTable(col, type);
+      });
+    });
+
+    // Initial sort
+    if (currentSort) {
+      const header = Array.from(headers).find(h => h.dataset.col === currentSort);
+      if (header) sortTable(currentSort, header.dataset.type);
+    }
+  }
+</script>

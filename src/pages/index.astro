@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
+import SearchBar from '../components/SearchBar.astro';
+import StatCard from '../components/StatCard.astro';
+import LocationCard from '../components/LocationCard.astro';
+import AdUnit from '../components/AdUnit.astro';
+import { ZUPANIJE } from '../data/zupanije';
+import { GRADOVI } from '../data/gradovi';
+
+const sortedZupanije = [...ZUPANIJE].sort((a, b) => b.population_2021 - a.population_2021);
+const topCities = [...GRADOVI].sort((a, b) => b.population_2021 - a.population_2021).slice(0, 10);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MojaHrvatska",
+  "url": "https://mojahrvatska.com.hr",
+  "description": "Hrvatska u brojkama — demografski podaci, naselja, stanovnistvo. Popis 2021.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mojahrvatska.com.hr/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+---
+
+<Layout
+  title="Hrvatska u brojkama"
+  description="Demografski podaci za sve hrvatske gradove, opcine i zupanije. Stanovnistvo, prezimena, dobna struktura — Popis 2021. DZS podaci na jednom mjestu."
+  schema={schema}
+>
+  <Header />
+  <NavTabs active="home" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <!-- Hero Stats -->
+    <div class="grid grid-cols-3 gap-3 mb-6">
+      <StatCard value="3.871.833" label="Stanovnika" icon="" />
+      <StatCard value={21} label="Zupanija" icon="" />
+      <StatCard value={556} label="Gradova i opcina" icon="" />
+    </div>
+
+    <!-- Search -->
+    <SearchBar class="mb-6" />
+
+    <AdUnit />
+
+    <!-- County Grid -->
+    <section class="mb-8">
+      <h2 class="text-lg font-black text-gray-200 mb-4">Zupanije</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {sortedZupanije.map(z => (
+          <LocationCard
+            name={z.name}
+            slug={z.slug}
+            type="zupanija"
+            population={z.population_2021}
+            change={z.change_pct}
+          />
+        ))}
+      </div>
+    </section>
+
+    <AdUnit />
+
+    <!-- Fun Facts -->
+    <section class="mb-8">
+      <h2 class="text-lg font-black text-gray-200 mb-4">Zanimljivosti</h2>
+      <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 space-y-3">
+        <div class="flex items-start gap-3">
+          <span class="text-lg">1.</span>
+          <div>
+            <span class="text-sm font-bold text-gray-300">Najveci grad:</span>
+            <span class="text-sm text-gray-400"> Zagreb (769.944 stanovnika)</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-lg">2.</span>
+          <div>
+            <span class="text-sm font-bold text-gray-300">Najcesci prezime:</span>
+            <span class="text-sm text-gray-400"> Horvat (19.705 obitelji)</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-lg">3.</span>
+          <div>
+            <span class="text-sm font-bold text-gray-300">Pad stanovnistva:</span>
+            <span class="text-sm text-gray-400"> -9,64% od 2011. do 2021. (-413.056 osoba)</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-lg">4.</span>
+          <div>
+            <span class="text-sm font-bold text-gray-300">Najveca zupanija:</span>
+            <span class="text-sm text-gray-400"> Licko-senjska (5.353 km2)</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-lg">5.</span>
+          <div>
+            <span class="text-sm font-bold text-gray-300">Najbrzi pad:</span>
+            <span class="text-sm text-gray-400"> Vukovarsko-srijemska (-21,2%)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top 10 Cities -->
+    <section class="mb-8">
+      <h2 class="text-lg font-black text-gray-200 mb-4">Top 10 gradova po broju stanovnika</h2>
+      <div class="space-y-2">
+        {topCities.map((city, i) => (
+          <a href={`/grad/${city.slug}/`} class="flex items-center gap-3 bg-gray-900 border border-gray-800 rounded-lg p-3 hover:border-gray-700 transition-all no-underline">
+            <span class={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black ${
+              i === 0 ? 'bg-amber-500 text-black' :
+              i === 1 ? 'bg-gray-400 text-black' :
+              i === 2 ? 'bg-amber-700 text-white' :
+              'bg-gray-800 text-gray-400'
+            }`}>{i + 1}</span>
+            <div class="flex-1">
+              <span class="font-bold text-gray-200">{city.name}</span>
+              <span class="text-xs text-gray-600 ml-2">{city.county_name}</span>
+            </div>
+            <div class="text-right">
+              <span class="text-sm font-bold text-gray-300">{city.population_2021.toLocaleString('hr-HR')}</span>
+              <span class={`text-xs ml-2 ${city.change_pct >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                {city.change_pct >= 0 ? '+' : ''}{city.change_pct.toFixed(1)}%
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="mt-3 text-center">
+        <a href="/rang-lista/" class="inline-block bg-gray-900 border border-gray-700 text-gray-400 hover:text-white px-6 py-2 rounded-lg text-xs font-bold transition-colors no-underline">
+          Sve rang-liste &rarr;
+        </a>
+      </div>
+    </section>
+
+    <AdUnit />
+  </main>
+</Layout>

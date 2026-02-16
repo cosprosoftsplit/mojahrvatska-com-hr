@@ -1,0 +1,29 @@
+---
+import siteConfig from '../../site.config.json';
+
+interface Props {
+  slot?: string;
+  format?: 'auto' | 'rectangle' | 'horizontal' | 'vertical';
+  class?: string;
+}
+
+const { slot = '', format = 'auto', class: className = '' } = Astro.props;
+const showAds = siteConfig.monetization === 'ads' || siteConfig.monetization === 'both';
+const adsenseId = siteConfig.adsenseId;
+---
+
+{showAds && adsenseId && (
+  <div class={`ad-unit my-6 ${className}`}>
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client={adsenseId}
+      data-ad-slot={slot}
+      data-ad-format={format}
+      data-full-width-responsive="true"
+    ></ins>
+    <script is:inline>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+)}

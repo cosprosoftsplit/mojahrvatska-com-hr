@@ -1,0 +1,17 @@
+---
+interface Props {
+  change: number;
+  large?: boolean;
+  class?: string;
+}
+
+const { change, large = false, class: className = '' } = Astro.props;
+const isPositive = change >= 0;
+const arrow = isPositive ? '\u2191' : '\u2193';
+const color = isPositive ? 'text-green-500' : 'text-red-500';
+const size = large ? 'text-lg font-black' : 'text-xs font-bold';
+---
+
+<span class={`${color} ${size} ${className}`}>
+  {arrow} {isPositive ? '+' : ''}{change.toFixed(1)}%
+</span>

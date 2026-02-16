@@ -1,0 +1,112 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div class={`bg-gray-900 border border-gray-800 rounded-xl p-6 ${className}`} id="compare-tool">
+  <h2 class="text-lg font-black text-gray-200 mb-4">Usporedi dva grada ili opcine</h2>
+  <div class="grid grid-cols-2 gap-4 mb-6">
+    <div>
+      <label class="text-xs text-gray-500 mb-1 block">Prva lokacija</label>
+      <select id="compare-a" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+        <option value="">Odaberi...</option>
+      </select>
+    </div>
+    <div>
+      <label class="text-xs text-gray-500 mb-1 block">Druga lokacija</label>
+      <select id="compare-b" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
+        <option value="">Odaberi...</option>
+      </select>
+    </div>
+  </div>
+  <div id="compare-results" class="hidden space-y-3"></div>
+</div>
+
+<script>
+  let locations: any[] = [];
+
+  async function loadCompareData() {
+    try {
+      const res = await fetch('/locations-compare.json');
+      locations = await res.json();
+      populateSelects();
+    } catch {}
+  }
+
+  function populateSelects() {
+    const selectA = document.getElementById('compare-a') as HTMLSelectElement;
+    const selectB = document.getElementById('compare-b') as HTMLSelectElement;
+    const sorted = [...locations].sort((a, b) => a.name.localeCompare(b.name, 'hr'));
+    for (const loc of sorted) {
+      const typeLabel = loc.type === 'grad' ? 'Grad' : 'Opcina';
+      const opt = `<option value="${loc.slug}">${loc.name} (${typeLabel})</option>`;
+      selectA.insertAdjacentHTML('beforeend', opt);
+      selectB.insertAdjacentHTML('beforeend', opt);
+    }
+  }
+
+  function renderComparison() {
+    const selectA = document.getElementById('compare-a') as HTMLSelectElement;
+    const selectB = document.getElementById('compare-b') as HTMLSelectElement;
+    const results = document.getElementById('compare-results') as HTMLDivElement;
+
+    const a = locations.find(l => l.slug === selectA.value);
+    const b = locations.find(l => l.slug === selectB.value);
+
+    if (!a || !b) {
+      results.classList.add('hidden');
+      return;
+    }
+
+    const metrics = [
+      { label: 'Stanovnistvo', key: 'population_2021', format: (v: number) => v.toLocaleString('hr-HR') },
+      { label: 'Promjena 2011-2021', key: 'change_pct', format: (v: number) => (v >= 0 ? '+' : '') + v.toFixed(1) + '%' },
+      { label: 'Gustoca (stan/km2)', key: 'density', format: (v: number) => v.toFixed(1) },
+      { label: 'Prosjecna starost', key: 'avg_age', format: (v: number) => v.toFixed(1) },
+      { label: 'Fakultet %', key: 'education_university_pct', format: (v: number) => v.toFixed(1) + '%' },
+    ];
+
+    let html = '';
+    for (const m of metrics) {
+      const va = a[m.key] ?? 0;
+      const vb = b[m.key] ?? 0;
+      const maxVal = Math.max(Math.abs(va), Math.abs(vb)) || 1;
+      const pctA = (Math.abs(va) / maxVal) * 100;
+      const pctB = (Math.abs(vb) / maxVal) * 100;
+      html += `
+        <div class="bg-gray-800 rounded-lg p-3">
+          <div class="text-xs text-gray-500 mb-2">${m.label}</div>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="text-right">
+              <span class="text-sm font-bold text-blue-400">${m.format(va)}</span>
+              <div class="mt-1 h-2 bg-gray-700 rounded-full overflow-hidden flex justify-end">
+                <div class="h-full bg-blue-500 rounded-full" style="width: ${pctA}%"></div>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm font-bold text-amber-400">${m.format(vb)}</span>
+              <div class="mt-1 h-2 bg-gray-700 rounded-full overflow-hidden">
+                <div class="h-full bg-amber-500 rounded-full" style="width: ${pctB}%"></div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    results.innerHTML = `
+      <div class="grid grid-cols-2 gap-4 mb-3">
+        <div class="text-center text-sm font-bold text-blue-400">${a.name}</div>
+        <div class="text-center text-sm font-bold text-amber-400">${b.name}</div>
+      </div>
+      ${html}`;
+    results.classList.remove('hidden');
+  }
+
+  document.getElementById('compare-a')?.addEventListener('change', renderComparison);
+  document.getElementById('compare-b')?.addEventListener('change', renderComparison);
+
+  loadCompareData();
+</script>

@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
+import SortableTable from '../components/SortableTable.astro';
+import AdUnit from '../components/AdUnit.astro';
+import { GRADOVI } from '../data/gradovi';
+import { OPCINE } from '../data/opcine';
+
+const allLocations = [
+  ...GRADOVI.map(g => ({ ...g, typeLabel: 'Grad' })),
+  ...OPCINE.map(o => ({ ...o, typeLabel: 'Opcina' })),
+];
+
+// Biggest cities
+const biggestCities = [...GRADOVI]
+  .sort((a, b) => b.population_2021 - a.population_2021)
+  .slice(0, 30)
+  .map(c => ({
+    name: c.name,
+    href: `/grad/${c.slug}/`,
+    population_2021: c.population_2021,
+    change_pct: c.change_pct,
+    county: c.county_name,
+  }));
+
+// Smallest cities
+const smallestCities = [...GRADOVI]
+  .sort((a, b) => a.population_2021 - b.population_2021)
+  .slice(0, 20)
+  .map(c => ({
+    name: c.name,
+    href: `/grad/${c.slug}/`,
+    population_2021: c.population_2021,
+    change_pct: c.change_pct,
+    county: c.county_name,
+  }));
+
+// Densest
+const densest = [...allLocations]
+  .sort((a, b) => b.density - a.density)
+  .slice(0, 20)
+  .map(c => ({
+    name: c.name,
+    href: c.type === 'grad' ? `/grad/${c.slug}/` : `/opcina/${c.slug}/`,
+    density: Math.round(c.density * 10) / 10,
+    population_2021: c.population_2021,
+    typeLabel: c.typeLabel,
+  }));
+
+// Fastest growth/decline
+const fastestChange = [...allLocations]
+  .sort((a, b) => b.change_pct - a.change_pct)
+  .map(c => ({
+    name: c.name,
+    href: c.type === 'grad' ? `/grad/${c.slug}/` : `/opcina/${c.slug}/`,
+    change_pct: c.change_pct,
+    population_2021: c.population_2021,
+    typeLabel: c.typeLabel,
+  }));
+const growthTop = fastestChange.slice(0, 20);
+const declineTop = [...fastestChange].reverse().slice(0, 20);
+
+// Oldest/youngest by avg age
+const byAge = [...allLocations].sort((a, b) => b.avg_age - a.avg_age);
+const oldestPlaces = byAge.slice(0, 20).map(c => ({
+  name: c.name,
+  href: c.type === 'grad' ? `/grad/${c.slug}/` : `/opcina/${c.slug}/`,
+  avg_age: c.avg_age,
+  population_2021: c.population_2021,
+  typeLabel: c.typeLabel,
+}));
+const youngestPlaces = [...byAge].reverse().slice(0, 20).map(c => ({
+  name: c.name,
+  href: c.type === 'grad' ? `/grad/${c.slug}/` : `/opcina/${c.slug}/`,
+  avg_age: c.avg_age,
+  population_2021: c.population_2021,
+  typeLabel: c.typeLabel,
+}));
+
+// Most educated
+const mostEducated = [...allLocations]
+  .sort((a, b) => (b.education_university_pct || 0) - (a.education_university_pct || 0))
+  .slice(0, 20)
+  .map(c => ({
+    name: c.name,
+    href: c.type === 'grad' ? `/grad/${c.slug}/` : `/opcina/${c.slug}/`,
+    education_university_pct: c.education_university_pct || 0,
+    population_2021: c.population_2021,
+    typeLabel: c.typeLabel,
+  }));
+
+const title = 'Rang-liste — najveci gradovi, demografija, prezimena';
+const description = 'Rang-liste hrvatskih gradova i opcina: najveci, najmanji, najgusci, najstariji, najobrazovaniji. Popis 2021 podaci sortirani.';
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <NavTabs active="rang-lista" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <h1 class="text-2xl font-black text-gray-100 mb-6">Rang-liste</h1>
+
+    <!-- Biggest Cities -->
+    <section class="mb-8" id="gradovi">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najveci gradovi</h2>
+      <SortableTable
+        id="table-biggest"
+        columns={[
+          { key: 'name', label: 'Grad', type: 'string' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'change_pct', label: 'Promjena %', type: 'number' },
+          { key: 'county', label: 'Zupanija', type: 'string' },
+        ]}
+        rows={biggestCities}
+        defaultSort="population_2021"
+        defaultDir="desc"
+      />
+    </section>
+
+    <AdUnit />
+
+    <!-- Smallest Cities -->
+    <section class="mb-8">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najmanji gradovi</h2>
+      <SortableTable
+        id="table-smallest"
+        columns={[
+          { key: 'name', label: 'Grad', type: 'string' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'change_pct', label: 'Promjena %', type: 'number' },
+          { key: 'county', label: 'Zupanija', type: 'string' },
+        ]}
+        rows={smallestCities}
+        defaultSort="population_2021"
+        defaultDir="asc"
+      />
+    </section>
+
+    <!-- Densest -->
+    <section class="mb-8">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najgusce naseljeni</h2>
+      <SortableTable
+        id="table-densest"
+        columns={[
+          { key: 'name', label: 'Mjesto', type: 'string' },
+          { key: 'density', label: 'stan/km2', type: 'number' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'typeLabel', label: 'Tip', type: 'string' },
+        ]}
+        rows={densest}
+        defaultSort="density"
+        defaultDir="desc"
+      />
+    </section>
+
+    <AdUnit />
+
+    <!-- Fastest Growth -->
+    <section class="mb-8">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najbrzi rast (2011-2021)</h2>
+      <SortableTable
+        id="table-growth"
+        columns={[
+          { key: 'name', label: 'Mjesto', type: 'string' },
+          { key: 'change_pct', label: 'Promjena %', type: 'number' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'typeLabel', label: 'Tip', type: 'string' },
+        ]}
+        rows={growthTop}
+        defaultSort="change_pct"
+        defaultDir="desc"
+      />
+    </section>
+
+    <!-- Fastest Decline -->
+    <section class="mb-8">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najveci pad (2011-2021)</h2>
+      <SortableTable
+        id="table-decline"
+        columns={[
+          { key: 'name', label: 'Mjesto', type: 'string' },
+          { key: 'change_pct', label: 'Promjena %', type: 'number' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'typeLabel', label: 'Tip', type: 'string' },
+        ]}
+        rows={declineTop}
+        defaultSort="change_pct"
+        defaultDir="asc"
+      />
+    </section>
+
+    <AdUnit />
+
+    <!-- Oldest -->
+    <section class="mb-8">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najstariji (prosjecna starost)</h2>
+      <SortableTable
+        id="table-oldest"
+        columns={[
+          { key: 'name', label: 'Mjesto', type: 'string' },
+          { key: 'avg_age', label: 'Prosj. starost', type: 'number' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'typeLabel', label: 'Tip', type: 'string' },
+        ]}
+        rows={oldestPlaces}
+        defaultSort="avg_age"
+        defaultDir="desc"
+      />
+    </section>
+
+    <!-- Youngest -->
+    <section class="mb-8">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najmladi (prosjecna starost)</h2>
+      <SortableTable
+        id="table-youngest"
+        columns={[
+          { key: 'name', label: 'Mjesto', type: 'string' },
+          { key: 'avg_age', label: 'Prosj. starost', type: 'number' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'typeLabel', label: 'Tip', type: 'string' },
+        ]}
+        rows={youngestPlaces}
+        defaultSort="avg_age"
+        defaultDir="asc"
+      />
+    </section>
+
+    <AdUnit />
+
+    <!-- Most Educated -->
+    <section class="mb-8" id="opcine">
+      <h2 class="text-lg font-bold text-gray-200 mb-3">Najobrazovaniji (% fakulteta)</h2>
+      <SortableTable
+        id="table-educated"
+        columns={[
+          { key: 'name', label: 'Mjesto', type: 'string' },
+          { key: 'education_university_pct', label: 'Fakultet %', type: 'number' },
+          { key: 'population_2021', label: 'Stanovnika', type: 'number' },
+          { key: 'typeLabel', label: 'Tip', type: 'string' },
+        ]}
+        rows={mostEducated}
+        defaultSort="education_university_pct"
+        defaultDir="desc"
+      />
+    </section>
+  </main>
+</Layout>

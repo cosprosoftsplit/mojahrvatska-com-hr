@@ -1,0 +1,26 @@
+---
+interface Props {
+  surnames: string[];
+  title?: string;
+  class?: string;
+}
+
+const { surnames, title = 'Najcesca prezimena', class: className = '' } = Astro.props;
+---
+
+<div class={`bg-gray-900 border border-gray-800 rounded-xl p-4 ${className}`}>
+  <h3 class="text-sm font-bold text-gray-300 mb-3">{title}</h3>
+  <div class="space-y-1.5">
+    {surnames.map((surname, i) => (
+      <div class="flex items-center gap-2">
+        <span class={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-black ${
+          i === 0 ? 'bg-amber-500 text-black' :
+          i === 1 ? 'bg-gray-400 text-black' :
+          i === 2 ? 'bg-amber-700 text-white' :
+          'bg-gray-800 text-gray-500'
+        }`}>{i + 1}</span>
+        <span class="text-sm text-gray-300">{surname}</span>
+      </div>
+    ))}
+  </div>
+</div>

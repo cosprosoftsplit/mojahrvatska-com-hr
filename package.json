@@ -1,0 +1,19 @@
+{
+  "name": "mojahrvatska-com-hr",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/generate-search-index.mjs && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.4.1",
+    "@astrojs/sitemap": "^3.3.0",
+    "fuse.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0"
+  }
+}

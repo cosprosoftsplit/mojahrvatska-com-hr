@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteConfig from '../../site.config.json';
+---
+
+<Layout title="Impressum" description={`Impressum — pravne informacije za ${siteConfig.siteName}`}>
+  <main class="max-w-2xl mx-auto px-4 py-12" style="font-family: system-ui, sans-serif;">
+    <h1 class="text-2xl font-bold mb-6">Impressum</h1>
+
+    <div class="prose prose-invert prose-sm text-gray-300 space-y-4">
+      <h2 class="text-lg font-bold text-gray-100">Informacije o web stranici</h2>
+      <p><strong>Naziv:</strong> {siteConfig.siteName}</p>
+      <p><strong>Web adresa:</strong> https://{siteConfig.domain}</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Odgovornost za sadržaj</h2>
+      <p>Sadržaj ove web stranice pruža se isključivo u informativne i zabavne svrhe. Ne preuzimamo odgovornost za točnost, potpunost ili aktualnost objavljenih informacija.</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Izvor podataka</h2>
+      <p>Svi demografski podaci preuzeti su iz javno dostupnih podataka Državnog zavoda za statistiku (DZS), Popis stanovništva, kućanstava i stanova 2021. godine. Izvor: <a href="https://podaci.dzs.hr" class="text-blue-400 underline" target="_blank" rel="noopener">podaci.dzs.hr</a></p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Autorska prava</h2>
+      <p>Sav sadržaj na ovoj stranici (tekstovi, grafike, dizajn) zaštićen je autorskim pravom. Reprodukcija, distribucija ili bilo kakva uporaba izvan granica autorskog prava zahtijeva pisanu suglasnost autora.</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Vanjske poveznice</h2>
+      <p>Ova stranica može sadržavati poveznice na vanjske web stranice. Ne preuzimamo odgovornost za sadržaj vanjskih stranica jer nemamo utjecaj na njihov sadržaj.</p>
+
+      <p class="text-xs text-gray-500 mt-8">Posljednje ažuriranje: veljača 2026.</p>
+    </div>
+  </main>
+</Layout>

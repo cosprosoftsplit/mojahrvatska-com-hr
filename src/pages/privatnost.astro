@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteConfig from '../../site.config.json';
+---
+
+<Layout title="Politika privatnosti" description={`Politika privatnosti za ${siteConfig.siteName}`}>
+  <main class="max-w-2xl mx-auto px-4 py-12" style="font-family: system-ui, sans-serif;">
+    <h1 class="text-2xl font-bold mb-6">Politika privatnosti</h1>
+
+    <div class="prose prose-invert prose-sm text-gray-300 space-y-4">
+      <p>Ova politika privatnosti opisuje kako {siteConfig.siteName} ({siteConfig.domain}) prikuplja, koristi i štiti vaše osobne podatke.</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Podaci koje prikupljamo</h2>
+      <p>Ova web stranica ne zahtijeva registraciju i ne prikuplja osobne podatke poput imena, adrese e-pošte ili telefonskog broja.</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Kolačići i analitika</h2>
+      <p>Koristimo Cloudflare Web Analytics za praćenje posjećenosti. Ovaj sustav ne koristi kolačiće i ne prikuplja osobne podatke posjetitelja.</p>
+      {(siteConfig.monetization === 'ads' || siteConfig.monetization === 'both') && (
+        <p>Za prikazivanje oglasa koristimo Google AdSense koji može postavljati kolačiće na vaš uređaj. Možete upravljati postavkama kolačića putem svog preglednika ili putem <a href="https://adssettings.google.com" class="text-blue-400 underline" target="_blank" rel="noopener">Google postavki oglasa</a>.</p>
+      )}
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Lokalna pohrana</h2>
+      <p>Ova stranica može koristiti localStorage u vašem pregledniku za spremanje postavki (npr. pristanak na kolačiće). Ovi podaci ostaju samo na vašem uređaju i nikada se ne šalju na naše poslužitelje.</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Vanjski servisi</h2>
+      <p>Stranica može učitavati sadržaj s vanjskih servisa (npr. Cloudflare CDN, Google servisi). Ti servisi mogu prikupljati tehničke podatke poput IP adrese u skladu sa svojim politikama privatnosti.</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Vaša prava</h2>
+      <p>Prema Općoj uredbi o zaštiti podataka (GDPR), imate pravo na pristup, ispravak i brisanje svojih osobnih podataka. S obzirom da ne prikupljamo osobne podatke, ova prava se primjenjuju samo na podatke pohranjene putem kolačića trećih strana.</p>
+
+      <h2 class="text-lg font-bold text-gray-100 mt-6">Kontakt</h2>
+      <p>Za sva pitanja vezana uz privatnost, obratite nam se putem informacija navedenih na stranici <a href="/impressum" class="text-blue-400 underline">Impressum</a>.</p>
+
+      <p class="text-xs text-gray-500 mt-8">Posljednje ažuriranje: veljača 2026.</p>
+    </div>
+  </main>
+</Layout>

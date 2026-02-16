@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import NavTabs from '../../components/NavTabs.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import StatCard from '../../components/StatCard.astro';
+import BarChart from '../../components/BarChart.astro';
+import SurnameList from '../../components/SurnameList.astro';
+import PopulationChange from '../../components/PopulationChange.astro';
+import AdUnit from '../../components/AdUnit.astro';
+import { OPCINE } from '../../data/opcine';
+import { ZUPANIJE } from '../../data/zupanije';
+import { GRADOVI } from '../../data/gradovi';
+
+export function getStaticPaths() {
+  return OPCINE.map(o => ({
+    params: { slug: o.slug },
+    props: { opcina: o }
+  }));
+}
+
+const { opcina } = Astro.props;
+const zupanija = ZUPANIJE.find(z => z.id === opcina.county_id);
+const nearbyLocations = [
+  ...GRADOVI.filter(g => g.county_id === opcina.county_id).slice(0, 3),
+  ...OPCINE.filter(o => o.county_id === opcina.county_id && o.slug !== opcina.slug)
+    .sort((a, b) => Math.abs(a.population_2021 - opcina.population_2021) - Math.abs(b.population_2021 - opcina.population_2021))
+    .slice(0, 3),
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": opcina.name,
+  "containedInPlace": {
+    "@type": "AdministrativeArea",
+    "name": opcina.county_name
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": opcina.lat,
+    "longitude": opcina.lng
+  },
+  "population": {
+    "@type": "QuantitativeValue",
+    "value": opcina.population_2021,
+    "unitText": "inhabitants",
+    "observationDate": "2021-09-13"
+  }
+};
+
+const title = `${opcina.name} — broj stanovnika, demografija`;
+const description = `Opcina ${opcina.name}: ${opcina.population_2021.toLocaleString('hr-HR')} stanovnika (Popis 2021). ${opcina.county_name}. Demografski podaci, dobna struktura, prezimena, obrazovanje.`;
+---
+
+<Layout title={title} description={description} schema={schema} article>
+  <Header />
+  <NavTabs active="opcine" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <Breadcrumb items={[
+      { label: zupanija?.name || opcina.county_name, href: `/zupanija/${opcina.county_slug}/` },
+      { label: opcina.name }
+    ]} />
+
+    <h1 class="text-2xl font-black text-gray-100 mb-1">{opcina.name}</h1>
+    <p class="text-sm text-gray-500 mb-6">Opcina &middot; {opcina.county_name}</p>
+
+    <!-- Key Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+      <StatCard value={opcina.population_2021} label="Stanovnika" change={opcina.change_pct} />
+      <StatCard value={`${opcina.area_km2.toFixed(1)} km2`} label="Povrsina" />
+      <StatCard value={opcina.density.toFixed(1)} label="Gustoca (stan/km2)" />
+      <StatCard value={opcina.avg_age.toFixed(1)} label="Prosjecna starost" />
+      <StatCard value={`${opcina.male_pct.toFixed(1)}%`} label="Muski" />
+      <StatCard value={`${opcina.female_pct.toFixed(1)}%`} label="Zenski" />
+    </div>
+
+    <!-- Age Pyramid -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Dobna struktura</h2>
+      <BarChart items={[
+        { label: '0-14 godina', value: opcina.age_0_14_pct, color: '#22c55e' },
+        { label: '15-64 godina', value: opcina.age_15_64_pct, color: '#3b82f6' },
+        { label: '65+ godina', value: opcina.age_65_plus_pct, color: '#ef4444' },
+      ]} maxValue={100} />
+    </section>
+
+    <!-- Nationality -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Nacionalni sastav</h2>
+      <div class="bg-gray-900 rounded-lg p-4">
+        <div class="flex items-center gap-2">
+          <span class="text-sm text-gray-400">Hrvati:</span>
+          <span class="text-sm font-bold text-gray-200">{opcina.nationality_croatian_pct.toFixed(1)}%</span>
+        </div>
+      </div>
+    </section>
+
+    <AdUnit />
+
+    <!-- Education -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Obrazovanje (15+)</h2>
+      <BarChart items={[
+        { label: 'Fakultet', value: opcina.education_university_pct, color: '#22c55e' },
+        { label: 'Srednja skola', value: opcina.education_secondary_pct, color: '#3b82f6' },
+      ]} maxValue={100} />
+    </section>
+
+    <!-- Surnames -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Najcesca prezimena</h2>
+      <SurnameList surnames={opcina.top_surnames} />
+    </section>
+
+    <!-- Population Change -->
+    <section class="mb-6">
+      <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Promjena stanovnistva 2011 &rarr; 2021</h2>
+      <div class="bg-gray-900 rounded-lg p-4">
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <div class="text-xs text-gray-500">Popis 2011.</div>
+            <div class="text-lg font-bold text-gray-300">{opcina.population_2011.toLocaleString('hr-HR')}</div>
+          </div>
+          <PopulationChange change={opcina.change_pct} large />
+          <div class="text-right">
+            <div class="text-xs text-gray-500">Popis 2021.</div>
+            <div class="text-lg font-bold text-gray-300">{opcina.population_2021.toLocaleString('hr-HR')}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <AdUnit />
+
+    <!-- Nearby Locations -->
+    {nearbyLocations.length > 0 && (
+      <section class="mb-6">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">U istoj zupaniji</h2>
+        <div class="flex flex-wrap gap-2">
+          {nearbyLocations.map(loc => {
+            const href = loc.type === 'grad' ? `/grad/${loc.slug}/` : `/opcina/${loc.slug}/`;
+            return (
+              <a href={href} class="bg-gray-900 border border-gray-800 rounded-lg px-3 py-2 text-sm text-blue-400 hover:border-blue-500 transition-colors no-underline">
+                {loc.name}
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+  </main>
+</Layout>

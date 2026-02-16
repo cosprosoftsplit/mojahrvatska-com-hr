@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
+import CompareTool from '../components/CompareTool.astro';
+
+const title = 'Usporedba gradova i opcina';
+const description = 'Usporedite dva hrvatska grada ili opcine. Stanovnistvo, gustoca, prosjecna starost, obrazovanje — sve na jednom mjestu.';
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <NavTabs active="usporedba" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <h1 class="text-2xl font-black text-gray-100 mb-2">Usporedba</h1>
+    <p class="text-sm text-gray-500 mb-6">Odaberite dva grada ili opcine za usporedbu demografskih podataka.</p>
+
+    <CompareTool />
+  </main>
+</Layout>

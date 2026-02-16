@@ -1,0 +1,42 @@
+---
+import SEOHead from '../components/SEOHead.astro';
+import Analytics from '../components/Analytics.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
+import Footer from '../components/Footer.astro';
+import siteConfig from '../../site.config.json';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schema?: object;
+  article?: boolean;
+  class?: string;
+}
+
+const { title, description, canonical, schema, article, class: bodyClass = '' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={siteConfig.locale}>
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      canonical={canonical}
+      schema={schema}
+      article={article}
+    />
+    {(siteConfig.monetization === 'ads' || siteConfig.monetization === 'both') && siteConfig.adsenseId && (
+      <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsenseId}`} crossorigin="anonymous"></script>
+    )}
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body class={`min-h-screen bg-gray-950 text-gray-100 ${bodyClass}`}>
+    <slot />
+    <Footer />
+    <ConsentBanner />
+    <Analytics />
+  </body>
+</html>

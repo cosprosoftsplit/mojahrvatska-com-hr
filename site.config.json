@@ -1,0 +1,16 @@
+{
+  "name": "mojahrvatska-com-hr",
+  "domain": "mojahrvatska.com.hr",
+  "siteName": "MojaHrvatska",
+  "locale": "hr",
+  "emoji": "\ud83c\udded\ud83c\uddf7",
+  "themeColor": "#1e3a5f",
+  "primaryKeywords": ["broj stanovnika", "hrvatska gradovi", "stanovnistvo", "popis 2021", "zupanije hrvatska", "opcine hrvatska"],
+  "monetization": "ads",
+  "adsenseId": "",
+  "cfBeacon": "",
+  "buildSchedule": "none",
+  "dataSource": "none",
+  "template": "content-site",
+  "createdAt": "2026-02-16T00:00:00Z"
+}
