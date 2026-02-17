@@ -239,8 +239,8 @@
     ]
   },
   "sveta-nedelja": {
-    "description": "Sveta Nedelja je općina u Hrvatskoj. Općina se nalazi u Istarskoj županiji. Općinom je proglašena 1993. godine. Sjedište općine je u naselju Nedešćina.",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/3d/Sveta_Nedelja%2C_op%C4%87ina_%28grb%29.gif",
+    "description": "Sveta Nedelja je grad u Hrvatskoj, u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/82/Grb_Sveta_Nedelja.png",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Crkva%20Presvetog%20Trojstva%2C%20Sveta%20Nedelja.jpg",
     "postalCode": "10431",
     "elevation": 144,
@@ -393,7 +393,8 @@
     ]
   },
   "glina": {
-    "description": "Glina može značiti:glina (tlo)\nGlina (grad), grad u Hrvatskoj\nGlina (rijeka), rijeka u Hrvatskoj\nGlina, grad u Rumunjskoj",
+    "description": "Glina je grad u središnjoj Hrvatskoj. Poznata je i kao \"Grad hrvatske himne\", zbog činjenice da je Josip Runjanin u Glini skladao himnu.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/29/Glina_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Hrvatska%20ulica%2C%20Glina.jpg",
     "postalCode": "44400",
     "elevation": 113,
@@ -1432,6 +1433,8 @@
     ]
   },
   "ilok": {
+    "description": "Ilok je najistočniji grad u Hrvatskoj, a pripada Vukovarsko-srijemskoj županiji. Poznat je po nadimcima mali Dubrovnik i Dubrovnik na istoku.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8b/Ilok_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Ilok%20view.jpg",
     "postalCode": "32236",
     "elevation": 135,
@@ -1454,6 +1457,8 @@
     ]
   },
   "vinkovci": {
+    "description": "Vinkovci su grad u istočnoj Hrvatskoj. Nalazi se u Vukovarsko-srijemskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/55/Vinkovci_%28grb%29.gif",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Vinkovci.jpg",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Cibalae-Vinkovci-%D0%92%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D1%86%D0%B8-Winkowitz.png",
     "postalCode": "32100",
@@ -1500,6 +1505,8 @@
     ]
   },
   "hvar": {
+    "description": "Hvar je grad na istoimenom otoku u Hrvatskoj i važno turističko odredište.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/69/Hvar_seal.gif",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/Hvar%20seal.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20image%20of%20Hvar%20%28view%20from%20the%20south%29.jpg",
     "postalCode": "21450",
@@ -1528,6 +1535,8 @@
     ]
   },
   "kastela": {
+    "description": "Kaštela su grad u Hrvatskoj koji administrativno pripadaju Splitsko-dalmatinskoj županiji te su dio aglomeracije grada Splita. Pod nazivom ‘Kaštela’ podrazumijeva se niz od sedam spojenih naselja između Solina i Trogira.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/13/Ka%C5%A1tela_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Ka%C5%A1tel%20Kambelovac%2C%20Croatia%20-%20panoramio.jpg",
     "elevation": 3,
     "officialWebsite": "https://kastela.hr",
@@ -1574,6 +1583,8 @@
     ]
   },
   "omis": {
+    "description": "Omiš je grad u Hrvatskoj, u Splitsko-dalmatinskoj županiji. Povijesni je grad koji ima kontinuitet postojanja od antike do danas. Središte je omiškog primorja i popularno turističko odredište.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f3/Omi%C5%A1_%28grb%29.gif",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Republic%20of%20Poljica.svg",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Omis%20bridge.jpg",
     "postalCode": "21310",
@@ -1615,6 +1626,8 @@
     ]
   },
   "solin": {
+    "description": "Solin je grad u Hrvatskoj koji administrativno pripada Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/31/Solin_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Solin%20a%20kostely.jpg",
     "postalCode": "21210",
     "elevation": 0,
@@ -1701,6 +1714,8 @@
     ]
   },
   "trilj": {
+    "description": "Trilj grad je u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8f/Trilj_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Trilj%20town.jpg",
     "postalCode": "21240",
     "elevation": 300,
@@ -1731,6 +1746,8 @@
     ]
   },
   "vis": {
+    "description": "Vis je grad u Hrvatskoj, na otoku Visu.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/12/Vis_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Vis%20Bay%2C%20Croatia.JPG",
     "postalCode": "21480",
     "elevation": 587,
@@ -1763,6 +1780,8 @@
     ]
   },
   "vrlika": {
+    "description": "Vrlika je grad u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d3/Vrlika_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Vrlika%20i%20sveti%20nikola.jpg",
     "postalCode": "21236",
     "elevation": 425,
@@ -1776,6 +1795,8 @@
     ]
   },
   "buje": {
+    "description": "Buje je grad u zapadnoj Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/35/Buje_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Buje1.jpg",
     "postalCode": "52460",
     "elevation": 222,
@@ -1802,6 +1823,8 @@
     ]
   },
   "labin": {
+    "description": "Labin grad je u zapadnoj Hrvatskoj, u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Grb_Grada_Labina.png/330px-Grb_Grada_Labina.png",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Labin.JPG",
     "postalCode": "52220",
     "elevation": 320,
@@ -1817,8 +1840,8 @@
     ]
   },
   "novigrad": {
-    "description": "Novigrad je naselje i općina u Zadarskoj županiji.",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/ab/Novigrad_dalmatinski_%28grb%29.gif",
+    "description": "Novigrad je grad u zapadnoj Hrvatskoj, smješten na zapadnoj obali Istre.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/58/Novigrad_%28grb%29.gif",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/Novigrad.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Novigrad1.jpg",
     "postalCode": "52466",
@@ -1843,6 +1866,8 @@
     ]
   },
   "porec": {
+    "description": "Poreč je grad na zapadu Hrvatske smješten na zapadnoj obali poluotoka Istre.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/aa/Pore%C4%8D_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/HR%20-Porec2.JPG",
     "postalCode": "34343",
     "elevation": 29,
@@ -1856,6 +1881,8 @@
     ]
   },
   "pula": {
+    "description": "Pula, grad na zapadu Hrvatske. Najveći je grad Istarske županije, leži na jugozapadnom području istarskog poluotoka u dobro zaštićenom zaljevu.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Grb_Pule_%282%29.svg/langhr-330px-Grb_Pule_%282%29.svg.png",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/Grb%20Pule%20%282%29.svg",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Pula%20Aerial%20View.jpg",
     "postalCode": "52100",
@@ -1871,6 +1898,8 @@
     ]
   },
   "rovinj": {
+    "description": "Rovinj je grad na zapadnom dijelu Hrvatske. Nalazi se na zapadnoj obali Istre. Skupa s Porečom čini turistički centar Istre, te je jedno od najprivlačnijih turističkih odredišta na Jadranu. Područje grada Rovinja graniči s općinama Bale, Kanfanar, Sv. Lovreč i Vrsar.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/69/Rovinj_%28grb%29.gif",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/HRV%20Rovinj%20COA.svg",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Rovinj%2C%20Croatia.jpg",
     "postalCode": "52210",
@@ -1899,6 +1928,8 @@
     ]
   },
   "vodnjan": {
+    "description": "Vodnjan je grad u južnoj Istri, desetak kilometara sjeverno od Pule. Vodnjan je jedan od centara istriotskog jezika. U crkvi sv. Blaža nalazi se svjetski poznata zbirka relikvija u Vodnjanu kao i Vodnjanske mumije svetaca.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/02/Vodnjan_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Vodnjan%203.JPG",
     "postalCode": "52215",
     "elevation": 135,
@@ -1938,6 +1969,8 @@
     ]
   },
   "korcula": {
+    "description": "Korčula je grad na istoimenom otoku u Dubrovačko-neretvanskoj županiji u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b5/Kor%C4%8Dula_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Korcula%20City.jpg",
     "postalCode": "20260",
     "elevation": 1,
@@ -1961,6 +1994,8 @@
     ]
   },
   "opuzen": {
+    "description": "Opuzen je grad u Dalmaciji, Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b9/Opuzen_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Neretva%20opuzen4.jpg",
     "postalCode": "20355",
     "elevation": 0,
@@ -1971,6 +2006,8 @@
     ]
   },
   "ploce": {
+    "description": "Ploče su grad u Hrvatskoj koji administrativno pripada Dubrovačko-neretvanskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/be/Plo%C4%8De_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20Plo%C4%8Da180899.JPG",
     "postalCode": "20340",
     "elevation": 1,
@@ -2001,6 +2038,8 @@
     ]
   },
   "mursko-sredisce": {
+    "description": "Mursko Središće je grad u sjevernoj Hrvatskoj.\nMursko Središće je povezano prometnicama prema Čakovcu, Podturnu i prema Sv. Martinu na Muri te graničnom prijelazu prema Sloveniji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Coat_of_arms_of_Mursko_Sredisce.svg/langhr-330px-Coat_of_arms_of_Mursko_Sredisce.svg.png",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Mursko%20Sredisce.svg",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Mursko%20Sredi%C5%A1%C4%87e%20111399367.jpg",
     "postalCode": "40315",
@@ -2067,6 +2106,8 @@
     ]
   },
   "bedenica": {
+    "description": "Bedenica je općina u Hrvatskoj. Nalazi se u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/94/Bedenica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -9.0% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.5 godina iznad je nacionalnog prosjeka (43.7)."
@@ -2081,12 +2122,16 @@
     ]
   },
   "brckovljani": {
+    "description": "Brckovljani su općina u Hrvatskoj. Nalaze se u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/9b/Brckovljani_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 2.4% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
       "Gustoća naseljenosti (150/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "brdovec": {
+    "description": "Brdovec je općina u Hrvatskoj. Nalazi se u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/49/Brdovec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan rast od 5.3% u desetljeću 2011.–2021., što je znatno iznad nacionalnog trenda (-9.6%).",
       "Gustoća naseljenosti (345/km²) znatno je iznad nacionalnog prosjeka (68.4/km²).",
@@ -2094,7 +2139,8 @@
     ]
   },
   "dubrava": {
-    "description": "Dubrava može značiti:",
+    "description": "Dubrava je općina u Hrvatskoj, u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f3/Dubrava_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Peljesac%2C%20vinice%20u%20vsi%20Dubrava%20a%20vinarska%20usedlost.jpg",
     "postalCode": "20247",
     "elevation": 130,
@@ -2104,6 +2150,8 @@
     ]
   },
   "dubravica": {
+    "description": "Dubravica je naseljeno mjesto i istoimena općina u Hrvatskoj, u sastavu Zagrebačke županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f3/Dubravica_%28grb%29.gif",
     "postalCode": "20350",
     "conclusions": [
       "Stanovništvo bilježi značajan rast od 12.9% u desetljeću 2011.–2021., što je znatno iznad nacionalnog trenda (-9.6%).",
@@ -2120,6 +2168,8 @@
     ]
   },
   "gradec": {
+    "description": "Gradec je općina u Hrvatskoj. Nalazi se u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/49/Gradec_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Zagreb%20Gornji%20grad.jpg",
     "postalCode": "10000",
     "conclusions": [
@@ -2136,6 +2186,8 @@
     ]
   },
   "klinca-sela": {
+    "description": "Klinča Sela je općina u Središnjoj Hrvatskoj, u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f6/Klin%C4%8Da_Sela_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.1% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Udio mladih (0–14 godina) od 16.1% iznad je nacionalnog prosjeka (14.2%), što upućuje na povoljniju demografsku sliku."
@@ -2150,6 +2202,8 @@
     ]
   },
   "kravarsko": {
+    "description": "Kravarsko je općina u Hrvatskoj, u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/35/Kravarsko_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -12.6% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (30/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2157,8 +2211,8 @@
     ]
   },
   "luka": {
-    "description": "Luka je naselje i istoimena općina u Republici Hrvatskoj, u sastavu Zagrebačke županije.",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/19/Luka_%28grb%29.gif",
+    "description": "Luka je mjesto za pristajanje brodova te ukrcaj, prekrcaj ili iskrcaj tereta ili putnika s brodova i na njih, te ih temeljem toga dijelimo na putničke i teretne luke. Ako su tereti samo jedne vrste i služe kao odlazna postaja za promet roba i dobara proizvedenih u obližnjoj tvornici, rudniku ili naftnoj rafineriji, onda ih nazivamo terminalima.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Rijecka_luka_0807.jpg/330px-Rijecka_luka_0807.jpg",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/LukaVrbovecka.jpg",
     "postalCode": "10340",
     "officialWebsite": "https://www.rijeka.hr/mjesni-odbori/luka/",
@@ -2169,6 +2223,8 @@
     ]
   },
   "marija-gorica": {
+    "description": "Marija Gorica je ime naselja i općine u Hrvatskoj. Nalazi se u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/61/Marija_Gorica_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Marija%20Gorica%20-%20Sljeme%20%28Zagreb%20County%29.jpg",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 1.1% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
@@ -2185,6 +2241,8 @@
     ]
   },
   "pisarovina": {
+    "description": "Pisarovina je općina u Hrvatskoj, u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/1c/Pisarovina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.8% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (22/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2201,6 +2259,8 @@
     ]
   },
   "preseka": {
+    "description": "Preseka je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.8% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (9.4%) ispod je nacionalnog prosjeka (18.4%)."
@@ -2217,12 +2277,16 @@
     ]
   },
   "rakovec": {
+    "description": "Rakovec je općina u Hrvatskoj, u Zagrebačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/2c/Rakovec_%28grb%29.gif",
     "postalCode": "42222",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.7% u desetljeću 2011.–2021."
     ]
   },
   "rugvica": {
+    "description": "Rugvica je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c3/RugvicaGrb.jpg",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -0.7% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (122/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -2238,6 +2302,8 @@
     ]
   },
   "zumberak": {
+    "description": "Žumberak ili Žumberačka gora je gorje na sjeverozapadu Hrvatske, južno od Zagorja i zapadno od Zagreba te dijelom u Sloveniji. Žumberak je i naziv za hrvatsku mikroregiju koja obuhvaća hrvatski dio gore, ali bez Samoborskoga gorja. Najviši je vrh Sveta Gera na 1178 metara nadmorske visine, koji je ujedno i najviši vrh kontinentalne Hrvatske. Žumberak još nazivaju i Alpska Hrvatska. Žumberačko gorje tvori nekoliko gorskih lanaca: Žumberačka gora, Samoborsko gorje i Plešivica.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Gorjanci.jpg/330px-Gorjanci.jpg",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -25.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (4/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2246,6 +2312,8 @@
     ]
   },
   "klostar-ivanic": {
+    "description": "Kloštar Ivanić je naseljeno mjesto i istoimena općina u blizini Ivanić-Grada, pripada Zagrebačkoj županiji u Republici Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/36/Klo%C5%A1tar_Ivani%C4%87_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.1% u desetljeću 2011.–2021."
     ]
@@ -2258,6 +2326,8 @@
     ]
   },
   "bedekovcina": {
+    "description": "Bedekovčina je naseljeno mjesto i istoimena općina u Hrvatskom zagorju. Pripada Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f8/Bedekov%C4%8Dina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.8% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (245/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -2265,6 +2335,8 @@
     ]
   },
   "budinscina": {
+    "description": "Budinščina je općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/de/Budin%C5%A1%C4%8Dina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -9.4% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.3 godina iznad je nacionalnog prosjeka (43.7)."
@@ -2279,6 +2351,8 @@
     ]
   },
   "durmanec": {
+    "description": "Đurmanec je općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/69/%C4%90urmanec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -12.7% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (6.6%) ispod je nacionalnog prosjeka (18.4%)."
@@ -2294,6 +2368,8 @@
     ]
   },
   "hrascina": {
+    "description": "Hrašćina je općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/79/Hra%C5%A1%C4%87ina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.3% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (111/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -2302,11 +2378,15 @@
     ]
   },
   "hum-na-sutli": {
+    "description": "Hum na Sutli je naseljeno mjesto i istoimena općina u Hrvatskom zagorju, u sastavu Krapinsko-zagorske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/2e/Hum_na_Sutli_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.2% u desetljeću 2011.–2021."
     ]
   },
   "jesenje": {
+    "description": "Jesenje je općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/88/Jesenje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (7.2%) ispod je nacionalnog prosjeka (18.4%)."
@@ -2322,12 +2402,16 @@
     ]
   },
   "krapinske-toplice": {
+    "description": "Krapinske Toplice su općina u sjeverozapadnoj Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b3/Krapinske_Toplice_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -3.2% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (160/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "kumrovec": {
+    "description": "Kumrovec je naselje i općina u Hrvatskom zagorju. Pripada Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8d/Kumrovec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -15.9% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.0 godina iznad je nacionalnog prosjeka (43.7)."
@@ -2342,12 +2426,16 @@
     ]
   },
   "mace": {
+    "description": "Mače je općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/41/Ma%C4%8De_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -16.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (6.9%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "marija-bistrica": {
+    "description": "Marija Bistrica je općina u Hrvatskom zagorju, u Krapinsko-zagorskoj županiji. Poznata je po hrvatskom nacionalnom marijanskom svetištu.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/0d/Marija_Bistrica.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.9% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (174/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -2356,6 +2444,8 @@
     ]
   },
   "mihovljan": {
+    "description": "Mihovljan je općina u Hrvatskoj kod Zlatara, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/44/Mihovljan_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Mihovljan%20%28Me%C4%91imurje%29%20-%20ulaz.jpg",
     "postalCode": "40000",
     "conclusions": [
@@ -2373,6 +2463,8 @@
     ]
   },
   "petrovsko": {
+    "description": "Petrovsko je općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/5a/Petrovsko_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.0% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (119/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -2389,6 +2481,8 @@
     ]
   },
   "stubicke-toplice": {
+    "description": "Stubičke Toplice su općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/7f/Stubi%C4%8Dke_Toplice_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -7.6% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (228/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -2396,6 +2490,8 @@
     ]
   },
   "sveti-kriz-zacretje": {
+    "description": "Sveti Križ Začretje je općina u Hrvatskoj, u Krapinsko-zagorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/68/Sveti_Kri%C5%BE_Za%C4%8Dretje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -5.2% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (185/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -2410,6 +2506,8 @@
     ]
   },
   "veliko-trgovisce": {
+    "description": "Veliko Trgovišće je naseljeno mjesto i istoimena općina u Hrvatskom zagorju, u sastavu Krapinsko-zagorske županije.\nPrvi put u pisanim dokumentima spominje se 1501. godine. Nalazili su se posjedi grofova Erdödy iz Novih Dvora Klanječkih.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/14/Veliko_Trgovi%C5%A1%C4%87e_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -9.4% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (150/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -2425,6 +2523,8 @@
     ]
   },
   "kraljevec-na-sutli": {
+    "description": "Kraljevec na Sutli je naseljeno mjesto i istoimena općina u Hrvatskom zagorju u sastavu Krapinsko-zagorske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/1c/Kraljevec_na_Sutli_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.2% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (9.6%) ispod je nacionalnog prosjeka (18.4%)."
@@ -2439,6 +2539,8 @@
     ]
   },
   "donji-kukuruzari": {
+    "description": "Donji Kukuruzari su naselje i općina u Republici Hrvatskoj, u Sisačko-moslavačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/80/Donji_Kukuruzari_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -24.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (19/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2460,6 +2562,8 @@
     ]
   },
   "gvozd": {
+    "description": "Gvozd je općina u Hrvatskoj, u Sisačko-moslavačkoj županiji. Sjedište Općine Gvozd nalazi se u naselju Vrginmost, koje je u razdoblju od 1996. do 2012. također nosilo naziv Gvozd.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/22/Gvozd_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (11/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -2480,6 +2584,8 @@
     ]
   },
   "jasenovac": {
+    "description": "Jasenovac je općina u Hrvatskoj, u Sisačko-moslavačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/3b/Jasenovac_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Manastir%20Jasenovac.jpg",
     "postalCode": "44324",
     "elevation": 93,
@@ -2500,6 +2606,8 @@
     ]
   },
   "lipovljani": {
+    "description": "Lipovljani su općina u Sisačko-moslavačkoj županiji u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/dc/Lipovljani_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -16.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (19/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -2516,6 +2624,8 @@
     ]
   },
   "martinska-ves": {
+    "description": "Martinska Ves je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/a0/Martinska_Ves_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Martinska%20Ves%20-%20Panorama%20-%20panoramio.jpg",
     "postalCode": "10340",
     "conclusions": [
@@ -2523,6 +2633,8 @@
     ]
   },
   "sunja": {
+    "description": "Sunja je općina u Hrvatskoj, u Sisačko-moslavačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c6/Sunja_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -22.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (17/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2540,6 +2652,8 @@
     ]
   },
   "velika-ludina": {
+    "description": "Velika Ludina je općina u Hrvatskoj, u Sisačko-moslavačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c4/Velika_Ludina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.5% u desetljeću 2011.–2021."
     ]
@@ -2554,6 +2668,8 @@
     ]
   },
   "bosiljevo": {
+    "description": "Bosiljevo je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/66/Bosiljevo_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Bosiljevo%20sv.%20Mavra%20opata-%D0%91%D0%BE%D1%81%D0%B8%D1%99%D0%B5%D0%B2%D0%BE%20%D1%81%D0%B2.%20%D0%9C%D0%B0%D0%B2%D1%80%D0%B0%20%D0%BE%D0%BF%D0%B0%D1%82%D0%B0.jpg",
     "postalCode": "43240",
     "elevation": 199,
@@ -2566,6 +2682,8 @@
     ]
   },
   "cetingrad": {
+    "description": "Cetingrad je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/87/Cetingrad_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -25.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (9/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2581,6 +2699,8 @@
     ]
   },
   "generalski-stol": {
+    "description": "Generalski Stol je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/bb/Generalski_Stol_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (16/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2596,6 +2716,8 @@
     ]
   },
   "kamanje": {
+    "description": "Kamanje su općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/2b/Kamanje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.8% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (4.4%) ispod je nacionalnog prosjeka (18.4%)."
@@ -2612,6 +2734,8 @@
     ]
   },
   "lasinja": {
+    "description": "Lasinja je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/98/Lasinja_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (13/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2619,6 +2743,8 @@
     ]
   },
   "netretic": {
+    "description": "Netretić je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/65/Netreti%C4%87_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (21/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2626,6 +2752,8 @@
     ]
   },
   "plaski": {
+    "description": "Plaški je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -24.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (7/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2641,6 +2769,8 @@
     ]
   },
   "ribnik": {
+    "description": "Ribnik je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/91/Ribnik_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (6/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2658,6 +2788,8 @@
     ]
   },
   "tounj": {
+    "description": "Tounj je općina u Hrvatskoj, u Karlovačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e0/Tounj_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.8% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (9/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2665,6 +2797,8 @@
     ]
   },
   "vojnic": {
+    "description": "Vojnić je općina u Hrvatskoj u Karlovačkoj županiji, 4764 st. (2011.). Općinsko središte Vojnić se nalazi 22 kilometra od Karlovca.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/34/Vojni%C4%87_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -25.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (15/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -2681,18 +2815,24 @@
     ]
   },
   "bednja": {
+    "description": "Bednja je naselje i općina u Hrvatskoj na rijeci Bednji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (7.0%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "beretinec": {
+    "description": "Beretinec je općina u Hrvatskoj, u Varaždinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/96/Beretinec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.5% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (164/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "breznica": {
+    "description": "Breznica je općina u Hrvatskoj, u Varaždinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/12/Breznica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -9.3% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (106/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -2706,6 +2846,8 @@
     ]
   },
   "cestica": {
+    "description": "Cestica je općina u Hrvatskoj. Smještena je u Varaždinskoj županiji. Općinska uprava smještena je u naselju Cestica.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/1f/Cestica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (118/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -2720,6 +2862,8 @@
     ]
   },
   "jalzabet": {
+    "description": "Jalžabet je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/38/Jal%C5%BEabet_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.6% u desetljeću 2011.–2021."
     ]
@@ -2733,12 +2877,16 @@
     ]
   },
   "marusevec": {
+    "description": "Maruševec je općina u Varaždinskoj županiji, Hrvatska.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/cc/Maru%C5%A1evec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.3% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (121/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "petrijanec": {
+    "description": "Petrijanec je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c3/Petrijanec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -12.2% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (179/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -2753,12 +2901,16 @@
     ]
   },
   "sveti-durd": {
+    "description": "Sveti Đurđ je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e9/Sveti_%C4%90ur%C4%91_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.7% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (107/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "sveti-ilija": {
+    "description": "Ilija prorok starozavjetni je prorok rodom iz Tišbe, pa se naziva i Tišbijcem.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kip_Sv._Ilije_na_brdu_Karmelu.jpg/330px-Kip_Sv._Ilije_na_brdu_Karmelu.jpg",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -5.1% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (204/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -2775,6 +2927,8 @@
     ]
   },
   "vidovec": {
+    "description": "Vidovec je općina u Hrvatskoj, u Varaždinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/0c/Vidovec_%28grb%29.gif",
     "postalCode": "10040",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.0% u desetljeću 2011.–2021.",
@@ -2791,11 +2945,15 @@
     ]
   },
   "visoko": {
+    "description": "Visoko je općina u Hrvatskoj, Varaždinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/62/Visoko_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.3% u desetljeću 2011.–2021."
     ]
   },
   "veliki-bukovec": {
+    "description": "Veliki Bukovec je općina i selo u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "postalCode": "49251",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.4% u desetljeću 2011.–2021.",
@@ -2814,12 +2972,16 @@
     ]
   },
   "gornji-kneginec": {
+    "description": "Gornji Kneginec je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/dc/Gornji_Kneginec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.5% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (262/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "ljubescica": {
+    "description": "Ljubešćica je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/96/Ljube%C5%A1%C4%87ica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -12.7% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (7.9%) ispod je nacionalnog prosjeka (18.4%)."
@@ -2838,6 +3000,8 @@
     ]
   },
   "drnje": {
+    "description": "Drnje je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e9/Drnje_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Drnje%2C%20Croatia%20-%20panoramio.jpg",
     "postalCode": "48322",
     "officialWebsite": "http://www.drnje.hr",
@@ -2847,6 +3011,8 @@
     ]
   },
   "delekovec": {
+    "description": "Đelekovec je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/63/%C4%90elekovec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.7% u desetljeću 2011.–2021."
     ]
@@ -2860,6 +3026,8 @@
     ]
   },
   "gola": {
+    "description": "Gola je općina u Hrvatskoj. Ime mjesta dolazi iz mađarskog jezika i znači roda. Naime općina je poznata po velikom broju roda koje se gnijezde u njoj. Općina se nalazi u prekodravskom dijelu Koprivničko-križevačke županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/61/Gola_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Gola%20crkva%20-%20panoramio.jpg",
     "postalCode": "48331",
     "officialWebsite": "https://www.gola.hr/",
@@ -2875,12 +3043,16 @@
     ]
   },
   "hlebine": {
+    "description": "Hlebine su općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/32/Hlebine_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (6.3%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "kalinovac": {
+    "description": "Kalinovac je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/25/Kalinovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
@@ -2895,6 +3067,8 @@
     ]
   },
   "klostar-podravski": {
+    "description": "Kloštar Podravski je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/77/Klo%C5%A1tar_Podravski_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
@@ -2907,12 +3081,16 @@
     ]
   },
   "koprivnicki-ivanec": {
+    "description": "Koprivnički Ivanec je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b0/Koprivni%C4%8Dki_Ivanec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.3% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.8 godina iznad je nacionalnog prosjeka (43.7)."
     ]
   },
   "legrad": {
+    "description": "Legrad je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/20/Legrad_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -27.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (8.5%) ispod je nacionalnog prosjeka (18.4%)."
@@ -2935,18 +3113,24 @@
     ]
   },
   "novo-virje": {
+    "description": "Novo Virje je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/34/Novo_Virje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -26.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (5.3%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "peteranec": {
+    "description": "Peteranec je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/4a/Peteranec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -12.3% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (6.1%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "podravske-sesvete": {
+    "description": "Podravske Sesvete su općina u Hrvatskoj. Nalaze se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/23/Podravske_Sesvete_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -16.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
@@ -2960,6 +3144,8 @@
     ]
   },
   "sokolovac": {
+    "description": "Sokolovac je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/3c/Sokolovac_%28grb%29.gif",
     "postalCode": "43506",
     "elevation": 115,
     "conclusions": [
@@ -2970,6 +3156,8 @@
     ]
   },
   "sveti-ivan-zabno": {
+    "description": "Sveti Ivan Žabno je općina u Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/66/Sveti_Ivan_%C5%BDabno_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.9% u desetljeću 2011.–2021."
     ]
@@ -2982,12 +3170,16 @@
     ]
   },
   "virje": {
+    "description": "Virje je općina u sjeveroistočnoj Hrvatskoj. Nalazi se u Koprivničko-križevačkoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/03/Virje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 45.9 godina iznad je nacionalnog prosjeka (43.7)."
     ]
   },
   "berek": {
+    "description": "Berek je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/9e/Berek_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -16.5% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (29/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3005,6 +3197,8 @@
     ]
   },
   "dulovac": {
+    "description": "Đulovac mjesto je i središte općine u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/46/%C4%90ulovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (16/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3012,6 +3206,8 @@
     ]
   },
   "hercegovac": {
+    "description": "Hercegovac je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f0/Hercegovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -22.5% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (33/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3028,11 +3224,15 @@
     ]
   },
   "kapela": {
+    "description": "Kapela je naziv za manju crkvenu građevinu, obično ovisnu o nekoj većoj župnoj crkvi. Kapela može biti samostojeća građevina, ali je češće dio većeg objekta poput veće crkve, palače, groblja, bolnice, zatvora ili škole.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kapela_Svetog_Fabijana_i_Sebastijana_Brinje_07.jpg/330px-Kapela_Svetog_Fabijana_i_Sebastijana_Brinje_07.jpg",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
   },
   "koncanica": {
+    "description": "Končanica je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/6a/Kon%C4%8Danica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (31/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3048,6 +3248,8 @@
     ]
   },
   "rovisce": {
+    "description": "Rovišće općina je u Hrvatskoj. Nalazi se u Bjelovarsko-bilogorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c7/Rovi%C5%A1%C4%87e_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.5% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (8.4%) ispod je nacionalnog prosjeka (18.4%)."
@@ -3062,6 +3264,8 @@
     ]
   },
   "sirac": {
+    "description": "Sirač je općina u Hrvatskoj. Nalazi se u Bjelovarsko-bilogorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e7/Sira%C4%8D_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -22.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (23/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3076,11 +3280,15 @@
     ]
   },
   "stefanje": {
+    "description": "Štefanje, Stipandan, Stipanjdan, Stipanovo, Stjepandan ili Stjepanje blagdan je sv. Stjepana Prvomučenika koji se u Katoličkoj Crkvi slavi 26. prosinca, drugoga dana Božića i Božićne osmine. Državni je blagdan u Hrvatskoj i nizu drugih država. U crkvama koje koriste gregorijanski kalendar blagdan je 27. prosinca, a u onima koje koriste julijanski kalendar 9. siječnja.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/St-stephen.jpg/330px-St-stephen.jpg",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.9% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
   },
   "velika-pisanica": {
+    "description": "Velika Pisanica je općina u Hrvatskoj, u sastavu Bjelovarsko-bilogorske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/28/Velika_Pisanica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
@@ -3094,6 +3302,8 @@
     ]
   },
   "veliki-grdevac": {
+    "description": "Veliki Grđevac je općina u Republici Hrvatskoj, u sastavu Bjelovarsko-bilogorske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/34/Veliki_Gr%C4%91evac_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Veliki%20Gr%C4%91evac%20-%20The%20Church%20-%20panoramio.jpg",
     "postalCode": "43270",
     "elevation": 146,
@@ -3112,6 +3322,8 @@
     ]
   },
   "zrinski-topolovac": {
+    "description": "Zrinski Topolovac je općina u Hrvatskoj, smještena u Bjelovarsko-bilogorskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/9e/Zrinski_Topolovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (23/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3127,6 +3339,8 @@
     ]
   },
   "brod-moravice": {
+    "description": "Brod Moravice je općina u Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/63/Brod_Moravice_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Brod%20Moravice.jpg",
     "postalCode": "51312",
     "elevation": 600,
@@ -3138,6 +3352,8 @@
     ]
   },
   "cavle": {
+    "description": "Čavle je općina u Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji.\t\nPovoljan prometno-zemljopisni položaj Rijeke u srednjeeuropskom prostoru je značajan preduvjet razvoja općina u riječkom prstenu, a tendencija širenja i suburbanizacija Rijeke potenciraju razvojne mogućnosti općine Čavle.\nPreko Grobničkog polja i većeg dijela područja općine prolazi državna cesta Zagreb – Rijeka, jedna od najvažnijih prometnica u funkciji prometnog povezivanja Hrvatske i središnje Europe.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Grb_%C4%8Cavla.svg/langhr-330px-Grb_%C4%8Cavla.svg.png",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/%C4%8Cavle%20-%20panoramio%20%281%29.jpg",
     "postalCode": "51219",
     "licensePlate": "RI",
@@ -3147,6 +3363,8 @@
     ]
   },
   "dobrinj": {
+    "description": "Dobrinj je naselje i općina u Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji na sjeveroistočnom dijelu otoka Krka.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/30/Dobrinj_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -5.2% u desetljeću 2011.–2021."
     ]
@@ -3161,6 +3379,8 @@
     ]
   },
   "jelenje": {
+    "description": "Jelenje je općina u Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e5/Jelenje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -5.2% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (121/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -3168,6 +3388,8 @@
     ]
   },
   "klana": {
+    "description": "Klana je mjesto i općina u Hrvatskoj, u Primorsko-goranskoj županiji, na Krasu sjeverozapadno od Rijeke.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/fc/Klana_novi_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.0% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (18/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3175,6 +3397,8 @@
     ]
   },
   "kostrena": {
+    "description": "Kostrena je općina u Hrvatskoj, u Primorsko-goranskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8a/Kostrena_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 2.3% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
       "Gustoća naseljenosti (360/km²) znatno je iznad nacionalnog prosjeka (68.4/km²).",
@@ -3193,6 +3417,8 @@
     ]
   },
   "lovran": {
+    "description": "Lovran je općina u Primorsko-goranskoj županiji na istočnoj obali poluotoka Istre u Republici Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/08/Lovran_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Lovran%20vanuit%20Liganj.jpg",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.4% u desetljeću 2011.–2021.",
@@ -3201,12 +3427,15 @@
     ]
   },
   "malinska-dubasnica": {
+    "description": "Malinska je naselje na otoku Krku u Hrvatskoj, i sjedište općine Malinske – Dubašnice.",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -0.5% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Udio visokoobrazovanih (6.2%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "matulji": {
+    "description": "Matulji su općina u zapadnoj Hrvatskoj. Dio su Primorsko-goranske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/a6/Matulji_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -3.8% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Udio visokoobrazovanih (6.3%) ispod je nacionalnog prosjeka (18.4%).",
@@ -3214,6 +3443,8 @@
     ]
   },
   "moscenicka-draga": {
+    "description": "Mošćenička Draga je općina u Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/cc/Mo%C5%A1%C4%87eni%C4%8Dka_Draga_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.0% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (32/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3232,6 +3463,8 @@
     ]
   },
   "omisalj": {
+    "description": "Omišalj je općina u zapadnoj Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji, na otoku Krku.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/06/Omi%C5%A1alj_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Town%20Omi%C5%A1alj%20on%20Krk%20from%20Forticina.jpg",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -2.5% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
@@ -3249,6 +3482,8 @@
     ]
   },
   "ravna-gora": {
+    "description": "Ravna Gora je općina u Gorskom kotaru, u Primorsko-goranskoj županiji. Smjestila se u središnjem dijelu Gorskog kotara na visoravni prosječne nadmorske visine od 775–910 metara po kojoj je navodno i dobila ime. Cijelo je ravnogorsko polje nekoć bilo gusta šuma okružena brdima.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Sve%C4%8Dani_grb_Ravne_Gore.svg/langhr-330px-Sve%C4%8Dani_grb_Ravne_Gore.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -23.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (23/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3256,6 +3491,8 @@
     ]
   },
   "skrad": {
+    "description": "Skrad je općina u Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/3d/Skrad_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -22.9% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (14/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3263,6 +3500,8 @@
     ]
   },
   "vinodolska-opcina": {
+    "description": "Vinodolska općina je općina u Hrvatskoj. Nalazi se u Primorsko-goranskoj županiji. Administrativno središte općine je naselje Bribir.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/eb/Vinodolska_op%C4%87ina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.4% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%)."
     ]
@@ -3314,6 +3553,8 @@
     ]
   },
   "lovinac": {
+    "description": "Lovinac je općina u Hrvatskoj, u Ličko-senjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/82/Lovinac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (3/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3321,6 +3562,8 @@
     ]
   },
   "perusic": {
+    "description": "Perušić je općina u Ličko-senjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b0/Peru%C5%A1i%C4%87_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -22.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (5/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3336,6 +3579,8 @@
     ]
   },
   "udbina": {
+    "description": "Udbina je općina u Hrvatskoj. Nalazi se u Lici i upravno pripada Ličko-senjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/a3/Udbina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (3/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3352,6 +3597,8 @@
     ]
   },
   "crnac": {
+    "description": "Negroidi ili crnci su prema nekadašnjoj, a danas uglavnom napuštenoj rasnoj podjeli, pripadnici ljudske rase karakterizirane crnom bojom kože.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Kenyan_man_2.jpg/330px-Kenyan_man_2.jpg",
     "postalCode": "44010",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.5% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -3370,6 +3617,8 @@
     ]
   },
   "cadavica": {
+    "description": "Čađavica je općina u Hrvatskoj. Nalazi se na sjeveroistoku Virovitičko-podravske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/93/%C4%8Ca%C4%91avica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (15/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3378,6 +3627,8 @@
     ]
   },
   "gradina": {
+    "description": "Gradina je općina u Hrvatskoj. Nalazi se u Virovitičko-podravskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/ec/Gradina_%28grb%29.gif",
     "postalCode": "52450",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -3385,6 +3636,8 @@
     ]
   },
   "lukac": {
+    "description": "Lukač je općina u Hrvatskoj. Nalazi se u Virovitičko-podravskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f1/Luka%C4%8D_%28grb%29.gif",
     "postalCode": "34335",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -15.9% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -3401,6 +3654,8 @@
     ]
   },
   "nova-bukovica": {
+    "description": "Nova Bukovica je općina u Hrvatskoj. Nalazi se u Virovitičko-podravskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e6/Nova_Bukovica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (16/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3409,6 +3664,8 @@
     ]
   },
   "pitomaca": {
+    "description": "Pitomača je općina u sjeveroistočnoj Hrvatskoj. Nalazi se u Virovitičko-podravskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/93/Pitoma%C4%8Da_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -15.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.9 godina iznad je nacionalnog prosjeka (43.7)."
@@ -3423,11 +3680,15 @@
     ]
   },
   "suhopolje": {
+    "description": "Suhopolje je općina u Hrvatskoj, u sastavu Virovitičko-podravske županije. Dan općine je 15. kolovoza, blagdan Velike Gospe.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/31/Suhopolje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -23.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
   },
   "spisic-bukovica": {
+    "description": "Špišić Bukovica je općina u Hrvatskoj. Nalazi se u Virovitičko-podravskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/50/%C5%A0pi%C5%A1i%C4%87_Bukovica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.7 godina iznad je nacionalnog prosjeka (43.7).",
@@ -3435,6 +3696,8 @@
     ]
   },
   "vocin": {
+    "description": "Voćin je naselje i općina u Hrvatskoj, smještena u južnom dijelu Virovitičko-podravske županije. Graniči s gradom Slatinom, općinama Suhopolje, Čačinci i Mikleuš, te sa županijama Bjelovarsko-bilogorskom i Požeško-slavonskom.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Grb_Vo%C4%87in.svg/langhr-330px-Grb_Vo%C4%87in.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (10/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -3449,6 +3712,8 @@
     ]
   },
   "brestovac": {
+    "description": "Brestovac je naseljeno mjesto i istoimena općina u Slavoniji, u Požeško-slavonskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -23.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (25/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -3463,6 +3728,8 @@
     ]
   },
   "jaksic": {
+    "description": "Jakšić je općina u Hrvatskoj, u Požeško-slavonskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/13/Jak%C5%A1i%C4%87_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.4% u desetljeću 2011.–2021."
     ]
@@ -3475,6 +3742,8 @@
     ]
   },
   "velika": {
+    "description": "Velika je općina u Hrvatskoj, u Požeško-slavonskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e6/Velika_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (26/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3482,6 +3751,8 @@
     ]
   },
   "bebrina": {
+    "description": "Bebrina je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/73/Bebrina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -26.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (30/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3489,18 +3760,23 @@
     ]
   },
   "brodski-stupnik": {
+    "description": "Brodski Stupnik je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b1/Hr%29sb-bs.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -15.9% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (8.3%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "bukovlje": {
+    "description": "Bukovlje je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.7% u desetljeću 2011.–2021."
     ]
   },
   "cernik": {
-    "description": "Cernik može značiti:Cernik, općina\nCernik (Žumberak)\nCernik (Čavle)",
+    "description": "Cernik je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/cc/Cernik_%28grb%29.gif",
     "postalCode": "10457",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -25.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -3508,6 +3784,8 @@
     ]
   },
   "davor": {
+    "description": "Davor je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Grb_Davor.svg/langhr-330px-Grb_Davor.svg.png",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Sava%20River%20Aerial.jpg",
     "postalCode": "35425",
     "officialWebsite": "http://www.davor.hr/",
@@ -3523,12 +3801,16 @@
     ]
   },
   "dragalic": {
+    "description": "Dragalić je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -28.9% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (19/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
     ]
   },
   "garcin": {
+    "description": "Garčin je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/94/Gar%C4%8Din_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (6.6%) ispod je nacionalnog prosjeka (18.4%)."
@@ -3543,6 +3825,8 @@
     ]
   },
   "gornji-bogicevci": {
+    "description": "Gornji Bogićevci su općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/47/Gornji_Bogi%C4%87evci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -26.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (10/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -3557,6 +3841,8 @@
     ]
   },
   "klakar": {
+    "description": "Klakar je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/67/Klakar_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.4% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.3 godina iznad je nacionalnog prosjeka (43.7).",
@@ -3564,6 +3850,8 @@
     ]
   },
   "okucani": {
+    "description": "Okučani su općina u Hrvatskoj, u jugozapadnoj Slavoniji, u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c5/Oku%C4%8Dani_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (20/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3571,6 +3859,8 @@
     ]
   },
   "oprisavci": {
+    "description": "Oprisavci su općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c5/Oprisavci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (8.6%) ispod je nacionalnog prosjeka (18.4%)."
@@ -3586,18 +3876,24 @@
     ]
   },
   "podcrkavlje": {
+    "description": "Podcrkavlje je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/7f/Hr%29sb-pc.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (6.3%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "resetari": {
+    "description": "Rešetari su općina u Hrvatskoj, u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8d/Hr%29sb-rs.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (6.3%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "sibinj": {
+    "description": "Sibinj je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/a9/Sibinj_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (7.8%) ispod je nacionalnog prosjeka (18.4%)."
@@ -3612,6 +3908,8 @@
     ]
   },
   "slavonski-samac": {
+    "description": "Slavonski Šamac je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Slavonski%20%C5%A0amac%2C%20ku%C4%87e%20kraj%20%C5%BEeljeznice.jpg",
     "postalCode": "35220",
     "officialWebsite": "https://www.slavonski-samac.hr/",
@@ -3622,6 +3920,8 @@
     ]
   },
   "stara-gradiska": {
+    "description": "Stara Gradiška je općina u Hrvatskoj. Nalazi se u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/72/Stara_Gradi%C5%A1ka_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Zidine%20-%20panoramio.jpg",
     "postalCode": "35435",
     "officialWebsite": "https://www.staragradiska.com/",
@@ -3639,6 +3939,8 @@
     ]
   },
   "velika-kopanica": {
+    "description": "Velika Kopanica je općina u Hrvatskoj, u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/19/Hr%29sb-vk.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.6 godina iznad je nacionalnog prosjeka (43.7).",
@@ -3654,6 +3956,8 @@
     ]
   },
   "vrpolje": {
+    "description": "Vrpolje je općina u Hrvatskoj, u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/ab/Vrpolje_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Station%20Primorsko%20Vrpolje.JPG",
     "postalCode": "22000",
     "conclusions": [
@@ -3661,6 +3965,8 @@
     ]
   },
   "nova-kapela": {
+    "description": "Nova Kapela je općina u Hrvatskoj, u Brodsko-posavskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/3d/Nova_Kapela_%28grb%29.gif",
     "postalCode": "10343",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -16.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -3679,12 +3985,16 @@
     ]
   },
   "galovac": {
+    "description": "Galovac je općina u Zadarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/7c/Galovac_%28grb%29.gif",
     "postalCode": "43000",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -5.8% u desetljeću 2011.–2021."
     ]
   },
   "gracac": {
+    "description": "Gračac je općina u Zadarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/75/Gra%C4%8Dac_%28grb%29.gif",
     "postalCode": "22222",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -26.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -3702,6 +4012,8 @@
     ]
   },
   "kali": {
+    "description": "Kali je općina na otoku Ugljanu, u Zadarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/14/Kali_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -5.9% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (249/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -3716,6 +4028,8 @@
     ]
   },
   "lisane-ostrovicke": {
+    "description": "Lišane Ostrovičke su općina u Hrvatskoj, u Zadarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/0e/Li%C5%A1ane_Ostrovi%C4%8Dke_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.6% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (20/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3723,6 +4037,8 @@
     ]
   },
   "pakostane": {
+    "description": "Pakoštane su općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/68/Pako%C5%A1tane_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.3% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (123/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -3738,12 +4054,16 @@
     ]
   },
   "policnik": {
+    "description": "Poličnik je općina u Zadarskoj županiji, u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/75/Poli%C4%8Dnik_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 3.7% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
       "Udio visokoobrazovanih (8.1%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "polaca": {
+    "description": "Polača je općina u Hrvatskoj u Zadarskoj županiji, smještena između Biograda na Moru i Benkovca.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/f1/Pola%C4%8Da_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Crkva-Pola%C4%8Da.png",
     "postalCode": "22302",
     "conclusions": [
@@ -3754,6 +4074,8 @@
     ]
   },
   "posedarje": {
+    "description": "Posedarje je naselje i općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/94/Posedarje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.5% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.5 godina iznad je nacionalnog prosjeka (43.7)."
@@ -3768,6 +4090,8 @@
     ]
   },
   "privlaka-zadar": {
+    "description": "Privlaka je općina u Zadarskoj županiji u Hrvatskoj i turističko odredište, smještena između otoka Vira i grada Nina.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/a0/Privlaka_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -2.8% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (174/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -3775,11 +4099,15 @@
     ]
   },
   "razanac": {
+    "description": "Ražanac je općina u Zadarskoj županiji u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Ra%C5%BEanac_grb.png/330px-Ra%C5%BEanac_grb.png",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.1% u desetljeću 2011.–2021."
     ]
   },
   "sali": {
+    "description": "Sali su općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/36/Sali_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.7 godina iznad je nacionalnog prosjeka (43.7).",
@@ -3796,6 +4124,8 @@
     ]
   },
   "starigrad": {
+    "description": "Starigrad je općina u Hrvatskoj. Nerijetko se naziva prema naselju Starigrad Paklenica, kako bi se razlikovala od Starog Grada na Hvaru.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/bd/Starigrad_%28grb%29.png",
     "postalCode": "53286",
     "officialWebsite": "http://baltazar.izor.hr/plazepub/profil_plaze_url?p_jezik=eng&plok=5046",
     "conclusions": [
@@ -3816,6 +4146,8 @@
     ]
   },
   "sveti-filip-i-jakov": {
+    "description": "Sveti Filip i Jakov je naselje i općina u Zadarskoj županiji u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/04/Sveti_Filip_i_Jakov_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od 0.0% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (250/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -3824,6 +4156,8 @@
     ]
   },
   "skabrnja": {
+    "description": "Škabrnja je općina u Zadarskoj županiji u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/0f/%C5%A0kabrnja_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.4% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (7.4%) ispod je nacionalnog prosjeka (18.4%)."
@@ -3840,6 +4174,8 @@
     ]
   },
   "vir": {
+    "description": "Vir je naselje i općina na istoimenom otoku smještenom u sjeverozapadnom dijelu Dalmacije. Nalazi se u Zadarskoj županiji, sjeverozapadno od grada Nina.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/20/Vir_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.1% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (138/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -3848,6 +4184,8 @@
     ]
   },
   "vrsi": {
+    "description": "Vrsi su općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/51/Vrsi_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.0% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (124/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -3862,6 +4200,8 @@
     ]
   },
   "kolan": {
+    "description": "Kolan je općina u Zadarskoj županiji na otoku Pagu.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/0a/Kolan_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.3% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (26/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3889,18 +4229,24 @@
     ]
   },
   "bilje": {
+    "description": "Bilje je općina u Hrvatskoj. Smještena je u Osječko-baranjskoj županiji, 5 km od Osijeka i Drave.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e1/Bilje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.8% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (6.5%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "bizovac": {
+    "description": "Bizovac je općina u Hrvatskoj. Smještena je u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/f/fa/Bizovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (9.2%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "ceminac": {
+    "description": "Čeminac općina je u Hrvatskoj. Smještena je u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/9b/%C4%8Ceminac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.2% u desetljeću 2011.–2021.",
       "Prosječna starost od 45.9 godina iznad je nacionalnog prosjeka (43.7).",
@@ -3918,6 +4264,8 @@
     ]
   },
   "darda": {
+    "description": "Darda je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/5/59/Dardacoatofarms.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -16.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (6.7%) ispod je nacionalnog prosjeka (18.4%)."
@@ -3935,6 +4283,8 @@
     ]
   },
   "erdut": {
+    "description": "Erdut je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d0/Erdut_%28grb%29.gif",
     "coatOfArms": "http://commons.wikimedia.org/wiki/Special:FilePath/Erdut.svg",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Erdut%20Castle.jpg",
     "postalCode": "31206",
@@ -3954,6 +4304,8 @@
     ]
   },
   "fericanci": {
+    "description": "Feričanci su općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/99/Feri%C4%8Danci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (28/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3971,6 +4323,8 @@
     ]
   },
   "jagodnjak": {
+    "description": "Jagodnjak, je mjesto i općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -27.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (16/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3978,6 +4332,8 @@
     ]
   },
   "knezevi-vinogradi": {
+    "description": "Kneževi Vinogradi su općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d4/Kne%C5%BEevi_Vinogradi_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -23.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (29/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -3994,6 +4350,8 @@
     ]
   },
   "levanjska-varos": {
+    "description": "Levanjska Varoš je općina u Hrvatskoj, u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/ea/Levanjska_Varo%C5%A1_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (19/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4010,6 +4368,8 @@
     ]
   },
   "marijanci": {
+    "description": "Marijanci su općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e2/Marijanci.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.5% u desetljeću 2011.–2021."
     ]
@@ -4025,6 +4385,8 @@
     ]
   },
   "petrijevci": {
+    "description": "Petrijevci su općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/9d/Petrijevci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.3% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.6 godina iznad je nacionalnog prosjeka (43.7)."
@@ -4041,12 +4403,16 @@
     ]
   },
   "podravska-moslavina": {
+    "description": "Podravska Moslavina je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/5f/Podravska_Moslavina_grb.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (31/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
     ]
   },
   "popovac": {
+    "description": "Popovac je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/91/Popovac_%28grb%29.gif",
     "postalCode": "33522",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.5% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -4065,6 +4431,8 @@
     ]
   },
   "satnica-dakovacka": {
+    "description": "Satnica Đakovačka općina je u okolici Đakova. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Grb_Op%C4%87ine_Satnica_%C4%90akova%C4%8Dka.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.4% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (33/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -4079,6 +4447,8 @@
     ]
   },
   "strizivojna": {
+    "description": "Strizivojna je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/90/Strizivojna_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.4% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.5 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4086,6 +4456,8 @@
     ]
   },
   "sodolovci": {
+    "description": "Šodolovci, su naselje i općina u istočnoj Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji. Općinu Šodolovci čini 7 naselja koja su na popisu 2011. godine sveukupno brojila 1653 stanovnika. Suvremena općina osnovana je 1997. godine na temelju odluke prijelazne uprave UNTAES kako bi se srpskoj nacionalnoj manjini u Podunavlju osigurala zastupljenost u lokalnoj samoupravi.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -25.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (24/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4093,7 +4465,8 @@
     ]
   },
   "trnava": {
-    "description": "Trnava može značiti:",
+    "description": "Trnava je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/47/Trnava_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Gredelj%20u%20Trnavi%2C%20Zagreb%2C%202013.jpg",
     "postalCode": "35429",
     "conclusions": [
@@ -4102,6 +4475,8 @@
     ]
   },
   "viljevo": {
+    "description": "Viljevo je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b1/Viljevo_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (26/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -4118,6 +4493,8 @@
     ]
   },
   "vladislavci": {
+    "description": "Vladislavci su naselje i općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.3% u desetljeću 2011.–2021.",
       "Prosječna starost od 45.8 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4134,12 +4511,16 @@
     ]
   },
   "durdenovac": {
+    "description": "Đurđenovac je općina u Hrvatskoj. Nalazi se uz zapadnu granicu Osječko-baranjske županije, nedaleko Našica. Okružen je s 14 naselja, koja mu gravitiraju kao administrativnom i kulturnom središtu.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/6c/%C4%90ur%C4%91enovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (7.2%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "drenje": {
+    "description": "Drenje je općina u Hrvatskoj. Nalazi se u Osječko-baranjskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/92/Drenje_%28grb%29.gif",
     "postalCode": "52220",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
@@ -4156,6 +4537,8 @@
     ]
   },
   "bilice": {
+    "description": "Bilice su općina u Šibensko-kninskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d4/Bilice_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Bilice%20%28Pleternica%29.jpg",
     "postalCode": "34310",
     "elevation": 138,
@@ -4166,8 +4549,8 @@
     ]
   },
   "biskupija": {
-    "description": "Biskupija je općina u Hrvatskoj. Nalazi se u Šibensko-kninskoj županiji. Sjedište općine je naselje Orlić.",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/82/Biskupija_%28grb%29.gif",
+    "description": "Biskupija je u katoličkoj i nekim drugim kršćanskim crkvama upravna prostorna jedinica kojom upravlja biskup. U Katoličkoj Crkvi, važna biskupija kojom upravlja nadbiskup zove se nadbiskupija. \nPrema podatcima iz 2003. godine, u svijetu je 569 katoličkih nadbiskupija i 2014 biskupija.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Roman_Empire_with_dioceses_in_400_AD.png/330px-Roman_Empire_with_dioceses_in_400_AD.png",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Sveti%C5%A1te%20Gospe%20od%20biskupije%2C%20Knin%200216.jpg",
     "postalCode": "22300",
     "conclusions": [
@@ -4177,6 +4560,8 @@
     ]
   },
   "civljane": {
+    "description": "Civljane su općina u Šibensko-kninskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -42.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (2/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4196,6 +4581,8 @@
     ]
   },
   "kijevo": {
+    "description": "Kijevo je općina u Šibensko-kninskoj županiji. Prvi put se spominje 1315. godine pod imenom Chie (Kij).",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/cf/Kijevo_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -16.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (9/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4213,12 +4600,16 @@
     ]
   },
   "murter-kornati": {
+    "description": "Murter-Kornati su općina u Hrvatskoj. Nalaze se u Šibensko-kninskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c8/Murter-Kornati_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -7.9% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.4 godina iznad je nacionalnog prosjeka (43.7)."
     ]
   },
   "pirovac": {
+    "description": "Pirovac je općina u Šibensko-kninskoj županiji u Hrvatskoj",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/68/Pirovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.2% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.7 godina iznad je nacionalnog prosjeka (43.7)."
@@ -4232,6 +4623,8 @@
     ]
   },
   "promina": {
+    "description": "Promina je planina u Dalmaciji, sjeverno od Drniša, te južno od Knina u središtu Šibensko-kninske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Promina.jpg/330px-Promina.jpg",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -26.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (8/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4240,6 +4633,8 @@
     ]
   },
   "rogoznica": {
+    "description": "Rogoznica je općina u Hrvatskoj. Nalazi se u Šibensko-kninskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Rogoznica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -2.5% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Prosječna starost od 46.4 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4256,6 +4651,8 @@
     ]
   },
   "tisno": {
+    "description": "Tisno je općina u Šibensko-kninskoj županiji, Hrvatska.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/2d/Tisno_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.4% u desetljeću 2011.–2021."
     ]
@@ -4268,6 +4665,8 @@
     ]
   },
   "unesic": {
+    "description": "Unešić je općina u Hrvatskoj. Nalazi se u Šibensko-kninskoj županiji, desetak kilometara istočno od nacionalnog parka Krka.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (20/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4275,6 +4674,8 @@
     ]
   },
   "andrijasevci": {
+    "description": "Andrijaševci su općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/5f/Andrija%C5%A1evci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -15.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.7 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4290,6 +4691,8 @@
     ]
   },
   "bogdanovci": {
+    "description": "Bogdanovci su općina u Hrvatskoj, u Vukovarsko-srijemskoj županiji",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -23.5% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.7 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4304,12 +4707,15 @@
     ]
   },
   "bosnjaci": {
+    "description": "Bošnjaci su južnoslavenski narod nastanjen ponajviše u Bosni i Hercegovini, kao i na području pokrajine Sandžaka u Srbiji i Crnoj Gori. Ima ih oko 3 milijuna, od toga oko 2 milijuna u Bosni i Hercegovini, a velik broj Bošnjaka živi u Turskoj, približno 350 000. Pripadaju islamskom civilizacijskom krugu, a potječu od islamiziranoga pučanstva srednjovjekovne Bosne, kao i susjednih država i područja koja su bila dulje vremena pod turskom upravom:Srbija – posebice Sandžak, Šumadija, Mačva, Beograd s okolicom\nCrna Gora\nHrvatska – poglavito Lika, Slavonija i Dalmacija).",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -28.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.1 godina iznad je nacionalnog prosjeka (43.7)."
     ]
   },
   "cerna": {
+    "description": "Cerna je općina u Hrvatskoj u Vukovarsko-srijemskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/10/Cerna_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -22.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (8.9%) ispod je nacionalnog prosjeka (18.4%)."
@@ -4325,12 +4731,16 @@
     ]
   },
   "gradiste": {
+    "description": "Gradište je općina u Hrvatskoj. Često se ovo naselje naslovljava i kao Gradište kod Županje.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/bc/Gradi%C5%A1te_%28grb%29.gif",
     "postalCode": "34343",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
   },
   "gunja": {
+    "description": "Gunja je naseljeno mjesto i istoimena općina koja je upravni dio Vukovarsko-srijemske županije. Smještena je u zapadnome Srijemu na lijevoj obali Save, uz sami rub na granici s Bosnom i po popisu stanovnika iz 2011. imala je 3732 stanovnika, 1603 domaćinstava na površini 31,01 km2.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d6/Gunja_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Crkva%20u%20Gunji.jpg",
     "postalCode": "32260",
     "elevation": 84,
@@ -4348,6 +4758,8 @@
     ]
   },
   "jarmina": {
+    "description": "Jarmina je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/1a/Jarmina_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.0 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4355,6 +4767,8 @@
     ]
   },
   "lovas": {
+    "description": "Lovas je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/6e/Lovas_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -29.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (16/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4363,6 +4777,8 @@
     ]
   },
   "markusica": {
+    "description": "Markušica, je naselje i općina u Hrvatskoj, u Vukovarsko-srijemskoj županiji. Općina se nalazi na južnoj obali rijeke Vuke i sjeverozapadno od grada Vinkovaca.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -26.5% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (29/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -4377,6 +4793,8 @@
     ]
   },
   "nijemci": {
+    "description": "Nijemci su narod germanske grane indoeuropske porodice naroda nastanjen u današnjoj Njemačkoj, ali također i širom svijeta. Najviše ih ima u Sjedinjenim Državama, Kanadi, Rusiji i Poljskoj. Računa se da ih ukupno preko 100 milijuna govori materinjim njemačkim jezikom. Među Nijemcima postoji više etničkih grupa koje se razlikuju po jeziku i običajima. Najpoznatiji su svakako Švabi, Bavarci, Sasi i vjerojatno još neki.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Famous_Germans_collage_2.jpg/330px-Famous_Germans_collage_2.jpg",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -30.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (26/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4384,6 +4802,8 @@
     ]
   },
   "nustar": {
+    "description": "Nuštar je naseljeno mjesto i općina u Hrvatskoj, u Vukovarsko-srijemskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/4c/Nu%C5%A1tar_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.7 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4391,7 +4811,8 @@
     ]
   },
   "privlaka-vukovar": {
-    "description": "Privlaka može značiti:prevlaka (zemljopis), uski tanki dio kopna\nPrivlaka, općina u Zadarskoj županiji\nPrivlaka, općina u Vukovarsko-srijemskoj županiji\nPrivlaka (kanal), umjetni kanal u uvali Privlaka na Lošinju",
+    "description": "Privlaka je naseljeno mjesto i općina u Hrvatskoj, u Vukovarsko-srijemskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b2/Privlaka_%28Vukovarsko-srijemska_%C5%BEupanija%29_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -24.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
@@ -4406,6 +4827,8 @@
     ]
   },
   "stari-mikanovci": {
+    "description": "Stari Mikanovci su općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/48/Stari_Mikanovci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -18.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.4 godina iznad je nacionalnog prosjeka (43.7)."
@@ -4420,18 +4843,24 @@
     ]
   },
   "tompojevci": {
+    "description": "Tompojevci su općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -27.8% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (16/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
     ]
   },
   "tordinci": {
+    "description": "Tordinci su općina u Vukovarsko-srijemskoj županiji, Hrvatska",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c6/Tordinci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.3% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (7.8%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "tovarnik": {
+    "description": "Tovarnik je općina u Hrvatskoj u Vukovarsko-srijemskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/be/Tovarnik_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Natun%20Gustav%20Mato%C5%A1-%D0%90%D0%BD%D1%82%D1%83%D0%BD%20%D0%93%D1%83%D1%81%D1%82%D0%B0%D0%B2%20%D0%9C%D0%B0%D1%82%D0%BE%D1%88%2002.JPG",
     "postalCode": "32249",
     "officialWebsite": "https://www.opcina-tovarnik.hr/",
@@ -4451,6 +4880,8 @@
     ]
   },
   "vodinci": {
+    "description": "Vođinci su općina u Hrvatskoj, u Vukovarsko-srijemskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/03/Vo%C4%91inci_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Prosječna starost od 46.1 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4470,6 +4901,8 @@
     ]
   },
   "baska-voda": {
+    "description": "Baška Voda je općina u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/51/Ba%C5%A1ka_Voda_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.4% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (214/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -4486,6 +4919,8 @@
     ]
   },
   "brela": {
+    "description": "Brela su općina u Splitsko-dalmatinskoj županiji u Hrvatskoj. Poznato su turističko mjesto, zahvaljujući svojim prirodnim ljepotama i stogodišnjoj turističkoj tradiciji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/3f/Brela_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -3.7% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (114/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -4501,6 +4936,8 @@
     ]
   },
   "dicmo": {
+    "description": "Dicmo je općina u Hrvatskoj. Nalazi se u Splitsko-dalmatinskoj županiji. Administrativno sjedište općine je naselje Kraj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/be/Dicmo_grb.jpg",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.0% u desetljeću 2011.–2021."
     ]
@@ -4514,6 +4951,8 @@
     ]
   },
   "dugopolje": {
+    "description": "Dugopolje je općina u Hrvatskoj. Nalazi se u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/75/Dugopolje_%28grb%29.gif",
     "postalCode": "23445",
     "elevation": 648,
     "conclusions": [
@@ -4522,6 +4961,8 @@
     ]
   },
   "gradac": {
+    "description": "Gradac je općina u Hrvatskoj. Nalazi se u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/5e/Gradac_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Gradac%20%28Pleternica%29.jpg",
     "postalCode": "34310",
     "elevation": 127,
@@ -4532,6 +4973,8 @@
     ]
   },
   "hrvace": {
+    "description": "Hrvace su općina u Hrvatskoj.\nU podnožju šumovitih brežuljaka na rubu Hrvatačkog polja uz cestu Sinj – Knin smjestilo se mjesto Hrvace. Hrvace se nalaze u sjeverozapadnom djelu Splitsko-dalmatinske županije i Cetinske krajine. Župu Hrvace čine sela Hrvace i Rumin.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/49/Hrvace-grb.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.1% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (20/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4548,12 +4991,16 @@
     ]
   },
   "klis": {
+    "description": "Klis je naselje i općina u Splitskom zaleđu. Nastalo je podno srednjovjekovne tvrđave. Naziv je od klisura na kojoj je izgrađena tvrđava. Bio je prvi hrvatski glavni grad te kraljevska prijestolnica iz dinastije Trpimirovića.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/72/Klis_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.2% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (164/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "lecevica": {
+    "description": "Lećevica je općina u Hrvatskoj. Nalazi se u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -21.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (7/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4571,6 +5018,8 @@
     ]
   },
   "lovrec": {
+    "description": "Lovreć je općina u Hrvatskoj, u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/09/Lovre%C4%87_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.9% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (30/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4578,14 +5027,16 @@
     ]
   },
   "marina": {
-    "description": "Marina je naselje i lučica na unutrašnjem dijelu Marinskog zaljeva, središte istoimene općine, 12 km zapadno od Trogira. Naselje ima 1089 stanovnika.",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/0e/Marina_%28grb%29.gif",
+    "description": "Marina je vrsta pristaništa.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Marina_zut_1.jpg/330px-Marina_zut_1.jpg",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -7.1% u desetljeću 2011.–2021.",
       "Prosječna starost od 45.8 godina iznad je nacionalnog prosjeka (43.7)."
     ]
   },
   "milna": {
+    "description": "Milna je općina u Hrvatskoj na otoku Braču.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Lucija%20Bu%C5%A1i%C4%87%20-%20Milna2.jpg",
     "postalCode": "21450",
     "conclusions": [
@@ -4606,6 +5057,8 @@
     ]
   },
   "nerezisca": {
+    "description": "Nerežišća su općina i selo u Hrvatskoj na otoku Braču.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.4% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (26/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4622,6 +5075,7 @@
     ]
   },
   "podbablje": {
+    "description": "Podbablje je općina u Hrvatskoj. Nalazi se u Splitsko-dalmatinskoj županiji.",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
@@ -4636,6 +5090,8 @@
     ]
   },
   "podstrana": {
+    "description": "Podstrana je općina u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/05/Podstrana_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan rast od 22.0% u desetljeću 2011.–2021., što je znatno iznad nacionalnog trenda (-9.6%).",
       "Gustoća naseljenosti (968/km²) znatno je iznad nacionalnog prosjeka (68.4/km²).",
@@ -4643,6 +5099,8 @@
     ]
   },
   "postira": {
+    "description": "Postira je općina u Hrvatskoj na otoku Braču.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/bf/Opcina_postira.jpg",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.8% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.8 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4659,6 +5117,8 @@
     ]
   },
   "primorski-dolac": {
+    "description": "Primorski Dolac naselje je i općina u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/1a/Primorski_Dolac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -14.2% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (20/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4666,11 +5126,15 @@
     ]
   },
   "prolozac": {
+    "description": "Proložac je općina u Hrvatskoj, u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/1d/Prolozac_grb.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.2% u desetljeću 2011.–2021."
     ]
   },
   "pucisca": {
+    "description": "Pučišća su općina na otoku Braču u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Coat_of_arms_of_Pu%C4%8Di%C5%A1%C4%87a.svg/langhr-330px-Coat_of_arms_of_Pu%C4%8Di%C5%A1%C4%87a.svg.png",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.8% u desetljeću 2011.–2021.",
       "Prosječna starost od 47.0 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4686,6 +5150,8 @@
     ]
   },
   "seget": {
+    "description": "Seget je općina u Hrvatskoj, nastala 1993. izdvajanjem iz tadašnje općine Trogir.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/79/Seget_%28grb%29.gif",
     "postalCode": "52470",
     "officialWebsite": "http://www.grad-umag.hr/prva.aspx?stranica=7182&j=ITL",
     "conclusions": [
@@ -4696,6 +5162,8 @@
     ]
   },
   "selca": {
+    "description": "Selca su naselje na istočnom dijelu otoka Brača i municipalno središte Općine Selca, kojoj još pripadaju naselja: Novo Selo, Sumartin, Povlja, Selački zaseoci i Puntinak.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/77/Selca_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Selca%2C%20Pinguente%200.jpg",
     "postalCode": "52420",
     "conclusions": [
@@ -4714,12 +5182,16 @@
     ]
   },
   "sutivan": {
+    "description": "Sutivan je općina u Hrvatskoj, u Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e6/Sutivan_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.8% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (8.7%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "sestanovac": {
+    "description": "Šestanovac je općina u južnoj Hrvatskoj, u Splitsko-dalmatinskoj županiji. Poznata je kao čvorište Autoceste A1.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d9/%C5%A0estanovac_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.5% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (21/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4727,6 +5199,8 @@
     ]
   },
   "solta": {
+    "description": "Šolta je otok u srednjoj Dalmaciji, nedaleko od Splita, zapadno od Brača, površine 58,98 km², koji administrativno pripada Splitsko-dalmatinskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/%C5%A0olta_OpenStreetMap_120828.png/330px-%C5%A0olta_OpenStreetMap_120828.png",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.0% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (28/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -4751,6 +5225,8 @@
     ]
   },
   "zagvozd": {
+    "description": "Zagvozd je općina u Hrvatskoj, u Imotskoj krajini, Splitsko-dalmatinska županija. Zagvozd se nalazi 18 km od Imotskog, 15 km od Šestanovca, 18 km od Lovreća i 46 km od Vrgorca.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (15/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4768,6 +5244,8 @@
     ]
   },
   "bale": {
+    "description": "Bale općina je u Jadranskoj Hrvatskoj. Nalaze se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/09/Bale_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Croatia%20Istra%20Bale%20IMG%201%20fix%20and%20cropped%20423%20view%20from%20east.jpg",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 1.6% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
@@ -4776,6 +5254,8 @@
     ]
   },
   "barban": {
+    "description": "Barban općina je u zapadnoj Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/cb/Barban_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.9% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (29/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4800,6 +5280,8 @@
     ]
   },
   "fazana": {
+    "description": "Fažana je općina u jugozapadnoj Istri u Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/CoA_Fazana-Croatia.svg/langhr-330px-CoA_Fazana-Croatia.svg.png",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 3.6% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
       "Gustoća naseljenosti (279/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -4807,6 +5289,8 @@
     ]
   },
   "funtana": {
+    "description": "Funtana je općina u Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/2d/Funtana_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan rast od 6.2% u desetljeću 2011.–2021., što je znatno iznad nacionalnog trenda (-9.6%).",
       "Gustoća naseljenosti (172/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -4823,6 +5307,8 @@
     ]
   },
   "groznjan": {
+    "description": "Grožnjan je naselje i općina u Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8b/Gro%C5%BEnjan_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -17.1% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (17/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4831,12 +5317,16 @@
     ]
   },
   "kanfanar": {
+    "description": "Kanfanar je općina u Jadranskoj Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8e/Kanfanar_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -2.2% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (24/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
     ]
   },
   "karojba": {
+    "description": "Karojba je općina u Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/2f/Karojba_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.6% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (33/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4853,6 +5343,8 @@
     ]
   },
   "krsan": {
+    "description": "Kršan je općina, selo i općinsko središte u istočnom dijelu Istre, 9 km sjeverno od Labina; 236 st. (2011.) u zapadnoj Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e4/Kr%C5%A1an_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.2% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (32/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4871,12 +5363,16 @@
     ]
   },
   "liznjan": {
+    "description": "Ližnjan je općina u Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/23/Li%C5%BEnjan_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 1.4% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
       "Udio visokoobrazovanih (6.7%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "lupoglav": {
+    "description": "Lupoglav je općina na zapadu Hrvatske. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/5f/Lupoglav_%28grb%29.gif",
     "postalCode": "10370",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -19.7% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
@@ -4886,6 +5382,8 @@
     ]
   },
   "marcana": {
+    "description": "Marčana je općina u zapadnoj Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/39/Mar%C4%8Dana_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.0% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Udio visokoobrazovanih (7.5%) ispod je nacionalnog prosjeka (18.4%)."
@@ -4900,6 +5398,8 @@
     ]
   },
   "motovun": {
+    "description": "Motovun, naselje i općina u zapadnoj Hrvatskoj, u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/6/69/Motovun_-_Montona_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -2.3% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (27/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4907,6 +5407,8 @@
     ]
   },
   "oprtalj": {
+    "description": "Oprtalj jest općina u Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/92/Oprtalj_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.9% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (11/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4923,11 +5425,15 @@
     ]
   },
   "rasa": {
+    "description": "Raša je općina u Hrvatskoj. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/b3/Ra%C5%A1a_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -15.6% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove."
     ]
   },
   "sveti-lovrec": {
+    "description": "Sveti Lovreč gradić je i istoimena općina u zapadnoj Hrvatskoj. Nalazi se u Istarskoj županiji. \nGradić ima izrazita obilježja gradine - očuvane bedeme, kule i gradska vrata iz mletačkog doba, trobrodnu župnu crkvu iz romaničkog razdoblja te odvojeni zvonik-kulu. Očuvan je i stari popločani trg sa stupom srama te gradskom lođom. Lođa sa stupovima se naslanja na južni zid župne crkve i sadrži zbirku rimskih natpisa - kamenih spomenika.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/98/Sveti_Lovre%C4%8D_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.5% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (21/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4944,6 +5450,8 @@
     ]
   },
   "svetvincenat": {
+    "description": "Svetvinčenat je općina na zapadu Hrvatske. Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/5/51/Svetvin%C4%8Denat_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -7.2% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (33/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -4958,6 +5466,8 @@
     ]
   },
   "tinjan": {
+    "description": "Tinjan je općina u zapadnoj Hrvatskoj, a nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/0/0a/Tinjan_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -12.2% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (29/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -4965,6 +5475,8 @@
     ]
   },
   "visnjan": {
+    "description": "Višnjan je općina u zapadnoj Hrvatskoj, u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/9/9c/Vi%C5%A1njan_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -2.8% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Udio visokoobrazovanih (8.6%) ispod je nacionalnog prosjeka (18.4%)."
@@ -4985,6 +5497,8 @@
     ]
   },
   "vrsar": {
+    "description": "Vrsar je općina u zapadnoj Hrvatskoj, u Istarskoj županiji. Vrsar je ribarsko i turističko mjesto na zapadnoj obali Istre, s 2700 žitelja.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/b/bc/Vrsar_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -3.8% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Prosječna starost od 45.8 godina iznad je nacionalnog prosjeka (43.7).",
@@ -4992,6 +5506,8 @@
     ]
   },
   "zminj": {
+    "description": "Žminj je naselje i općina u zapadnoj Hrvatskoj koja se sastoji od 33 naselja na 72 km². Nalazi se u Istarskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d3/%C5%BDminj_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.3% u desetljeću 2011.–2021.",
       "Prosječna starost od 46.3 godina iznad je nacionalnog prosjeka (43.7).",
@@ -5009,6 +5525,8 @@
     ]
   },
   "dubrovacko-primorje": {
+    "description": "Dubrovačko primorje je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/01/Dubrova%C4%8Dko_primorje_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.8% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (18/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -5026,6 +5544,8 @@
     ]
   },
   "konavle": {
+    "description": "Konavle su općina u Hrvatskoj. Nalaze se u Dubrovačko-neretvanskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e7/Opcina_konavle_grb.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -3.6% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Prosječna starost od 46.5 godina iznad je nacionalnog prosjeka (43.7).",
@@ -5033,6 +5553,8 @@
     ]
   },
   "kula-norinska": {
+    "description": "Kula Norinska je općina i naselje u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/e4/Kula_Norinska_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -7.6% u desetljeću 2011.–2021."
     ]
@@ -5050,13 +5572,15 @@
     ]
   },
   "lumbarda": {
+    "description": "Lumbarda je naselje na istočnom rtu otoka Korčule i općina Dubrovačko-neretvanske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/76/Lumbarda_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.9% u desetljeću 2011.–2021."
     ]
   },
   "mljet": {
-    "description": "Mljet je općina u Hrvatskoj, koja teritorijalno pokriva područje čitavog otoka Mljeta.",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/44/Mljet_%28grb%29.gif",
+    "description": "Mljet je osmi otok po veličini u Hrvatskoj, jedan od najvećih južnodalmatinskih otoka te ujedno najjužniji i najistočniji od većih hrvatskih otoka. Mljet pripada dubrovačkoj skupini otoka i njezin je najveći otok. Jednako kao i danas, Mljet je svu svoju povijest gravitirao isključivo ovom području. Nalazi se u neposrednoj blizini Dubrovnika, Korčule, Elafitskih otoka, a od poluotoka Pelješca ga dijeli Mljetski kanal.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Zalaz_Soline.jpg/330px-Zalaz_Soline.jpg",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -3.5% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (11/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -5064,6 +5588,8 @@
     ]
   },
   "orebic": {
+    "description": "Orebić je naselje i općina u Hrvatskoj, na poluotoku Pelješcu u Dubrovačko-neretvanskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/3c/Orebi%C4%87_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.3% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (34/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter."
@@ -5079,6 +5605,8 @@
     ]
   },
   "slivno": {
+    "description": "Slivno je općina u južnoj Hrvatskoj, u Dubrovačko-neretvanskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/4a/Slivno_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Pogled%20na%20Slivno%2C%20dio.jpg",
     "postalCode": "22205",
     "conclusions": [
@@ -5088,6 +5616,8 @@
     ]
   },
   "smokvica": {
+    "description": "Smokvica je općina u Hrvatskoj, na otoku Korčuli.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/4f/Smokvica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.2% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (4.5%) ispod je nacionalnog prosjeka (18.4%)."
@@ -5103,6 +5633,8 @@
     ]
   },
   "trpanj": {
+    "description": "Trpanj je općina u Hrvatskoj. Nalazi se u Dubrovačko-neretvanskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coats_of_arms_of_None.svg/langhr-330px-Coats_of_arms_of_None.svg.png",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -20.0% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Gustoća naseljenosti (18/km²) ispod je nacionalnog prosjeka (68.4/km²), što ukazuje na ruralni karakter.",
@@ -5110,6 +5642,8 @@
     ]
   },
   "vela-luka": {
+    "description": "Vela Luka je općina na otoku Korčuli u Dubrovačko-neretvanskoj županiji u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d6/Vela_Luka_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -5.2% u desetljeću 2011.–2021."
     ]
@@ -5121,13 +5655,16 @@
     ]
   },
   "zupa-dubrovacka": {
+    "description": "Župa dubrovačka je općina u Hrvatskoj. Izdvojila se iz Grada Dubrovnika 1997. godine Graniči s Gradom Dubrovnikom na sjeverozapadu i općinom Konavle na jugoistoku, dok prema sjeveroistoku graniči s Bosnom i Hercegovinom, a prema jugozapadu s otvorenim morem.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/38/%C5%BDupa_dubrova%C4%8Dka_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi blagi rast od 0.5% u desetljeću 2011.–2021., suprotno od nacionalnog trenda pada.",
       "Gustoća naseljenosti (339/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "belica": {
-    "description": "Belica može značiti:",
+    "description": "Belica je općina u središnjem dijelu Međimurske županije, u čiji sastav ulaze tek dva naselja, koja su Belica i Gardinovec. Općina je poznata po svojoj poljoprivredi, posebno uzgoju krumpira. Postoji čak i spomenik posvećen krumpiru, otkriven u kolovozu 2007., te muzej krumpira, koji je otvoren u kolovozu 2025.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/eb/Belica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -3.6% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (164/km²) iznad je nacionalnog prosjeka (68.4/km²)."
@@ -5143,12 +5680,16 @@
     ]
   },
   "domasinec": {
+    "description": "Domašinec, općina u Hrvatskoj. Nalazi se u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/8/8b/Doma%C5%A1inec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -11.4% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (125/km²) iznad je nacionalnog prosjeka (68.4/km²)."
     ]
   },
   "donja-dubrava": {
+    "description": "Donja Dubrava je općina u Međimurskoj županiji, Hrvatska, smještena blizu ušća rijeke Mure u Dravu. Sastoji se od jednog istoimenog naselja s 2531 stanovnikom (2001.).",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/a0/Donja_Dubrava_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Gredelj%20u%20Trnavi%2C%20Zagreb%2C%202013.jpg",
     "postalCode": "10040",
     "conclusions": [
@@ -5157,6 +5698,8 @@
     ]
   },
   "donji-kraljevec": {
+    "description": "Donji Kraljevec je općina u Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/e/ef/Donji_Kraljevec_%28grb%29.gif",
     "postalCode": "49284",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -8.4% u desetljeću 2011.–2021.",
@@ -5174,6 +5717,8 @@
     ]
   },
   "gorican": {
+    "description": "Goričan je općina i naselje u sjevernoj Hrvatskoj. Smještena je u Međimurskoj županiji. Administrativno središte općine je naselje Goričan.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/4/42/Gori%C4%8Dan_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Gorican12Chorvatsko2.JPG",
     "postalCode": "40324",
     "officialWebsite": "http://www.gorican.hr/",
@@ -5183,12 +5728,16 @@
     ]
   },
   "gornji-mihaljevec": {
+    "description": "Gornji Mihaljevec je općina u Republici Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/d/d9/Gornji_Mihaljevec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.4% u desetljeću 2011.–2021.",
       "Udio visokoobrazovanih (6.1%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "kotoriba": {
+    "description": "Kotoriba je općina u Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/78/Kotoriba_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -13.5% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (115/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -5196,6 +5745,8 @@
     ]
   },
   "mala-subotica": {
+    "description": "Mala Subotica je općina u Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/1/10/Mala_Subotica_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.5% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (171/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -5213,6 +5764,8 @@
     ]
   },
   "orehovica": {
+    "description": "Orehovica je općina u Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/28/Orehovica_%28grb%29.gif",
     "photo": "http://commons.wikimedia.org/wiki/Special:FilePath/Orehovica%20120409.jpg",
     "postalCode": "49228",
     "conclusions": [
@@ -5231,6 +5784,8 @@
     ]
   },
   "pribislavec": {
+    "description": "Pribislavec je općina u Međimurskoj županiji, u Republici Hrvatskoj.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/2/2a/Pribislavec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -2.2% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (415/km²) znatno je iznad nacionalnog prosjeka (68.4/km²).",
@@ -5238,6 +5793,8 @@
     ]
   },
   "selnica": {
+    "description": "Selnica je općina u Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/a/af/Selnica_%28grb%29.gif",
     "postalCode": "49246",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -7.6% u desetljeću 2011.–2021.",
@@ -5245,6 +5802,8 @@
     ]
   },
   "strahoninec": {
+    "description": "Strahoninec je općina u Hrvatskoj. Nalazi se u sastavu Međimurske županije.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/77/Strahoninec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.7% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (317/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -5261,6 +5820,8 @@
     ]
   },
   "sveti-juraj-na-bregu": {
+    "description": "Sveti Juraj na Bregu je općina u Hrvatskoj. Smještena je u Međimurskoj županiji. Prostire se na 30,17 km², ima 5,279 stanovnika. Sjedište Općine službeno je naselje Lopatinec u kojem je smještena crkva, iako je općinska uprava smještena u Pleškovcu, kao i osnovna škola te župno središte.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/c/c0/Sveti_Juraj_na_Bregu_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi umjereni pad od -4.9% u razdoblju 2011.–2021., što je blaže od nacionalnog prosjeka (-9.6%).",
       "Gustoća naseljenosti (251/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -5268,6 +5829,8 @@
     ]
   },
   "sveti-martin-na-muri": {
+    "description": "Sveti Martin na Muri stari naziv Pomorje je naselje i istoimena općina u Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/71/Sveti_Martin_na_Muri_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -6.3% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (128/km²) iznad je nacionalnog prosjeka (68.4/km²).",
@@ -5286,12 +5849,16 @@
     ]
   },
   "strigova": {
+    "description": "Štrigova je općina u Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/3/32/%C5%A0trigova_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi drastičan pad od -15.2% u razdoblju 2011.–2021., što ukazuje na snažne demografske izazove.",
       "Udio visokoobrazovanih (6.8%) ispod je nacionalnog prosjeka (18.4%)."
     ]
   },
   "vratisinec": {
+    "description": "Vratišinec je općina u Hrvatskoj. Smještena je u Međimurskoj županiji.",
+    "thumbnail": "https://upload.wikimedia.org/wikipedia/hr/7/74/Vrati%C5%A1inec_%28grb%29.gif",
     "conclusions": [
       "Stanovništvo bilježi značajan pad od -10.9% u desetljeću 2011.–2021.",
       "Gustoća naseljenosti (154/km²) iznad je nacionalnog prosjeka (68.4/km²).",

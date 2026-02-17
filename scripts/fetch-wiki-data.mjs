@@ -169,48 +169,127 @@ function processWikidataResults(bindings) {
 // ---------------------------------------------------------------------------
 // 3. HR Wikipedia REST API — fetch Croatian descriptions + thumbnails
 // ---------------------------------------------------------------------------
-async function fetchWikipediaSummary(title) {
+const WIKI_HEADERS = { 'User-Agent': 'MojaHrvatska/1.0 (mojahrvatska.com.hr) Node.js' };
+
+async function fetchWikipediaSummary(title, retries = 3) {
   const encoded = encodeURIComponent(title.replace(/ /g, '_'));
   const url = `https://hr.wikipedia.org/api/rest_v1/page/summary/${encoded}`;
-  try {
-    const res = await fetch(url, {
-      headers: { 'User-Agent': 'MojaHrvatska/1.0 (mojahrvatska.com.hr) Node.js' },
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    return {
-      description: data.extract || null,
-      thumbnail: data.thumbnail?.source || null,
-    };
-  } catch {
-    return null;
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      const res = await fetch(url, { headers: WIKI_HEADERS });
+      if (res.status === 404) return null; // Article doesn't exist, no retry
+      if (!res.ok) {
+        // Rate limited or server error — wait and retry
+        const wait = 1000 * (attempt + 1);
+        console.log(`    [retry] ${title}: HTTP ${res.status}, waiting ${wait}ms...`);
+        await sleep(wait);
+        continue;
+      }
+      const data = await res.json();
+      if (data.type === 'disambiguation') return { disambiguation: true };
+      return {
+        description: data.extract || null,
+        thumbnail: data.thumbnail?.source || null,
+      };
+    } catch (err) {
+      const wait = 1000 * (attempt + 1);
+      console.log(`    [retry] ${title}: ${err.message}, waiting ${wait}ms...`);
+      await sleep(wait);
+    }
   }
+  return null;
+}
+
+// Use Wikipedia search API to find the correct article title
+async function searchWikipediaTitle(query, retries = 2) {
+  const url = `https://hr.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(query)}&limit=5&namespace=0&format=json`;
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      const res = await fetch(url, { headers: WIKI_HEADERS });
+      if (!res.ok) {
+        await sleep(1000 * (attempt + 1));
+        continue;
+      }
+      const data = await res.json();
+      // data = [query, [titles], [descriptions], [urls]]
+      const titles = data[1] || [];
+      return titles;
+    } catch {
+      await sleep(1000 * (attempt + 1));
+    }
+  }
+  return [];
 }
 
 function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
-// Wikipedia article title mapping — location name -> Wikipedia article title
-// Most locations have direct articles, but some need disambiguation
-function getWikiTitle(location) {
+// Disambiguation: cities that share names with islands/regions/other entities
+// These need "(grad)" suffix on Wikipedia
+const CITY_DISAMBIG = new Set([
+  'Hvar', 'Vis', 'Korčula', // Islands with same-name cities
+]);
+
+// Manual title overrides for locations where automatic lookup fails.
+// Found by testing all misses against the HR Wikipedia API.
+const MANUAL_TITLE_MAP = {
+  // Cities
+  'Sveta Nedelja': 'Sveta Nedelja (Zagrebačka županija)',
+  // Municipalities — case-sensitivity or naming differences
+  'Malinska-Dubašnica': 'Malinska',
+  'Vinodolska Općina': 'Vinodolska općina',  // lowercase "općina"
+  'Dubrovačko Primorje': 'Dubrovačko primorje',  // lowercase "primorje"
+  'Župa Dubrovačka': 'Župa dubrovačka',  // lowercase "dubrovačka"
+  'Cernik': 'Cernik (Brodsko-posavska županija)',
+  'Gradina': 'Gradina (Virovitičko-podravska županija)',
+  'Belica': 'Belica (Međimurska županija)',
+  'Trnava': 'Trnava (Osječko-baranjska županija)',
+};
+
+// Slug-based overrides for duplicate names (e.g., two "Privlaka" municipalities)
+const SLUG_TITLE_MAP = {
+  'privlaka-zadar': 'Privlaka (Zadarska županija)',
+  'privlaka-vukovar': 'Privlaka (Vukovarsko-srijemska županija)',
+};
+
+// Build ordered list of Wikipedia title candidates for a location
+function getWikiTitleCandidates(location) {
   const name = location.name;
   const type = location.type;
 
-  // Counties: article title is just the county name
-  if (type === 'zupanija') return name;
+  // Check slug-based overrides first (for duplicate names like Privlaka)
+  if (SLUG_TITLE_MAP[location.slug]) {
+    return [SLUG_TITLE_MAP[location.slug]];
+  }
 
-  // Special cases where Wikipedia article differs from our name
-  const titleMap = {
-    // Cities that might need disambiguation
-    'Grad Zagreb': 'Zagreb',
-  };
+  // Check name-based manual overrides
+  if (MANUAL_TITLE_MAP[name]) {
+    return [MANUAL_TITLE_MAP[name], name];
+  }
 
-  if (titleMap[name]) return titleMap[name];
+  if (type === 'zupanija') {
+    return [name];
+  }
 
-  // For municipalities, Wikipedia often uses "Općina X" or just "X"
-  // Try the plain name first, the script handles 404s gracefully
-  return name;
+  if (type === 'grad') {
+    if (CITY_DISAMBIG.has(name)) {
+      return [`${name} (grad)`, name];
+    }
+    return [name, `${name} (grad)`, `${name} (Hrvatska)`];
+  }
+
+  // opcina — try lowercase variants too since Wikipedia often uses lowercase
+  // e.g., "Dubrovačko Primorje" → "Dubrovačko primorje"
+  const words = name.split(' ');
+  const lowercaseVariant = words.length > 1
+    ? words[0] + ' ' + words.slice(1).map(w => w.toLowerCase()).join(' ')
+    : null;
+
+  const candidates = [name];
+  if (lowercaseVariant && lowercaseVariant !== name) candidates.push(lowercaseVariant);
+  candidates.push(`${name} (općina)`, `${name} (Hrvatska)`, `Općina ${name}`);
+  return candidates;
 }
 
 // ---------------------------------------------------------------------------
@@ -344,11 +423,11 @@ async function main() {
   console.log(`\nFetching Wikipedia summaries for ${allLocations.length} locations...`);
   let wikiCount = 0;
   let wikiMiss = 0;
+  const missedNames = [];
 
   for (let i = 0; i < allLocations.length; i++) {
     const loc = allLocations[i];
     const slug = loc.slug;
-    const wikiTitle = getWikiTitle(loc);
 
     // Initialize enrichment entry
     enrichment[slug] = {
@@ -379,7 +458,6 @@ async function main() {
 
     // Also try matching county names (Wikidata may use different name form)
     if (!wd && loc.type === 'zupanija') {
-      // Try without "županija" suffix
       const shortName = loc.name.replace(' županija', '').replace('Grad ', '');
       const wd2 = wikidataMap[shortName] || wikidataMap[loc.name];
       if (wd2) {
@@ -393,41 +471,69 @@ async function main() {
       }
     }
 
-    // Fetch Wikipedia summary
-    const wiki = await fetchWikipediaSummary(wikiTitle);
-    if (wiki) {
-      enrichment[slug].description = wiki.description;
-      if (wiki.thumbnail && !enrichment[slug].photo) {
+    // Fetch Wikipedia summary — try ordered title candidates
+    const candidates = getWikiTitleCandidates(loc);
+    let found = false;
+
+    for (const title of candidates) {
+      const wiki = await fetchWikipediaSummary(title);
+      await sleep(200);
+
+      if (wiki && !wiki.disambiguation) {
+        enrichment[slug].description = wiki.description;
         enrichment[slug].thumbnail = wiki.thumbnail;
-      } else {
-        enrichment[slug].thumbnail = wiki.thumbnail;
+        wikiCount++;
+        found = true;
+        break;
       }
-      wikiCount++;
-    } else {
-      wikiMiss++;
-      // Try alternate titles for municipalities
-      if (loc.type === 'opcina') {
-        const altTitle = `${loc.name} (općina)`;
-        const wiki2 = await fetchWikipediaSummary(altTitle);
-        if (wiki2) {
-          enrichment[slug].description = wiki2.description;
-          enrichment[slug].thumbnail = wiki2.thumbnail;
-          wikiCount++;
-          wikiMiss--;
-        }
-        await sleep(50);
+      if (wiki?.disambiguation) {
+        // Disambiguation page — next candidate might be more specific
+        continue;
       }
-      // Try alternate for cities
-      if (loc.type === 'grad' && !enrichment[slug].description) {
-        const altTitle = `${loc.name} (grad)`;
-        const wiki2 = await fetchWikipediaSummary(altTitle);
-        if (wiki2) {
-          enrichment[slug].description = wiki2.description;
-          enrichment[slug].thumbnail = wiki2.thumbnail;
-          wikiCount++;
-          wikiMiss--;
+      // 404 — try next candidate
+    }
+
+    // Last resort: use Wikipedia search API to find the right article
+    if (!found) {
+      const searchQuery = loc.type === 'opcina'
+        ? `${loc.name} općina Hrvatska`
+        : loc.type === 'grad'
+          ? `${loc.name} grad Hrvatska`
+          : loc.name;
+
+      const searchResults = await searchWikipediaTitle(searchQuery);
+      await sleep(200);
+
+      // Try each search result — pick the first one that contains a valid summary
+      for (const resultTitle of searchResults) {
+        // Skip if it's clearly about something else
+        const lower = resultTitle.toLowerCase();
+        if (lower.includes('nogomet') || lower.includes('košark') || lower.includes('rukome')) continue;
+
+        const wiki = await fetchWikipediaSummary(resultTitle);
+        await sleep(200);
+
+        if (wiki && !wiki.disambiguation && wiki.description) {
+          // Verify the description is actually about this location (not a different place)
+          const desc = wiki.description.toLowerCase();
+          const nameWords = loc.name.toLowerCase().split(/\s+/);
+          const isRelevant = nameWords.some(w => w.length > 3 && desc.includes(w))
+            || desc.includes('općina') || desc.includes('grad') || desc.includes('naselje')
+            || desc.includes('hrvat') || desc.includes('županij');
+
+          if (isRelevant) {
+            enrichment[slug].description = wiki.description;
+            enrichment[slug].thumbnail = wiki.thumbnail;
+            wikiCount++;
+            found = true;
+            break;
+          }
         }
-        await sleep(50);
+      }
+
+      if (!found) {
+        wikiMiss++;
+        missedNames.push(`${loc.name} [${loc.type}, ${slug}]`);
       }
     }
 
@@ -438,9 +544,6 @@ async function main() {
     if ((i + 1) % 50 === 0 || i === allLocations.length - 1) {
       console.log(`  Progress: ${i + 1}/${allLocations.length} (${wikiCount} wiki hits, ${wikiMiss} misses)`);
     }
-
-    // Rate limit Wikipedia API
-    await sleep(100);
   }
 
   // Clean up: remove null/empty fields to keep JSON compact
@@ -480,6 +583,11 @@ async function main() {
   console.log(`With postal code: ${stats.withPostalCode}`);
   console.log(`With website: ${stats.withWebsite}`);
   console.log(`\nOutput: ${outPath}`);
+
+  if (missedNames.length > 0) {
+    console.log(`\n=== Still missing Wikipedia descriptions (${missedNames.length}) ===`);
+    missedNames.forEach(n => console.log(`  ${n}`));
+  }
 }
 
 main().catch(err => {
