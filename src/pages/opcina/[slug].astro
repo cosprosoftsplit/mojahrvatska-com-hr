@@ -8,9 +8,13 @@ import BarChart from '../../components/BarChart.astro';
 import SurnameList from '../../components/SurnameList.astro';
 import PopulationChange from '../../components/PopulationChange.astro';
 import AdUnit from '../../components/AdUnit.astro';
+import WikiDescription from '../../components/WikiDescription.astro';
+import LocationMeta from '../../components/LocationMeta.astro';
+import Conclusions from '../../components/Conclusions.astro';
 import { OPCINE } from '../../data/opcine';
 import { ZUPANIJE } from '../../data/zupanije';
 import { GRADOVI } from '../../data/gradovi';
+import wikiData from '../../data/wiki-enrichment.json';
 
 export function getStaticPaths() {
   return OPCINE.map(o => ({
@@ -21,6 +25,7 @@ export function getStaticPaths() {
 
 const { opcina } = Astro.props;
 const zupanija = ZUPANIJE.find(z => z.id === opcina.county_id);
+const wiki = (wikiData as Record<string, any>)[opcina.slug] || {};
 const nearbyLocations = [
   ...GRADOVI.filter(g => g.county_id === opcina.county_id).slice(0, 3),
   ...OPCINE.filter(o => o.county_id === opcina.county_id && o.slug !== opcina.slug)
@@ -65,6 +70,15 @@ const description = `Opcina ${opcina.name}: ${opcina.population_2021.toLocaleStr
 
     <h1 class="text-2xl font-black text-gray-100 mb-1">{opcina.name}</h1>
     <p class="text-sm text-gray-500 mb-6">Opcina &middot; {opcina.county_name}</p>
+
+    <WikiDescription description={wiki.description} locationName={opcina.name} />
+
+    <LocationMeta
+      postalCode={wiki.postalCode}
+      elevation={wiki.elevation}
+      licensePlate={wiki.licensePlate}
+      officialWebsite={wiki.officialWebsite}
+    />
 
     <!-- Key Stats -->
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
@@ -133,6 +147,8 @@ const description = `Opcina ${opcina.name}: ${opcina.population_2021.toLocaleStr
     </section>
 
     <AdUnit />
+
+    <Conclusions conclusions={wiki.conclusions} />
 
     <!-- Nearby Locations -->
     {nearbyLocations.length > 0 && (

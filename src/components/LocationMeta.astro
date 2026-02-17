@@ -1,0 +1,38 @@
+---
+interface Props {
+  postalCode?: string | null;
+  elevation?: number | null;
+  licensePlate?: string | null;
+  officialWebsite?: string | null;
+}
+
+const { postalCode, elevation, licensePlate, officialWebsite } = Astro.props;
+const hasAny = postalCode || elevation != null || licensePlate || officialWebsite;
+---
+
+{hasAny && (
+  <section class="mb-6">
+    <div class="flex flex-wrap gap-2">
+      {postalCode && (
+        <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-800 rounded-full px-3 py-1.5 text-xs text-gray-300">
+          <span class="text-gray-500">Pošta:</span> {postalCode}
+        </span>
+      )}
+      {elevation != null && (
+        <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-800 rounded-full px-3 py-1.5 text-xs text-gray-300">
+          <span class="text-gray-500">Nadmorska visina:</span> {elevation} m
+        </span>
+      )}
+      {licensePlate && (
+        <span class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-800 rounded-full px-3 py-1.5 text-xs text-gray-300">
+          <span class="text-gray-500">Registracija:</span> {licensePlate}
+        </span>
+      )}
+      {officialWebsite && (
+        <a href={officialWebsite} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-gray-900 border border-gray-800 rounded-full px-3 py-1.5 text-xs text-blue-400 hover:border-blue-500 transition-colors no-underline">
+          <span class="text-gray-500">Web:</span> {new URL(officialWebsite).hostname}
+        </a>
+      )}
+    </div>
+  </section>
+)}

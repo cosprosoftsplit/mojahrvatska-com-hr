@@ -1,0 +1,24 @@
+---
+interface Props {
+  conclusions?: string[] | null;
+}
+
+const { conclusions } = Astro.props;
+const hasConclusions = conclusions && conclusions.length > 0;
+---
+
+{hasConclusions && (
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Analiza i zaključci</h2>
+    <div class="bg-gray-900 rounded-lg p-4">
+      <ul class="space-y-2">
+        {conclusions.map(c => (
+          <li class="flex gap-2 text-sm text-gray-300">
+            <span class="text-blue-400 flex-shrink-0 mt-0.5">&bull;</span>
+            <span>{c}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}

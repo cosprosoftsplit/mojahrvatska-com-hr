@@ -8,8 +8,13 @@ import BarChart from '../../components/BarChart.astro';
 import SurnameList from '../../components/SurnameList.astro';
 import PopulationChange from '../../components/PopulationChange.astro';
 import AdUnit from '../../components/AdUnit.astro';
+import WikiDescription from '../../components/WikiDescription.astro';
+import LocationMeta from '../../components/LocationMeta.astro';
+import CoatOfArms from '../../components/CoatOfArms.astro';
+import Conclusions from '../../components/Conclusions.astro';
 import { GRADOVI } from '../../data/gradovi';
 import { ZUPANIJE } from '../../data/zupanije';
+import wikiData from '../../data/wiki-enrichment.json';
 
 export function getStaticPaths() {
   return GRADOVI.map(g => ({
@@ -20,6 +25,7 @@ export function getStaticPaths() {
 
 const { grad } = Astro.props;
 const zupanija = ZUPANIJE.find(z => z.id === grad.county_id);
+const wiki = (wikiData as Record<string, any>)[grad.slug] || {};
 const similarCities = GRADOVI
   .filter(g => g.county_id === grad.county_id && g.slug !== grad.slug)
   .sort((a, b) => Math.abs(a.population_2021 - grad.population_2021) - Math.abs(b.population_2021 - grad.population_2021))
@@ -60,8 +66,35 @@ const description = `${grad.name}: ${grad.population_2021.toLocaleString('hr-HR'
       { label: grad.name }
     ]} />
 
-    <h1 class="text-2xl font-black text-gray-100 mb-1">{grad.name}</h1>
-    <p class="text-sm text-gray-500 mb-6">Grad &middot; {grad.county_name}</p>
+    <div class="flex items-center gap-3 mb-1">
+      <CoatOfArms src={wiki.coatOfArms} alt={grad.name} />
+      <div>
+        <h1 class="text-2xl font-black text-gray-100">{grad.name}</h1>
+        <p class="text-sm text-gray-500">Grad &middot; {grad.county_name}</p>
+      </div>
+    </div>
+
+    {(wiki.photo || wiki.thumbnail) && (
+      <div class="mb-6 mt-4">
+        <img
+          src={wiki.photo || wiki.thumbnail}
+          alt={grad.name}
+          loading="lazy"
+          class="w-full max-h-64 object-cover rounded-lg"
+        />
+      </div>
+    )}
+
+    {!(wiki.photo || wiki.thumbnail) && <div class="mb-6"></div>}
+
+    <WikiDescription description={wiki.description} locationName={grad.name} />
+
+    <LocationMeta
+      postalCode={wiki.postalCode}
+      elevation={wiki.elevation}
+      licensePlate={wiki.licensePlate}
+      officialWebsite={wiki.officialWebsite}
+    />
 
     <!-- Key Stats -->
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
@@ -149,6 +182,22 @@ const description = `${grad.name}: ${grad.population_2021.toLocaleString('hr-HR'
     </section>
 
     <AdUnit />
+
+    <Conclusions conclusions={wiki.conclusions} />
+
+    <!-- Sister Cities -->
+    {wiki.sisterCities && wiki.sisterCities.length > 0 && (
+      <section class="mb-6">
+        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Gradovi prijatelji</h2>
+        <div class="flex flex-wrap gap-2">
+          {wiki.sisterCities.map((city: string) => (
+            <span class="bg-gray-900 border border-gray-800 rounded-lg px-3 py-2 text-sm text-gray-300">
+              {city}
+            </span>
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- Similar Cities -->
     {similarCities.length > 0 && (

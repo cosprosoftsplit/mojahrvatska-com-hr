@@ -9,9 +9,14 @@ import NameList from '../../components/NameList.astro';
 import LocationCard from '../../components/LocationCard.astro';
 import PopulationChange from '../../components/PopulationChange.astro';
 import AdUnit from '../../components/AdUnit.astro';
+import WikiDescription from '../../components/WikiDescription.astro';
+import LocationMeta from '../../components/LocationMeta.astro';
+import CoatOfArms from '../../components/CoatOfArms.astro';
+import Conclusions from '../../components/Conclusions.astro';
 import { ZUPANIJE } from '../../data/zupanije';
 import { GRADOVI } from '../../data/gradovi';
 import { OPCINE } from '../../data/opcine';
+import wikiData from '../../data/wiki-enrichment.json';
 
 export function getStaticPaths() {
   return ZUPANIJE.map(z => ({
@@ -23,6 +28,7 @@ export function getStaticPaths() {
 const { zupanija } = Astro.props;
 const cityList = GRADOVI.filter(g => g.county_id === zupanija.id).sort((a, b) => b.population_2021 - a.population_2021);
 const opcinaList = OPCINE.filter(o => o.county_id === zupanija.id).sort((a, b) => b.population_2021 - a.population_2021);
+const wiki = (wikiData as Record<string, any>)[zupanija.slug] || {};
 
 const schema = {
   "@context": "https://schema.org",
@@ -54,8 +60,24 @@ const description = `${zupanija.name}: ${zupanija.population_2021.toLocaleString
       { label: zupanija.name }
     ]} />
 
-    <h1 class="text-2xl font-black text-gray-100 mb-1">{zupanija.name}</h1>
-    <p class="text-sm text-gray-500 mb-6">Sjediste: {zupanija.seat}</p>
+    <div class="flex items-center gap-3 mb-1">
+      <CoatOfArms src={wiki.coatOfArms} alt={zupanija.name} />
+      <div>
+        <h1 class="text-2xl font-black text-gray-100">{zupanija.name}</h1>
+        <p class="text-sm text-gray-500">Sjediste: {zupanija.seat}</p>
+      </div>
+    </div>
+
+    <div class="mb-6"></div>
+
+    <WikiDescription description={wiki.description} locationName={zupanija.name} />
+
+    <LocationMeta
+      postalCode={wiki.postalCode}
+      elevation={wiki.elevation}
+      licensePlate={wiki.licensePlate}
+      officialWebsite={wiki.officialWebsite}
+    />
 
     <!-- Key Stats -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
@@ -119,6 +141,8 @@ const description = `${zupanija.name}: ${zupanija.population_2021.toLocaleString
     </section>
 
     <AdUnit />
+
+    <Conclusions conclusions={wiki.conclusions} />
 
     <!-- Names -->
     <section class="mb-6">
