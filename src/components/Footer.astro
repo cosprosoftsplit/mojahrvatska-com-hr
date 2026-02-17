@@ -7,11 +7,6 @@ interface Props {
 
 const { class: className = '' } = Astro.props;
 
-const sisterSites = [
-  { name: 'MojHoroskop', url: 'https://mojhoroskop.com.hr' },
-  { name: 'MojaPrognoza', url: 'https://mojaprognoza.com.hr' },
-  { name: 'HNL Stats', url: 'https://hnl.com.hr' },
-];
 ---
 
 <footer class={`border-t border-gray-800 mt-8 py-6 px-4 ${className}`} style="font-family: system-ui, sans-serif;">
@@ -28,10 +23,6 @@ const sisterSites = [
       <a href="/impressum" class="hover:text-gray-300 transition-colors">Impressum</a>
     </div>
 
-    <div class="flex gap-3 justify-center text-xs text-gray-600">
-      {sisterSites.map(site => (
-        <a href={site.url} class="hover:text-blue-400 transition-colors" target="_blank" rel="noopener">{site.name}</a>
-      ))}
-    </div>
+
   </div>
 </footer>
