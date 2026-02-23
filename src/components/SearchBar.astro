@@ -62,11 +62,11 @@ const { class: className = '' } = Astro.props;
         <div class="flex justify-between items-center">
           <div>
             <span class="text-sm font-bold text-gray-200">${item.name}</span>
-            <span class="text-xs text-gray-500 ml-2">${typeLabel}</span>
+            <span class="text-xs text-gray-400 ml-2">${typeLabel}</span>
           </div>
           <span class="text-xs text-gray-400">${item.pop?.toLocaleString('hr-HR') || ''}</span>
         </div>
-        ${item.county ? `<div class="text-xs text-gray-600">${item.county}</div>` : ''}
+        ${item.county ? `<div class="text-xs text-gray-400">${item.county}</div>` : ''}
       </a>`;
     }).join('');
     results.classList.remove('hidden');

@@ -23,7 +23,7 @@ const { id, columns, rows, defaultSort, defaultDir = 'desc', class: className = 
       <tr class="border-b border-gray-800">
         {columns.map(col => (
           <th
-            class="px-3 py-2 text-left text-xs font-bold text-gray-500 uppercase cursor-pointer hover:text-blue-400 transition-colors select-none"
+            class="px-3 py-2 text-left text-xs font-bold text-gray-400 uppercase cursor-pointer hover:text-blue-400 transition-colors select-none"
             data-col={col.key}
             data-type={col.type || 'string'}
           >

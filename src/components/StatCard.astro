@@ -15,7 +15,7 @@ const { value, label, change, icon, class: className = '' } = Astro.props;
   <div class="text-2xl font-black text-gray-100">
     {typeof value === 'number' ? value.toLocaleString('hr-HR') : value}
   </div>
-  <div class="text-xs text-gray-500 mt-1">{label}</div>
+  <div class="text-xs text-gray-400 mt-1">{label}</div>
   {change !== undefined && (
     <div class={`text-xs mt-1 font-bold ${change >= 0 ? 'text-green-500' : 'text-red-500'}`}>
       {change >= 0 ? '\u2191' : '\u2193'} {change >= 0 ? '+' : ''}{change.toFixed(1)}%

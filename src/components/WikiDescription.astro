@@ -11,8 +11,8 @@ const { description, locationName } = Astro.props;
   <section class="mb-6">
     <div class="bg-gray-900 rounded-lg p-4">
       <p class="text-sm text-gray-300 leading-relaxed">{description}</p>
-      <p class="mt-2 text-xs text-gray-600">
-        Izvor: <a href={`https://hr.wikipedia.org/wiki/${encodeURIComponent(locationName.replace(/ /g, '_'))}`} target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-400 underline">Wikipedia</a> (CC-BY-SA 4.0)
+      <p class="mt-2 text-xs text-gray-400">
+        Izvor: <a href={`https://hr.wikipedia.org/wiki/${encodeURIComponent(locationName.replace(/ /g, '_'))}`} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-400 underline">Wikipedia</a> (CC-BY-SA 4.0)
       </p>
     </div>
   </section>

@@ -10,13 +10,13 @@ const { class: className = '' } = Astro.props;
   <h2 class="text-lg font-black text-gray-200 mb-4">Usporedi dva grada ili opcine</h2>
   <div class="grid grid-cols-2 gap-4 mb-6">
     <div>
-      <label class="text-xs text-gray-500 mb-1 block">Prva lokacija</label>
+      <label class="text-xs text-gray-400 mb-1 block">Prva lokacija</label>
       <select id="compare-a" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
         <option value="">Odaberi...</option>
       </select>
     </div>
     <div>
-      <label class="text-xs text-gray-500 mb-1 block">Druga lokacija</label>
+      <label class="text-xs text-gray-400 mb-1 block">Druga lokacija</label>
       <select id="compare-b" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:border-blue-500 focus:outline-none">
         <option value="">Odaberi...</option>
       </select>
@@ -78,7 +78,7 @@ const { class: className = '' } = Astro.props;
       const pctB = (Math.abs(vb) / maxVal) * 100;
       html += `
         <div class="bg-gray-800 rounded-lg p-3">
-          <div class="text-xs text-gray-500 mb-2">${m.label}</div>
+          <div class="text-xs text-gray-400 mb-2">${m.label}</div>
           <div class="grid grid-cols-2 gap-2">
             <div class="text-right">
               <span class="text-sm font-bold text-blue-400">${m.format(va)}</span>

@@ -17,16 +17,38 @@ const tabs = [
 ---
 
 <nav class={`sticky top-0 z-40 bg-gray-900/95 backdrop-blur border-b border-gray-800 ${className}`}>
-  <div class="max-w-4xl mx-auto px-4 flex gap-1 py-2 overflow-x-auto">
-    {tabs.map(t => (
-      <a
-        href={t.href}
-        class={`px-4 py-2 text-xs font-bold rounded-lg transition-all whitespace-nowrap no-underline ${
-          active === t.id ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-white hover:bg-gray-800'
-        }`}
-      >
-        {t.label}
-      </a>
-    ))}
+  <div class="max-w-4xl mx-auto px-4 py-2">
+    <div class="flex items-center justify-between sm:hidden">
+      <span class="text-sm font-bold text-gray-100">Navigacija</span>
+      <button id="nav-toggle" type="button" class="p-2 text-gray-400 hover:text-white" aria-label="Otvori izbornik" aria-expanded="false">
+        <svg id="nav-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="nav-menu" class="hidden sm:flex gap-1 overflow-x-auto">
+      {tabs.map(t => (
+        <a
+          href={t.href}
+          class={`px-4 py-2 text-xs font-bold rounded-lg transition-all whitespace-nowrap no-underline ${
+            active === t.id ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-800'
+          }`}
+        >
+          {t.label}
+        </a>
+      ))}
+    </div>
   </div>
 </nav>
+
+<script is:inline>
+  document.getElementById('nav-toggle')?.addEventListener('click', function() {
+    var menu = document.getElementById('nav-menu');
+    var iconOpen = document.getElementById('nav-icon-open');
+    var iconClose = document.getElementById('nav-icon-close');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+  });
+</script>
