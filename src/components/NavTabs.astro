@@ -25,7 +25,7 @@ const tabs = [
         <svg id="nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <div id="nav-menu" class="hidden sm:flex gap-1 overflow-x-auto">
+    <div id="nav-menu" class="hidden flex-col gap-1 pt-2 sm:flex sm:flex-row sm:pt-0 sm:overflow-x-auto">
       {tabs.map(t => (
         <a
           href={t.href}
@@ -48,6 +48,7 @@ const tabs = [
     var expanded = this.getAttribute('aria-expanded') === 'true';
     this.setAttribute('aria-expanded', String(!expanded));
     menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
     iconOpen.classList.toggle('hidden');
     iconClose.classList.toggle('hidden');
   });
