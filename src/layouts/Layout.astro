@@ -21,6 +21,14 @@ const { title, description, canonical, schema, article, class: bodyClass = '' } 
 <!DOCTYPE html>
 <html lang={siteConfig.locale}>
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJLZXZ7YMQ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PJLZXZ7YMQ');
+    </script>
     <SEOHead
       title={title}
       description={description}
