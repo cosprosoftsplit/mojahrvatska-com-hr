@@ -6,6 +6,7 @@ import SearchBar from '../components/SearchBar.astro';
 import StatCard from '../components/StatCard.astro';
 import LocationCard from '../components/LocationCard.astro';
 import AdUnit from '../components/AdUnit.astro';
+import CroatiaMap from '../components/CroatiaMap.astro';
 import { ZUPANIJE } from '../data/zupanije';
 import { GRADOVI } from '../data/gradovi';
 
@@ -41,6 +42,9 @@ const schema = {
       <StatCard value={21} label="Zupanija" icon="" />
       <StatCard value={556} label="Gradova i opcina" icon="" />
     </div>
+
+    <!-- Map -->
+    <CroatiaMap />
 
     <!-- Search -->
     <SearchBar class="mb-6" />
