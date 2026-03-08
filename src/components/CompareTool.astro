@@ -22,18 +22,32 @@ const { class: className = '' } = Astro.props;
       </select>
     </div>
   </div>
+  <div id="compare-error" class="hidden text-sm text-red-400 mb-4"></div>
   <div id="compare-results" class="hidden space-y-3"></div>
 </div>
 
 <script>
   let locations: any[] = [];
 
+  function esc(text: string): string {
+    const d = document.createElement('div');
+    d.textContent = text;
+    return d.innerHTML;
+  }
+
   async function loadCompareData() {
     try {
       const res = await fetch('/locations-compare.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
       locations = await res.json();
       populateSelects();
-    } catch {}
+    } catch (e) {
+      const errEl = document.getElementById('compare-error');
+      if (errEl) {
+        errEl.textContent = 'Greška pri učitavanju podataka. Pokušajte osvježiti stranicu.';
+        errEl.classList.remove('hidden');
+      }
+    }
   }
 
   function populateSelects() {
@@ -42,7 +56,8 @@ const { class: className = '' } = Astro.props;
     const sorted = [...locations].sort((a, b) => a.name.localeCompare(b.name, 'hr'));
     for (const loc of sorted) {
       const typeLabel = loc.type === 'grad' ? 'Grad' : 'Opcina';
-      const opt = `<option value="${loc.slug}">${loc.name} (${typeLabel})</option>`;
+      const key = loc.type + ':' + loc.slug;
+      const opt = `<option value="${esc(key)}">${esc(loc.name)} (${typeLabel})</option>`;
       selectA.insertAdjacentHTML('beforeend', opt);
       selectB.insertAdjacentHTML('beforeend', opt);
     }
@@ -53,8 +68,10 @@ const { class: className = '' } = Astro.props;
     const selectB = document.getElementById('compare-b') as HTMLSelectElement;
     const results = document.getElementById('compare-results') as HTMLDivElement;
 
-    const a = locations.find(l => l.slug === selectA.value);
-    const b = locations.find(l => l.slug === selectB.value);
+    const [typeA, slugA] = selectA.value.split(':');
+    const [typeB, slugB] = selectB.value.split(':');
+    const a = locations.find(l => l.slug === slugA && l.type === typeA);
+    const b = locations.find(l => l.slug === slugB && l.type === typeB);
 
     if (!a || !b) {
       results.classList.add('hidden');
@@ -78,16 +95,16 @@ const { class: className = '' } = Astro.props;
       const pctB = (Math.abs(vb) / maxVal) * 100;
       html += `
         <div class="bg-gray-800 rounded-lg p-3">
-          <div class="text-xs text-gray-400 mb-2">${m.label}</div>
+          <div class="text-xs text-gray-400 mb-2">${esc(m.label)}</div>
           <div class="grid grid-cols-2 gap-2">
             <div class="text-right">
-              <span class="text-sm font-bold text-blue-400">${m.format(va)}</span>
+              <span class="text-sm font-bold text-blue-400">${esc(m.format(va))}</span>
               <div class="mt-1 h-2 bg-gray-700 rounded-full overflow-hidden flex justify-end">
                 <div class="h-full bg-blue-500 rounded-full" style="width: ${pctA}%"></div>
               </div>
             </div>
             <div>
-              <span class="text-sm font-bold text-amber-400">${m.format(vb)}</span>
+              <span class="text-sm font-bold text-amber-400">${esc(m.format(vb))}</span>
               <div class="mt-1 h-2 bg-gray-700 rounded-full overflow-hidden">
                 <div class="h-full bg-amber-500 rounded-full" style="width: ${pctB}%"></div>
               </div>
@@ -98,8 +115,8 @@ const { class: className = '' } = Astro.props;
 
     results.innerHTML = `
       <div class="grid grid-cols-2 gap-4 mb-3">
-        <div class="text-center text-sm font-bold text-blue-400">${a.name}</div>
-        <div class="text-center text-sm font-bold text-amber-400">${b.name}</div>
+        <div class="text-center text-sm font-bold text-blue-400">${esc(a.name)}</div>
+        <div class="text-center text-sm font-bold text-amber-400">${esc(b.name)}</div>
       </div>
       ${html}`;
     results.classList.remove('hidden');

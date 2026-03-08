@@ -21,6 +21,7 @@ const {
 
 const fullTitle = `${title} — ${siteConfig.siteName}`;
 const siteUrl = `https://${siteConfig.domain}`;
+const effectiveOgImage = ogImage || `${siteUrl}/og-default.png`;
 ---
 
 <!-- Primary Meta Tags -->
@@ -32,8 +33,14 @@ const siteUrl = `https://${siteConfig.domain}`;
 <link rel="canonical" href={canonical} />
 <meta name="theme-color" content={siteConfig.themeColor} />
 
-<!-- Favicon (emoji) -->
-<link rel="icon" href={`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>${siteConfig.emoji}</text></svg>`} />
+<!-- Favicon (SVG emoji + PNG fallback) -->
+<link rel="icon" type="image/svg+xml" href={`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>${siteConfig.emoji}</text></svg>`} />
+<link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon.png" />
+
+<!-- Google AdSense verification -->
+{siteConfig.adsenseId && (
+  <meta name="google-adsense-account" content={siteConfig.adsenseId} />
+)}
 
 <!-- Language -->
 <meta name="language" content={siteConfig.locale} />
@@ -46,12 +53,13 @@ const siteUrl = `https://${siteConfig.domain}`;
 <meta property="og:description" content={description} />
 <meta property="og:locale" content={siteConfig.locale} />
 <meta property="og:site_name" content={siteConfig.siteName} />
-{ogImage && <meta property="og:image" content={ogImage} />}
+<meta property="og:image" content={effectiveOgImage} />
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={fullTitle} />
 <meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={effectiveOgImage} />
 
 <!-- Schema.org JSON-LD -->
 {schema && (

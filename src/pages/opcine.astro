@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
+import SearchBar from '../components/SearchBar.astro';
+import SortableTable from '../components/SortableTable.astro';
+import AdUnit from '../components/AdUnit.astro';
+import { OPCINE } from '../data/opcine';
+
+const sortedByPop = [...OPCINE].sort((a, b) => b.population_2021 - a.population_2021);
+const totalPop = OPCINE.reduce((s, o) => s + o.population_2021, 0);
+
+const columns = [
+  { key: 'name', label: 'Opcina', type: 'string' as const },
+  { key: 'population_2021', label: 'Stanovnika', type: 'number' as const },
+  { key: 'change_pct', label: 'Promjena', type: 'percent' as const },
+  { key: 'density', label: 'Gustoca', type: 'number' as const },
+  { key: 'avg_age', label: 'Pros. starost', type: 'number' as const },
+  { key: 'county_name', label: 'Zupanija', type: 'string' as const },
+];
+
+const rows = sortedByPop.map(o => ({
+  name: o.name,
+  population_2021: o.population_2021,
+  change_pct: o.change_pct,
+  density: Math.round(o.density * 10) / 10,
+  avg_age: o.avg_age,
+  county_name: o.county_name,
+  href: `/opcina/${o.slug}/`,
+}));
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Opcine u Hrvatskoj",
+  "description": `Popis svih ${OPCINE.length} opcina u Hrvatskoj s demografskim podacima iz Popisa 2021.`,
+  "numberOfItems": OPCINE.length,
+  "itemListElement": sortedByPop.slice(0, 50).map((o, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": o.name,
+    "url": `https://mojahrvatska.com.hr/opcina/${o.slug}/`
+  }))
+};
+---
+
+<Layout
+  title="Sve opcine u Hrvatskoj"
+  description={`Popis svih ${OPCINE.length} opcina u Hrvatskoj. Stanovnistvo, gustoca, prosjecna starost, promjena — sortirajte i pretrazite. Popis 2021.`}
+  schema={schema}
+>
+  <Header />
+  <NavTabs active="opcine" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <h1 class="text-2xl font-black text-gray-100 mb-2">Opcine u Hrvatskoj</h1>
+    <p class="text-sm text-gray-400 mb-6">
+      Hrvatska ima {OPCINE.length} opcina s ukupno {totalPop.toLocaleString('hr-HR')} stanovnika.
+      Kliknite na naziv opcine za detalje ili sortirajte tablicu po stupcu.
+    </p>
+
+    <SearchBar class="mb-6" />
+
+    <AdUnit />
+
+    <section class="mb-8">
+      <h2 class="text-lg font-black text-gray-200 mb-4">Svih {OPCINE.length} opcina — sortirajte po stupcu</h2>
+      <SortableTable
+        id="opcine-table"
+        columns={columns}
+        rows={rows}
+        defaultSort="population_2021"
+        defaultDir="desc"
+      />
+    </section>
+
+    <AdUnit />
+  </main>
+</Layout>

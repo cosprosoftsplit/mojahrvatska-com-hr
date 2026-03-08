@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
+import CroatiaMap from '../components/CroatiaMap.astro';
+import SortableTable from '../components/SortableTable.astro';
+import AdUnit from '../components/AdUnit.astro';
+import { ZUPANIJE } from '../data/zupanije';
+
+const sortedByPop = [...ZUPANIJE].sort((a, b) => b.population_2021 - a.population_2021);
+const totalPop = ZUPANIJE.reduce((s, z) => s + z.population_2021, 0);
+const totalArea = ZUPANIJE.reduce((s, z) => s + z.area_km2, 0);
+
+const columns = [
+  { key: 'name', label: 'Zupanija', type: 'string' as const },
+  { key: 'population_2021', label: 'Stanovnika', type: 'number' as const },
+  { key: 'change_pct', label: 'Promjena', type: 'percent' as const },
+  { key: 'area_km2', label: 'Povrsina (km2)', type: 'number' as const },
+  { key: 'density', label: 'Gustoca', type: 'number' as const },
+  { key: 'avg_age', label: 'Pros. starost', type: 'number' as const },
+  { key: 'seat', label: 'Sjediste', type: 'string' as const },
+];
+
+const rows = sortedByPop.map(z => ({
+  name: z.name,
+  population_2021: z.population_2021,
+  change_pct: z.change_pct,
+  area_km2: z.area_km2,
+  density: z.density,
+  avg_age: z.avg_age,
+  seat: z.seat,
+  href: `/zupanija/${z.slug}/`,
+}));
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Zupanije Republike Hrvatske",
+  "description": "Popis svih 21 zupanije u Hrvatskoj s demografskim podacima iz Popisa 2021.",
+  "numberOfItems": ZUPANIJE.length,
+  "itemListElement": sortedByPop.map((z, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": z.name,
+    "url": `https://mojahrvatska.com.hr/zupanija/${z.slug}/`
+  }))
+};
+---
+
+<Layout
+  title="Sve zupanije u Hrvatskoj"
+  description={`Pregled svih ${ZUPANIJE.length} zupanija u Hrvatskoj. Stanovnistvo, povrsina, gustoca, prosjecna starost — sortirajte i usporedite. Popis 2021.`}
+  schema={schema}
+>
+  <Header />
+  <NavTabs active="zupanije" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <h1 class="text-2xl font-black text-gray-100 mb-2">Zupanije Republike Hrvatske</h1>
+    <p class="text-sm text-gray-400 mb-6">
+      Hrvatska ima {ZUPANIJE.length} zupaniju s ukupno {totalPop.toLocaleString('hr-HR')} stanovnika
+      na {totalArea.toLocaleString('hr-HR')} km2. Kliknite na kartu ili tablicu za detalje.
+    </p>
+
+    <!-- Interactive Map -->
+    <CroatiaMap />
+
+    <AdUnit />
+
+    <!-- Sortable Table -->
+    <section class="mb-8">
+      <h2 class="text-lg font-black text-gray-200 mb-4">Sve zupanije — sortirajte po stupcu</h2>
+      <SortableTable
+        id="zupanije-table"
+        columns={columns}
+        rows={rows}
+        defaultSort="population_2021"
+        defaultDir="desc"
+      />
+    </section>
+
+    <AdUnit />
+
+    <!-- Quick Stats -->
+    <section class="mb-8">
+      <h2 class="text-lg font-black text-gray-200 mb-4">Usporedba u brojkama</h2>
+      <div class="space-y-3">
+        {sortedByPop.map(z => {
+          const widthPct = Math.max(2, (z.population_2021 / sortedByPop[0].population_2021) * 100);
+          return (
+            <a href={`/zupanija/${z.slug}/`} class="block group no-underline">
+              <div class="flex items-center gap-3">
+                <span class="text-xs text-gray-400 w-44 truncate group-hover:text-blue-400 transition-colors">{z.name}</span>
+                <div class="flex-1 h-5 bg-gray-900 rounded-full overflow-hidden">
+                  <div
+                    class={`h-full rounded-full ${z.change_pct >= 0 ? 'bg-blue-600' : 'bg-blue-800'}`}
+                    style={`width: ${widthPct}%`}
+                  ></div>
+                </div>
+                <span class="text-xs font-bold text-gray-300 w-20 text-right">{z.population_2021.toLocaleString('hr-HR')}</span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  </main>
+</Layout>

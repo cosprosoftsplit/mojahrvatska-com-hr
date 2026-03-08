@@ -1,0 +1,7 @@
+/search-index.json
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=3600
+
+/locations-compare.json
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=3600

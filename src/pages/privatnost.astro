@@ -1,9 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
 import siteConfig from '../../site.config.json';
 ---
 
 <Layout title="Politika privatnosti" description={`Politika privatnosti za ${siteConfig.siteName}`}>
+  <Header />
+  <NavTabs />
   <main class="max-w-2xl mx-auto px-4 py-12" style="font-family: system-ui, sans-serif;">
     <h1 class="text-2xl font-bold mb-6">Politika privatnosti</h1>
 
@@ -14,7 +18,7 @@ import siteConfig from '../../site.config.json';
       <p>Ova web stranica ne zahtijeva registraciju i ne prikuplja osobne podatke poput imena, adrese e-pošte ili telefonskog broja.</p>
 
       <h2 class="text-lg font-bold text-gray-100 mt-6">Kolačići i analitika</h2>
-      <p>Koristimo Cloudflare Web Analytics za praćenje posjećenosti. Ovaj sustav ne koristi kolačiće i ne prikuplja osobne podatke posjetitelja.</p>
+      <p>Koristimo Google Analytics za praćenje posjećenosti. Ovaj sustav koristi kolačiće i aktivira se tek nakon što prihvatite kolačiće putem bannera na stranici. Ako odbijete kolačiće, nikakvi analitički podaci se ne prikupljaju.</p>
       {(siteConfig.monetization === 'ads' || siteConfig.monetization === 'both') && (
         <p>Za prikazivanje oglasa koristimo Google AdSense koji može postavljati kolačiće na vaš uređaj. Možete upravljati postavkama kolačića putem svog preglednika ili putem <a href="https://adssettings.google.com" class="text-blue-400 underline" target="_blank" rel="noopener">Google postavki oglasa</a>.</p>
       )}

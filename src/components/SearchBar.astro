@@ -20,61 +20,70 @@ const { class: className = '' } = Astro.props;
   </div>
 </div>
 
-<script>
-  let fuse: any = null;
-  let searchData: any[] = [];
+<script is:inline>
+  (function() {
+    var fuse = null;
+    var searchData = [];
 
-  const input = document.getElementById('search-input') as HTMLInputElement;
-  const results = document.getElementById('search-results') as HTMLDivElement;
+    var input = document.getElementById('search-input');
+    var results = document.getElementById('search-results');
 
-  async function loadIndex() {
-    if (searchData.length > 0) return;
-    try {
-      const res = await fetch('/search-index.json');
-      searchData = await res.json();
-      const Fuse = (await import('https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.mjs' as any)).default;
-      fuse = new Fuse(searchData, {
-        keys: ['name', 'county'],
-        threshold: 0.3,
-        limit: 10,
-      });
-    } catch {}
-  }
-
-  input?.addEventListener('focus', loadIndex);
-
-  input?.addEventListener('input', () => {
-    const q = input.value.trim();
-    if (!q || !fuse) {
-      results.classList.add('hidden');
-      return;
+    function esc(text) {
+      var d = document.createElement('div');
+      d.textContent = text;
+      return d.innerHTML;
     }
-    const matches = fuse.search(q).slice(0, 8);
-    if (matches.length === 0) {
-      results.classList.add('hidden');
-      return;
-    }
-    results.innerHTML = matches.map((m: any) => {
-      const item = m.item;
-      const href = item.type === 'zupanija' ? `/zupanija/${item.slug}/` : item.type === 'grad' ? `/grad/${item.slug}/` : `/opcina/${item.slug}/`;
-      const typeLabel = item.type === 'grad' ? 'Grad' : item.type === 'opcina' ? 'Opcina' : 'Zupanija';
-      return `<a href="${href}" class="block px-4 py-3 hover:bg-gray-800 transition-colors border-b border-gray-800 last:border-0 no-underline">
-        <div class="flex justify-between items-center">
-          <div>
-            <span class="text-sm font-bold text-gray-200">${item.name}</span>
-            <span class="text-xs text-gray-400 ml-2">${typeLabel}</span>
-          </div>
-          <span class="text-xs text-gray-400">${item.pop?.toLocaleString('hr-HR') || ''}</span>
-        </div>
-        ${item.county ? `<div class="text-xs text-gray-400">${item.county}</div>` : ''}
-      </a>`;
-    }).join('');
-    results.classList.remove('hidden');
-  });
 
-  document.addEventListener('click', (e) => {
-    if (!results.contains(e.target as Node) && e.target !== input) {
-      results.classList.add('hidden');
+    async function loadIndex() {
+      if (searchData.length > 0) return;
+      try {
+        var res = await fetch('/search-index.json');
+        searchData = await res.json();
+        var mod = await import('/vendor/fuse.mjs');
+        var Fuse = mod.default;
+        fuse = new Fuse(searchData, {
+          keys: ['name', 'county'],
+          threshold: 0.3,
+          limit: 10,
+        });
+      } catch(e) {}
     }
-  });
+
+    if (input) input.addEventListener('focus', loadIndex);
+
+    if (input) input.addEventListener('input', function() {
+      var q = input.value.trim();
+      if (!q || !fuse) {
+        results.classList.add('hidden');
+        return;
+      }
+      var matches = fuse.search(q).slice(0, 8);
+      if (matches.length === 0) {
+        results.classList.add('hidden');
+        return;
+      }
+      results.innerHTML = matches.map(function(m) {
+        var item = m.item;
+        var href = item.type === 'zupanija' ? '/zupanija/' + esc(item.slug) + '/' : item.type === 'grad' ? '/grad/' + esc(item.slug) + '/' : '/opcina/' + esc(item.slug) + '/';
+        var typeLabel = item.type === 'grad' ? 'Grad' : item.type === 'opcina' ? 'Opcina' : 'Zupanija';
+        return '<a href="' + href + '" class="block px-4 py-3 hover:bg-gray-800 transition-colors border-b border-gray-800 last:border-0 no-underline">' +
+          '<div class="flex justify-between items-center">' +
+            '<div>' +
+              '<span class="text-sm font-bold text-gray-200">' + esc(item.name) + '</span>' +
+              '<span class="text-xs text-gray-400 ml-2">' + typeLabel + '</span>' +
+            '</div>' +
+            '<span class="text-xs text-gray-400">' + (item.pop ? item.pop.toLocaleString('hr-HR') : '') + '</span>' +
+          '</div>' +
+          (item.county ? '<div class="text-xs text-gray-400">' + esc(item.county) + '</div>' : '') +
+        '</a>';
+      }).join('');
+      results.classList.remove('hidden');
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!results.contains(e.target) && e.target !== input) {
+        results.classList.add('hidden');
+      }
+    });
+  })();
 </script>

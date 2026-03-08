@@ -1,14 +1,19 @@
 ---
 import siteConfig from '../../site.config.json';
 
-const showBanner = siteConfig.monetization === 'ads' || siteConfig.monetization === 'both';
+const hasAds = siteConfig.monetization === 'ads' || siteConfig.monetization === 'both';
+const showBanner = !!siteConfig.gaId || hasAds;
+const gaId = siteConfig.gaId || '';
+const bannerText = hasAds
+  ? 'Koristimo kolačiće za prikazivanje oglasa i analitiku.'
+  : 'Koristimo kolačiće za analitiku posjeta.';
 ---
 
 {showBanner && (
   <div id="consent-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4 text-sm text-gray-300 hidden" style="font-family: system-ui, sans-serif;">
     <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-3">
       <p class="flex-1 text-xs">
-        Koristimo kolačiće za prikazivanje oglasa i analitiku. Nastavkom korištenja stranice prihvaćate našu
+        {bannerText} Nastavkom korištenja stranice prihvaćate našu
         <a href="/privatnost" class="underline text-gray-100">politiku privatnosti</a>.
       </p>
       <div class="flex gap-2">
@@ -21,15 +26,33 @@ const showBanner = siteConfig.monetization === 'ads' || siteConfig.monetization 
       </div>
     </div>
   </div>
-  <script is:inline>
+  <script is:inline define:vars={{ gaId }}>
     (function() {
+      function loadGA() {
+        if (!gaId || window._gaLoaded) return;
+        window._gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', gaId);
+      }
+
       var consent = localStorage.getItem('cookie-consent');
-      if (!consent) {
+      if (consent === 'accepted') {
+        loadGA();
+      } else if (!consent) {
         document.getElementById('consent-banner').classList.remove('hidden');
       }
+
       document.getElementById('consent-accept')?.addEventListener('click', function() {
         localStorage.setItem('cookie-consent', 'accepted');
         document.getElementById('consent-banner').classList.add('hidden');
+        loadGA();
       });
       document.getElementById('consent-reject')?.addEventListener('click', function() {
         localStorage.setItem('cookie-consent', 'rejected');

@@ -10,11 +10,7 @@ import { dirname, join } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 
-// Dynamic import of TypeScript data files compiled to JS
-// Since we're using Astro with TS, we need to read the TS files directly and extract data.
-// Instead, we'll use a simpler approach: import from the built data.
-
-// Helper: read TS file and extract the array
+// Helper: read TS file and extract the array safely
 function parseDataFile(filePath) {
   const content = readFileSync(filePath, 'utf-8');
   // Extract the array from the export const XXXX: Type[] = [...]
@@ -24,12 +20,19 @@ function parseDataFile(filePath) {
     return [];
   }
   try {
-    // Clean up TypeScript syntax for JSON parsing
     let arrayStr = match[1];
     // Remove trailing semicolon
     arrayStr = arrayStr.replace(/;\s*$/, '');
-    // Use Function constructor to evaluate
-    return new Function(`return ${arrayStr}`)();
+    // Convert JS object notation to valid JSON:
+    // - Quote unquoted keys: word: -> "word":
+    // - Replace single quotes with double quotes in values
+    // - Remove trailing commas before ] or }
+    arrayStr = arrayStr
+      .replace(/\/\/[^\n]*/g, '')                      // strip line comments
+      .replace(/(\w+)\s*:/g, '"$1":')                  // quote keys
+      .replace(/:\s*'([^']*)'/g, ': "$1"')             // single-quoted values to double
+      .replace(/,\s*([\]}])/g, '$1');                   // trailing commas
+    return JSON.parse(arrayStr);
   } catch (e) {
     console.error(`Error parsing ${filePath}:`, e.message);
     return [];

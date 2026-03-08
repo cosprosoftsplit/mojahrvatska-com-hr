@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/generate-search-index.mjs && astro build",
+    "build": "node scripts/generate-assets.mjs && node scripts/generate-search-index.mjs && astro build",
     "preview": "astro preview"
   },
   "dependencies": {

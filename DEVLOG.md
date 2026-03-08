@@ -3,7 +3,7 @@
 **Domain:** mojahrvatska.com.hr
 **Stack:** Astro 5.x, Tailwind CSS v4, Cloudflare Pages
 **Data:** DZS Census 2021 (static data, no cron)
-**Pages:** 583 (128 cities + 428 municipalities + 21 counties + index + rang-lista + usporedba + 404 + impressum + privatnost)
+**Pages:** 586 (128 cities + 428 municipalities + 21 counties + index + zupanije + gradovi + opcine + rang-lista + usporedba + 404 + impressum + privatnost)
 
 ---
 
@@ -82,3 +82,78 @@ Six fixes to bring the site from grade A to A++:
 - Mobile nav tested at 375px viewport: hamburger works, tabs stack vertically
 - No consent banner in output
 - 24 files changed, 2 commits pushed, both deploys succeeded
+
+---
+
+## 2026-03-05 — Monetization, Hardening & Navigation Overhaul
+
+Major session covering AdSense enablement, GDPR consent, security hardening, SEO improvements, navigation bug fixes, and code quality fixes.
+
+### Monetization & ads.txt
+- Created `public/ads.txt` with Google AdSense snippet (`pub-3231671411512174`)
+- Updated `site.config.json`: `monetization: "ads"`, `adsenseId: "ca-pub-3231671411512174"`
+- Added `<meta name="google-adsense-account">` to SEOHead for site verification
+- AdUnit components now render across all pages
+
+### GDPR consent-aware GA4
+- Removed static GA4 script from `Layout.astro` `<head>`
+- Rewrote `ConsentBanner.astro` to be the single source of truth for consent + analytics
+- GA4 now only loads after user explicitly accepts cookies (GDPR compliant)
+- Banner shows whenever GA4 or ads are configured (not just ads)
+- Consent stored in `localStorage('cookie-consent')`: accepted/rejected
+- Updated `privatnost.astro` to correctly describe GA4 (was referencing Cloudflare Web Analytics)
+
+### Image optimization & error handling
+- `CoatOfArms.astro`: added `onerror="this.style.display='none'"` — broken Wikipedia images hide gracefully
+- `grad/[slug].astro` wiki photos: added `width="800" height="256"` for CLS, `onerror` to hide broken images
+- All external images already had `loading="lazy"` (confirmed)
+
+### Search index hardening
+- `robots.txt`: added `Disallow: /locations-compare.json`
+- Created `public/_headers` (Cloudflare Pages): `X-Robots-Tag: noindex` + cache headers for both JSON data files
+
+### PNG favicon fallback
+- Created `scripts/generate-assets.mjs`: generates `public/favicon.png` (32x32, theme color #1e3a5f) at build time using pure Node.js PNG encoding (zlib, no deps)
+- `SEOHead.astro`: SVG emoji favicon kept as primary, PNG added as `<link rel="alternate icon">`
+
+### Open Graph image
+- `generate-assets.mjs` also generates `public/og-default.png` (1200x630) with branded design: dark navy background, theme color band, red/white Croatian sahovnica pattern
+- `SEOHead.astro`: always renders `og:image` + `twitter:image` — uses page-specific image or falls back to default
+- `grad/[slug].astro`, `opcina/[slug].astro`: pass `wiki.photo || wiki.thumbnail` as ogImage
+- `zupanija/[slug].astro`: passes `wiki.coatOfArms` as ogImage
+- Twitter card upgraded from `summary` to `summary_large_image`
+- `Layout.astro`: added `ogImage` prop passthrough to SEOHead
+
+### Weekly cron build
+- `build-deploy.yml`: added `schedule: cron: '0 6 * * 1'` (Monday 6AM UTC) for weekly sitemap freshness
+
+### 404 page fix
+- Added `Header`, `NavTabs`, and `SearchBar` to 404 page — no longer a dead end
+
+### Vendor Fuse.js
+- `generate-assets.mjs` copies `node_modules/fuse.js/dist/fuse.mjs` to `public/vendor/fuse.mjs`
+- `SearchBar.astro` changed from CDN (`cdn.jsdelivr.net`) to local `/vendor/fuse.mjs` — no external dependency at runtime
+- Script changed to `is:inline` to bypass Vite bundling of the dynamic import
+- `.gitignore` updated to exclude build-generated assets (`public/vendor/`, `public/favicon.png`, `public/og-default.png`)
+
+### Navigation overhaul — 6 bugs found & fixed
+1. **"Zupanije" nav tab** linked to `/zupanija/grad-zagreb-zupanija/` (hardcoded Zagreb) — created new `/zupanije/` listing page with interactive SVG map, sortable table of all 21 counties, population bar chart
+2. **"Gradovi" nav tab** linked to `/rang-lista/#gradovi` (top-30 subset) — created new `/gradovi/` listing page with sortable table of all 128 cities + search
+3. **"Opcine" nav tab** linked to `/rang-lista/#opcine` which pointed to the "Najobrazovaniji" education section (wrong anchor!) — created new `/opcine/` listing page with sortable table of all 428 municipalities + search
+4. **Impressum page** had no Header or NavTabs (dead end) — added both
+5. **Privatnost page** had no Header or NavTabs (dead end) — added both
+6. **Zupanije breadcrumb** on county detail pages linked to `/` instead of `/zupanije/` — fixed
+
+### Security & code quality — 5 bugs fixed
+1. **XSS in SearchBar** (HIGH) — `innerHTML` used unescaped `item.name`, `item.county`, `item.slug` from JSON. Added `esc()` helper using `textContent`/`innerHTML` DOM escaping
+2. **XSS in CompareTool** (HIGH) — same `innerHTML` pattern with unescaped names in options and results. Added `esc()` helper, escaped all dynamic values
+3. **CompareTool slug collision** (MEDIUM) — 4 locations exist as both grad and opcina (bakar, novigrad, sveta-nedelja, otok) with identical slugs. `<option value="bakar">` always matched the first entry. Fixed by using `type:slug` as option value (e.g., `"grad:bakar"` vs `"opcina:bakar"`)
+4. **CompareTool silent failure** (MEDIUM) — empty `catch {}` on fetch error gave no feedback. Added error message div with user-friendly Croatian text
+5. **`new Function()` code eval in build script** (MEDIUM) — `generate-search-index.mjs` used `new Function()` to eval TS data files. Replaced with `JSON.parse()` after regex-based TS-to-JSON conversion (comment stripping, key quoting, trailing comma removal)
+
+### Build verification
+- 586 pages built clean in 2.42s (+3 new listing pages)
+- All generated assets verified: favicon.png (99B), og-default.png (3.5KB), vendor/fuse.mjs (44KB)
+- AdSense meta tag, consent banner, OG image, favicon fallback all confirmed in dist output
+- Search index: 577 entries with correct types (zupanija/grad/opcina)
+- Croatian characters preserved through new JSON.parse pipeline

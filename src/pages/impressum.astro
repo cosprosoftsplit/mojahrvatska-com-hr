@@ -1,9 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
 import siteConfig from '../../site.config.json';
 ---
 
 <Layout title="Impressum" description={`Impressum — pravne informacije za ${siteConfig.siteName}`}>
+  <Header />
+  <NavTabs />
   <main class="max-w-2xl mx-auto px-4 py-12" style="font-family: system-ui, sans-serif;">
     <h1 class="text-2xl font-bold mb-6">Impressum</h1>
 

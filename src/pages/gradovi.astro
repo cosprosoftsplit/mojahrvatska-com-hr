@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import NavTabs from '../components/NavTabs.astro';
+import SearchBar from '../components/SearchBar.astro';
+import SortableTable from '../components/SortableTable.astro';
+import AdUnit from '../components/AdUnit.astro';
+import { GRADOVI } from '../data/gradovi';
+
+const sortedByPop = [...GRADOVI].sort((a, b) => b.population_2021 - a.population_2021);
+const totalPop = GRADOVI.reduce((s, g) => s + g.population_2021, 0);
+
+const columns = [
+  { key: 'name', label: 'Grad', type: 'string' as const },
+  { key: 'population_2021', label: 'Stanovnika', type: 'number' as const },
+  { key: 'change_pct', label: 'Promjena', type: 'percent' as const },
+  { key: 'density', label: 'Gustoca', type: 'number' as const },
+  { key: 'avg_age', label: 'Pros. starost', type: 'number' as const },
+  { key: 'county_name', label: 'Zupanija', type: 'string' as const },
+];
+
+const rows = sortedByPop.map(g => ({
+  name: g.name,
+  population_2021: g.population_2021,
+  change_pct: g.change_pct,
+  density: Math.round(g.density * 10) / 10,
+  avg_age: g.avg_age,
+  county_name: g.county_name,
+  href: `/grad/${g.slug}/`,
+}));
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Gradovi u Hrvatskoj",
+  "description": `Popis svih ${GRADOVI.length} gradova u Hrvatskoj s demografskim podacima iz Popisa 2021.`,
+  "numberOfItems": GRADOVI.length,
+  "itemListElement": sortedByPop.slice(0, 50).map((g, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": g.name,
+    "url": `https://mojahrvatska.com.hr/grad/${g.slug}/`
+  }))
+};
+---
+
+<Layout
+  title="Svi gradovi u Hrvatskoj"
+  description={`Popis svih ${GRADOVI.length} gradova u Hrvatskoj. Stanovnistvo, gustoca, prosjecna starost, promjena — sortirajte i pretrazite. Popis 2021.`}
+  schema={schema}
+>
+  <Header />
+  <NavTabs active="gradovi" />
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+    <h1 class="text-2xl font-black text-gray-100 mb-2">Gradovi u Hrvatskoj</h1>
+    <p class="text-sm text-gray-400 mb-6">
+      Hrvatska ima {GRADOVI.length} gradova s ukupno {totalPop.toLocaleString('hr-HR')} stanovnika.
+      Kliknite na naziv grada za detalje ili sortirajte tablicu po stupcu.
+    </p>
+
+    <SearchBar class="mb-6" />
+
+    <AdUnit />
+
+    <section class="mb-8">
+      <h2 class="text-lg font-black text-gray-200 mb-4">Svih {GRADOVI.length} gradova — sortirajte po stupcu</h2>
+      <SortableTable
+        id="gradovi-table"
+        columns={columns}
+        rows={rows}
+        defaultSort="population_2021"
+        defaultDir="desc"
+      />
+    </section>
+
+    <AdUnit />
+  </main>
+</Layout>

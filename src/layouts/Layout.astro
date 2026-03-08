@@ -12,32 +12,23 @@ interface Props {
   canonical?: string;
   schema?: object;
   article?: boolean;
+  ogImage?: string;
   class?: string;
 }
 
-const { title, description, canonical, schema, article, class: bodyClass = '' } = Astro.props;
+const { title, description, canonical, schema, article, ogImage, class: bodyClass = '' } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang={siteConfig.locale}>
   <head>
-    {siteConfig.gaId && (
-      <Fragment>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaId}`}></script>
-        <script is:inline define:vars={{ gaId: siteConfig.gaId }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', gaId);
-        </script>
-      </Fragment>
-    )}
     <SEOHead
       title={title}
       description={description}
       canonical={canonical}
       schema={schema}
       article={article}
+      ogImage={ogImage}
     />
     {(siteConfig.monetization === 'ads' || siteConfig.monetization === 'both') && siteConfig.adsenseId && (
       <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adsenseId}`} crossorigin="anonymous"></script>
