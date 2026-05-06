@@ -7,6 +7,15 @@
 
 ---
 
+## 2026-05-06 — Shared Cloudflare deploy bridge
+
+- **Purpose**: Restored production autoupdates for `mojhoroskop.com.hr` and `hnl.com.hr` while their native repo Cloudflare tokens remain stale.
+- **Workflow**: Added `Deploy Shared Pages Sites`, scheduled daily at `05:45 UTC` with manual dispatch support.
+- **Security model**: Reuses this repo's working Cloudflare Pages token, and checks out the two private target repos with read-only SSH deploy keys instead of a broad GitHub token.
+- **Targets**: Builds and deploys `cosprosoftsplit/mojhoroskop-com-hr` to Cloudflare Pages project `mojhoroskop-com-hr`, and `cosprosoftsplit/hnl-com-hr` to project `hnl-com-hr`.
+- **Verification**: Manual run `25461735538` passed for both targets, including Cloudflare preflight, Pages deploy, and live freshness checks.
+- **Result**: MojHoroskop live data verified at `2026-05-06`; HNL standings verified at `2026-05-06`, round `33`.
+
 ## 2026-02-16 — v1 Launch
 
 ### Site scaffold & architecture
