@@ -19,15 +19,18 @@ jobs:
           - repo: cosprosoftsplit/mojhoroskop-com-hr
             path: mojhoroskop-com-hr
             project: mojhoroskop-com-hr
+            ssh_key_secret: SHARED_DEPLOY_SSH_KEY_MOJHOROSKOP
           - repo: cosprosoftsplit/hnl-com-hr
             path: hnl-com-hr
             project: hnl-com-hr
+            ssh_key_secret: SHARED_DEPLOY_SSH_KEY_HNL
     steps:
       - name: Checkout target site
         uses: actions/checkout@v4
         with:
           repository: ${{ matrix.repo }}
           path: ${{ matrix.path }}
+          ssh-key: ${{ secrets[matrix.ssh_key_secret] }}
 
       - uses: actions/setup-node@v4
         with:
