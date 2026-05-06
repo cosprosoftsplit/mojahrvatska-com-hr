@@ -1,0 +1,72 @@
+name: Deploy Shared Pages Sites
+
+on:
+  schedule:
+    - cron: '45 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy ${{ matrix.project }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - repo: cosprosoftsplit/mojhoroskop-com-hr
+            path: mojhoroskop-com-hr
+            project: mojhoroskop-com-hr
+          - repo: cosprosoftsplit/hnl-com-hr
+            path: hnl-com-hr
+            project: hnl-com-hr
+    steps:
+      - name: Checkout target site
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.repo }}
+          path: ${{ matrix.path }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: ${{ matrix.path }}
+        run: npm ci
+
+      - name: Build site
+        working-directory: ${{ matrix.path }}
+        run: npm run build
+
+      - name: Preflight Cloudflare credentials
+        shell: bash
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          test -n "$CF_ACCOUNT_ID" || { echo "::error::Missing CF_ACCOUNT_ID secret"; exit 1; }
+          test -n "$CF_API_TOKEN" || { echo "::error::Missing CF_API_TOKEN secret"; exit 1; }
+          status=$(curl -sS -o cf-account.json -w "%{http_code}" \
+            -H "Authorization: Bearer ${CF_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}")
+          if [ "$status" != "200" ]; then
+            echo "::error::Cloudflare account preflight failed with HTTP ${status}."
+            cat cf-account.json
+            exit 1
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          wranglerVersion: "4.86.0"
+          command: pages deploy ${{ matrix.path }}/dist --project-name=${{ matrix.project }} --commit-dirty=true
+
+      - name: Check live freshness
+        working-directory: ${{ matrix.path }}
+        run: npm run check:freshness
