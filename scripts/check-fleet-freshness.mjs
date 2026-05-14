@@ -7,11 +7,13 @@
 import fs from 'node:fs';
 
 const SITES = [
-  { name: 'mojhoroskop',  url: 'https://mojhoroskop.com.hr/data/today.json',  dateField: 'date' },
-  { name: 'hnl',          url: 'https://hnl.com.hr/data/standings.json',      dateField: 'updated' },
-  { name: 'mojaprognoza', url: 'https://mojaprognoza.com.hr/data/today.json', dateField: 'date' },
-  { name: 'infodanas',    url: 'https://infodanas.com.hr/data/weather.json',  dateField: 'date' },
-  { name: 'horoscopomeu', url: 'https://horoscopomeu.com/data/today.json',    dateField: 'date' },
+  { name: 'mojhoroskop',  url: 'https://mojhoroskop.com.hr/data/today.json',          dateField: 'date' },
+  { name: 'hnl',          url: 'https://hnl.com.hr/data/standings.json',              dateField: 'updated' },
+  { name: 'mojaprognoza', url: 'https://mojaprognoza.com.hr/data/today.json',         dateField: 'date' },
+  { name: 'infodanas',    url: 'https://infodanas.com.hr/data/weather.json',          dateField: 'date' },
+  // TODO: switch to https://horoscopomeu.com/data/today.json once apex DNS is configured.
+  // The custom domain isn't set up yet so the site only serves from .pages.dev.
+  { name: 'horoscopomeu', url: 'https://horoscopomeu-com.pages.dev/data/today.json',  dateField: 'date' },
 ];
 
 const MAX_STALE_HOURS = Number(process.env.MAX_STALE_HOURS || 48);
